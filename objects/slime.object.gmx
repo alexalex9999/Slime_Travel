@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>sprite_index = slime_idle_front 
 image_speed = 1/3
-depth = 0
+
 </string>
           </argument>
         </arguments>
