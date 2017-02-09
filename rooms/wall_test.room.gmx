@@ -92,6 +92,7 @@
     <instance objName="wall" x="288" y="96" name="inst_8936DC88" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="192" y="96" name="inst_A950FEB5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="96" name="inst_453E15AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pushable_box" x="672" y="672" name="inst_8EE698A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="castle_tile_set_unfinished" x="864" y="96" w="96" h="96" xo="0" yo="96" id="10000017" name="inst_D34AA161" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
