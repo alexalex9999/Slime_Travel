@@ -50,8 +50,10 @@
     <object>objects\slime</object>
     <object>objects\pushable_box</object>
     <object>objects\wall</object>
+    <object>objects\Reset_Button</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\reset_test</room>
     <room>rooms\wall_test</room>
   </rooms>
   <help>
