@@ -37,9 +37,19 @@
       </sprites>
     </sprites>
     <sprites name="interactive_items">
+      <sprite>sprites\button</sprite>
       <sprite>sprites\box</sprite>
       <sprites name="pillar">
         <sprite>sprites\sprite19</sprite>
+        <sprite>sprites\pillar_locked</sprite>
+        <sprite>sprites\pillar_locking</sprite>
+        <sprite>sprites\pillar_unlocking</sprite>
+        <sprite>sprites\pillar_unlocked</sprite>
+      </sprites>
+      <sprites name="pit">
+        <sprite>sprites\pit_closed</sprite>
+        <sprite>sprites\pit_open</sprite>
+        <sprite>sprites\pit_animation</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\spr_wall</sprite>
