@@ -53,7 +53,6 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_wall</sprite>
-    <sprite>sprites\sprite18</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\castle_tile_set_unfinished</background>
