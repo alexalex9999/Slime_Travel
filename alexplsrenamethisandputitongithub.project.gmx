@@ -40,7 +40,6 @@
       <sprite>sprites\button</sprite>
       <sprite>sprites\box</sprite>
       <sprites name="pillar">
-        <sprite>sprites\sprite19</sprite>
         <sprite>sprites\pillar_locked</sprite>
         <sprite>sprites\pillar_locking</sprite>
         <sprite>sprites\pillar_unlocking</sprite>
@@ -64,6 +63,9 @@
     <object>objects\pushable_box</object>
     <object>objects\wall</object>
     <object>objects\Reset_Button</object>
+    <object>objects\switch_button</object>
+    <object>objects\pillar</object>
+    <object>objects\pit</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\reset_test</room>
