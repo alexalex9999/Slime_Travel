@@ -60,12 +60,12 @@
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\slime</object>
-    <object>objects\pushable_box</object>
     <object>objects\wall</object>
-    <object>objects\Reset_Button</object>
+    <object>objects\pushable_box</object>
     <object>objects\switch_button</object>
     <object>objects\pillar</object>
     <object>objects\pit</object>
+    <object>objects\Reset_Button</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\reset_test</room>
