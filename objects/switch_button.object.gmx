@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="4" ename="slime">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,12 +25,42 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var i;
-for (i = 0; i &lt; instance_number(pillar); i += 1){
-    if((instance_find(pillar,i)).pillar_num == button_num){
-        
+            <string>image_speed = 0
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(place_meeting(x, y, box) || place_meeting(x, y, slime)){
+    var i;
+    for (i = 0; i &lt; instance_number(pillar); i += 1){
+        if((instance_find(pillar,i)).pillar_num == switch_num){
+        global.pillar_down = true
         }
     }
+    image_index = 1
+}
+else{
+    image_index = 0
+    global.pillar_down = false
+}
 </string>
           </argument>
         </arguments>

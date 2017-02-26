@@ -260,6 +260,9 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     if((instance_position(x-96, y, wall)!=noone)){
         sprite_index = slime_bounce_left
     }
+    if((instance_position(x-96, y, switch_button)!=noone)){
+        sprite_index = slime_jump_left
+    }
     if(instance_position(x-96, y, pushable_box)!=noone){
         if(instance_position(x-192, y, wall)!=noone || instance_position(x-192, y, pushable_box)!=noone){
             sprite_index=slime_bounce_left
