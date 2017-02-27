@@ -68,6 +68,7 @@
     <object>objects\Reset_Button</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\follow_test</room>
     <room>rooms\reset_test</room>
     <room>rooms\wall_test</room>
   </rooms>
