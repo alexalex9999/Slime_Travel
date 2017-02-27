@@ -71,6 +71,7 @@
     <object>objects\text_box</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\empty_room</room>
     <room>rooms\follow_test</room>
     <room>rooms\reset_test</room>
     <room>rooms\wall_test</room>

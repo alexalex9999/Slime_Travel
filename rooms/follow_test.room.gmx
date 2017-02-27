@@ -51,7 +51,6 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="slime" x="96" y="576" name="inst_4E284EA2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="288" y="448" name="inst_A598C1B8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="384" y="448" name="inst_9FE73EA3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="480" y="448" name="inst_623AAD4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -70,6 +69,7 @@
     <instance objName="door_nextroon" x="2080" y="288" name="inst_5C06EC6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroon" x="2080" y="320" name="inst_86ADFAA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroon" x="2048" y="288" name="inst_EC8EC7D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="slime" x="1056" y="384" name="inst_7B9ABC67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="castle_tile_set_unfinished" x="288" y="384" w="96" h="96" xo="0" yo="192" id="10000277" name="inst_0567CC6F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -125,9 +125,6 @@
     <tile bgName="castle_tile_set_unfinished" x="0" y="384" w="96" h="96" xo="192" yo="96" id="10000334" name="inst_BD1AB819" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="0" y="480" w="96" h="96" xo="192" yo="96" id="10000335" name="inst_DCB1713A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="0" y="576" w="96" h="96" xo="192" yo="96" id="10000336" name="inst_C8915240" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="castle_tile_set_unfinished" x="2016" y="96" w="96" h="96" xo="0" yo="96" id="10000337" name="inst_11B43FEB" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="castle_tile_set_unfinished" x="2016" y="192" w="96" h="96" xo="0" yo="96" id="10000338" name="inst_98DBC004" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="castle_tile_set_unfinished" x="2016" y="384" w="96" h="96" xo="0" yo="96" id="10000339" name="inst_769B4A36" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="2016" y="480" w="96" h="96" xo="0" yo="96" id="10000340" name="inst_16C6EC9B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="2016" y="576" w="96" h="96" xo="0" yo="96" id="10000341" name="inst_96CACB21" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="0" y="672" w="96" h="96" xo="384" yo="192" id="10000342" name="inst_9ECAB754" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -196,8 +193,6 @@
     <tile bgName="castle_tile_set_unfinished" x="1536" y="576" w="96" h="96" xo="96" yo="480" id="10000410" name="inst_8C411C4D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="768" y="384" w="96" h="96" xo="96" yo="480" id="10000411" name="inst_DB99EF9D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="768" y="480" w="96" h="96" xo="96" yo="480" id="10000412" name="inst_05B1224E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="castle_tile_set_unfinished" x="2016" y="288" w="96" h="96" xo="96" yo="480" id="10000413" name="inst_FA85FFDE" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="castle_tile_set_unfinished" x="1920" y="288" w="96" h="96" xo="96" yo="480" id="10000414" name="inst_AC82926A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="1920" y="384" w="96" h="96" xo="96" yo="480" id="10000415" name="inst_55979190" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="1920" y="480" w="96" h="96" xo="96" yo="480" id="10000416" name="inst_8F8DD0D1" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="1920" y="576" w="96" h="96" xo="96" yo="480" id="10000417" name="inst_DAA48C95" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -248,6 +243,11 @@
     <tile bgName="castle_tile_set_unfinished" x="384" y="480" w="96" h="96" xo="96" yo="288" id="10000464" name="inst_3A675F21" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="576" y="192" w="96" h="96" xo="96" yo="0" id="10000465" name="inst_F6712E59" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="672" y="288" w="96" h="96" xo="192" yo="96" id="10000466" name="inst_25F5A52C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="castle_tile_set_unfinished" x="1920" y="288" w="96" h="96" xo="96" yo="480" id="10000469" name="inst_E2211CF4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="castle_tile_set_unfinished" x="2016" y="384" w="96" h="96" xo="0" yo="0" id="10000470" name="inst_EEB8347F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="castle_tile_set_unfinished" x="2016" y="96" w="96" h="96" xo="0" yo="192" id="10000472" name="inst_F043677A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="castle_tile_set_unfinished" x="2016" y="192" w="96" h="96" xo="0" yo="288" id="10000473" name="inst_BB2F429D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="castle_tile_set_unfinished" x="2016" y="288" w="96" h="96" xo="96" yo="384" id="10000475" name="inst_12111371" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
