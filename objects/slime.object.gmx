@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = slime_idle_front 
+            <string>isAlive = true;
+sprite_index = slime_idle_front 
 image_speed = 1/3
 depth = 0
 </string>
@@ -53,30 +54,38 @@ depth = 0
             <string>if(sprite_index == slime_jump_right &amp;&amp; image_index == 6){
     sprite_index = slime_idle_right
     x+=96
+    image_speed = 1/3
 }
 if(sprite_index == slime_jump_left &amp;&amp; image_index == 6){
     sprite_index = slime_idle_left
     x-=96
+    image_speed = 1/3
 }
 if(sprite_index == slime_jump_up &amp;&amp; image_index == 6){
     sprite_index = slime_idle_back
     y-=96
+    image_speed = 1/3
 }
 if(sprite_index == slime_jump_down &amp;&amp; image_index == 6){
     sprite_index = slime_idle_front
     y+=96
+    image_speed = 1/3
 }
 if(sprite_index == slime_bounce_right &amp;&amp; image_index == 5){
     sprite_index = slime_idle_right
+    image_speed = 1/3
 }
 if(sprite_index == slime_bounce_left &amp;&amp; image_index == 5){
     sprite_index = slime_idle_left
+    image_speed = 1/3
 }
 if(sprite_index == slime_bounce_up &amp;&amp; image_index == 5){
     sprite_index = slime_idle_back
+    image_speed = 1/3
 }
 //if(sprite_index == slime_bounce_down &amp;&amp; image_index == 5){
 //    sprite_index = slime_idle_front
+//    image_speed = 1/3
 //}
 if(sprite_index == slime_push_left &amp;&amp; image_index == 6){
     var boxid = (instance_position(x-96, y, pushable_box));
@@ -84,6 +93,7 @@ if(sprite_index == slime_push_left &amp;&amp; image_index == 6){
     boxid.sprite_index = box
     boxid.x=x-96;
     sprite_index = slime_idle_left
+    image_speed = 1/3
 }
 if(sprite_index == slime_push_right &amp;&amp; image_index == 6){
     var boxid = (instance_position(x+96, y, pushable_box));
@@ -91,6 +101,7 @@ if(sprite_index == slime_push_right &amp;&amp; image_index == 6){
     boxid.sprite_index = box
     boxid.x=x+96;
     sprite_index = slime_idle_right
+    image_speed = 1/3
 }
 if(sprite_index == slime_push_up &amp;&amp; image_index == 6){
     var boxid = (instance_position(x, y-96, pushable_box));
@@ -98,6 +109,7 @@ if(sprite_index == slime_push_up &amp;&amp; image_index == 6){
     boxid.sprite_index = box
     boxid.y=y-96;
     sprite_index = slime_idle_back
+    image_speed = 1/3
 }
 if(sprite_index == slime_push_down &amp;&amp; image_index == 6){
     var boxid = (instance_position(x, y+96, pushable_box));
@@ -105,6 +117,7 @@ if(sprite_index == slime_push_down &amp;&amp; image_index == 6){
     boxid.sprite_index = box
     boxid.y=y+96;
     sprite_index = slime_idle_front
+    image_speed = 1/3
 }
 </string>
           </argument>
@@ -147,14 +160,18 @@ if(sprite_index == slime_push_down &amp;&amp; image_index == 6){
             <string>if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
+    image_speed = 1/2
     if(instance_position(x, y+96, all)==noone){
         sprite_index = slime_jump_down
     }
     if(instance_position(x, y+96, wall)!=noone){
         //sprite_index = slime_bounce_down
     }
-     if((instance_position(x, y+96, switch_button)!=noone)){
+    if((instance_position(x, y+96, switch_button)!=noone)){
         sprite_index = slime_jump_down
+    }
+    if((instance_position(x, y+96, pit)!=noone)){
+        sprite_index = slime_idle_front
     }
     if(instance_position(x, y+96, pushable_box)!=noone){
         if(instance_position(x, y+192, wall)!=noone || instance_position(x, y+192, pushable_box)!=noone){
@@ -191,14 +208,18 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
             <string>if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
+    image_speed = 1/2
     if(instance_position(x+96, y, all)==noone){
         sprite_index = slime_jump_right
     }
     if(instance_position(x+96, y, wall)!=noone){
         sprite_index = slime_bounce_right
     }
-     if((instance_position(x+96, y, switch_button)!=noone)){
+    if((instance_position(x+96, y, switch_button)!=noone)){
         sprite_index = slime_jump_right
+    }
+    if((instance_position(x+96, y, pit)!=noone)){
+        sprite_index = slime_idle_right
     }
     if(instance_position(x+96, y, pushable_box)!=noone){
         if(instance_position(x+192, y, wall)!=noone || instance_position(x+192, y, pushable_box)!=noone){
@@ -235,6 +256,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
             <string>if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
+    image_speed = 1/2
     if(instance_position(x, y-96, all)==noone){
         sprite_index = slime_jump_up
     }
@@ -243,6 +265,9 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     }
     if((instance_position(x, y-96, switch_button)!=noone)){
         sprite_index = slime_jump_up
+    }
+    if((instance_position(x, y-96, pit)!=noone)){
+        sprite_index = slime_idle_back
     }
     if(instance_position(x, y-96, pushable_box)!=noone){
         if(instance_position(x, y-192, wall)!=noone || instance_position(x, y-192, pushable_box)!=noone){
@@ -279,6 +304,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
             <string>if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
+    image_speed = 1/2
     if(instance_position(x-96, y, all)==noone){
         sprite_index = slime_jump_left
     }
@@ -287,6 +313,9 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     }
     if((instance_position(x-96, y, switch_button)!=noone)){
         sprite_index = slime_jump_left
+    }
+    if((instance_position(x-96, y, pit)!=noone)){
+        sprite_index = slime_idle_left
     }
     if(instance_position(x-96, y, pushable_box)!=noone){
         if(instance_position(x-192, y, wall)!=noone || instance_position(x-192, y, pushable_box)!=noone){
@@ -299,7 +328,6 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     }
 
 }
-
 </string>
           </argument>
         </arguments>
