@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 0
+depth = 1
 </string>
           </argument>
         </arguments>
@@ -49,17 +50,12 @@
           <argument>
             <kind>1</kind>
             <string>if(place_meeting(x, y, box) || place_meeting(x, y, slime)){
-    var i;
-    for (i = 0; i &lt; instance_number(pillar); i += 1){
-        if((instance_find(pillar,i)).pillar_num == switch_num){
-        global.pillar_down = true
-        }
-    }
+    global.pillar_down[switch_num] = true
     image_index = 1
 }
 else{
     image_index = 0
-    global.pillar_down = false
+    global.pillar_down[switch_num] = false
 }
 </string>
           </argument>

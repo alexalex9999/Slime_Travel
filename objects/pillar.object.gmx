@@ -25,13 +25,19 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pillar_down &amp;&amp; (sprite_index == pillar_locked || sprite_index == pillar_locking)){
+            <string>if(slime.y &gt; y){
+    depth = 1
+}
+else{
+    depth = -1
+}
+if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_locked || sprite_index == pillar_locking)){
     sprite_index = pillar_unlocking
 }
 if(sprite_index == pillar_unlocking &amp;&amp; image_index == 6){
     sprite_index = pillar_unlocked
 }
-if(!global.pillar_down &amp;&amp; (sprite_index == pillar_unlocked || sprite_index == pillar_unlocking)){
+if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_unlocked || sprite_index == pillar_unlocking)){
     sprite_index = pillar_locking
 }
 if(sprite_index == pillar_locking &amp;&amp; image_index == 6){

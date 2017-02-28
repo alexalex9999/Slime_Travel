@@ -10,7 +10,10 @@
   <persistent>0</persistent>
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
-  <code>global.pillar_down = false;</code>
+  <code>var i;
+for(i=0; i&lt;instance_number(switch_button); i++){
+    global.pillar_down[i] = false;
+}</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -56,9 +59,9 @@
     <instance objName="wall" x="480" y="448" name="inst_623AAD4C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="576" y="448" name="inst_ADBBCA39" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="672" y="448" name="inst_C3D8B4D7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pushable_box" x="288" y="576" name="inst_95793665" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="switch_button" x="1344" y="384" name="inst_D14D329B" locked="0" code="switch_num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pillar" x="1920" y="288" name="inst_410548D8" locked="0" code="pillar_num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pushable_box" x="1248" y="384" name="inst_95793665" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="switch_button" x="1344" y="384" name="inst_D14D329B" locked="0" code="switch_num = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pillar" x="1920" y="288" name="inst_410548D8" locked="0" code="pillar_num = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroon" x="2048" y="320" name="inst_2A009A16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="288" y="672" name="inst_7DF85F6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroon" x="2016" y="288" name="inst_EA06A7C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -245,9 +248,9 @@
     <tile bgName="castle_tile_set_unfinished" x="672" y="288" w="96" h="96" xo="192" yo="96" id="10000466" name="inst_25F5A52C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="1920" y="288" w="96" h="96" xo="96" yo="480" id="10000469" name="inst_E2211CF4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="castle_tile_set_unfinished" x="2016" y="384" w="96" h="96" xo="0" yo="0" id="10000470" name="inst_EEB8347F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="castle_tile_set_unfinished" x="2016" y="96" w="96" h="96" xo="0" yo="192" id="10000472" name="inst_F043677A" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="castle_tile_set_unfinished" x="2016" y="192" w="96" h="96" xo="0" yo="288" id="10000473" name="inst_BB2F429D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="castle_tile_set_unfinished" x="2016" y="288" w="96" h="96" xo="96" yo="384" id="10000475" name="inst_12111371" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="castle_tile_set_unfinished" x="2016" y="192" w="96" h="96" xo="0" yo="192" id="10000477" name="inst_2111491C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="castle_tile_set_unfinished" x="2016" y="96" w="96" h="96" xo="0" yo="96" id="10000478" name="inst_AA7D7B62" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="castle_tile_set_unfinished" x="2016" y="288" w="96" h="96" xo="96" yo="480" id="10000481" name="inst_84196D54" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>

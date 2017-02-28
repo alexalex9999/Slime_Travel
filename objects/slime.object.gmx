@@ -153,6 +153,9 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     if(instance_position(x, y+96, wall)!=noone){
         //sprite_index = slime_bounce_down
     }
+     if((instance_position(x, y+96, switch_button)!=noone)){
+        sprite_index = slime_jump_down
+    }
     if(instance_position(x, y+96, pushable_box)!=noone){
         if(instance_position(x, y+192, wall)!=noone || instance_position(x, y+192, pushable_box)!=noone){
             //sprite_index=slime_bounce_down
@@ -194,6 +197,9 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     if(instance_position(x+96, y, wall)!=noone){
         sprite_index = slime_bounce_right
     }
+     if((instance_position(x+96, y, switch_button)!=noone)){
+        sprite_index = slime_jump_right
+    }
     if(instance_position(x+96, y, pushable_box)!=noone){
         if(instance_position(x+192, y, wall)!=noone || instance_position(x+192, y, pushable_box)!=noone){
             sprite_index=slime_bounce_right
@@ -233,7 +239,10 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         sprite_index = slime_jump_up
     }
     if((instance_position(x, y-96, wall)!=noone)){
-            sprite_index = slime_bounce_up
+        sprite_index = slime_bounce_up
+    }
+    if((instance_position(x, y-96, switch_button)!=noone)){
+        sprite_index = slime_jump_up
     }
     if(instance_position(x, y-96, pushable_box)!=noone){
         if(instance_position(x, y-192, wall)!=noone || instance_position(x, y-192, pushable_box)!=noone){
