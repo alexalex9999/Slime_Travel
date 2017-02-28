@@ -174,7 +174,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         sprite_index = slime_idle_front
     }
     if(instance_position(x, y+96, pushable_box)!=noone){
-        if(instance_position(x, y+192, wall)!=noone || instance_position(x, y+192, pushable_box)!=noone){
+        if(instance_position(x, y+192, wall)!=noone || instance_position(x, y+192, pushable_box)!=noone || instance_position(x, y+192, pillar)!=noone){
             //sprite_index=slime_bounce_down
         }
         else{
@@ -222,7 +222,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         sprite_index = slime_idle_right
     }
     if(instance_position(x+96, y, pushable_box)!=noone){
-        if(instance_position(x+192, y, wall)!=noone || instance_position(x+192, y, pushable_box)!=noone){
+        if(instance_position(x+192, y, wall)!=noone || instance_position(x+192, y, pushable_box)!=noone  || instance_position(x+192, y, pillar)!=noone){
             sprite_index=slime_bounce_right
         }
         else{
@@ -270,7 +270,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         sprite_index = slime_idle_back
     }
     if(instance_position(x, y-96, pushable_box)!=noone){
-        if(instance_position(x, y-192, wall)!=noone || instance_position(x, y-192, pushable_box)!=noone){
+        if(instance_position(x, y-192, wall)!=noone || instance_position(x, y-192, pushable_box)!=noone  || instance_position(x, y-192, pillar)!=noone){
             sprite_index=slime_bounce_up
         }
         else{
@@ -318,7 +318,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         sprite_index = slime_idle_left
     }
     if(instance_position(x-96, y, pushable_box)!=noone){
-        if(instance_position(x-192, y, wall)!=noone || instance_position(x-192, y, pushable_box)!=noone){
+        if(instance_position(x-192, y, wall)!=noone || instance_position(x-192, y, pushable_box)!=noone || instance_position(x-192, y, pillar)!=noone){
             sprite_index=slime_bounce_left
         }
         else{

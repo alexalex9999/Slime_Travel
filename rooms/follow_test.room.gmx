@@ -141,6 +141,8 @@ for(i=0; i&lt;instance_number(switch_button); i++){
     <instance objName="wall" x="480" y="480" name="inst_2822CF18" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="384" y="480" name="inst_B784E41B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="288" y="480" name="inst_FE48ECBA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pit" x="1248" y="480" name="inst_7B1F9173" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pushable_box" x="1152" y="480" name="inst_C03EB3E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="castle_tile_set_unfinished" x="288" y="384" w="96" h="96" xo="0" yo="192" id="10000277" name="inst_0567CC6F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
