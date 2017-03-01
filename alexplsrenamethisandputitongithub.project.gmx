@@ -57,6 +57,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\castle_tile_set_unfinished</background>
+    <background>background\background_tile_set_v2</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -71,7 +72,7 @@
     <object>objects\text_box</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\thing_test</room>
+    <room>rooms\level_test</room>
     <room>rooms\follow_test</room>
     <room>rooms\reset_test</room>
     <room>rooms\wall_test</room>
