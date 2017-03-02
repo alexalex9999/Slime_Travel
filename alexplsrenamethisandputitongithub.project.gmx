@@ -54,6 +54,8 @@
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\empty_sprite</sprite>
     <sprite>sprites\sprite27</sprite>
+    <sprite>sprites\candle_sprite</sprite>
+    <sprite>sprites\candles_sprite</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\castle_tile_set_unfinished</background>

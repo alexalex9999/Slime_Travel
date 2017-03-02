@@ -51,7 +51,8 @@ depth = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(y){
+            <string>show_debug_message(y);
+switch(y){
 case 96: depth = -1
 break;
 case 192: depth = -2
