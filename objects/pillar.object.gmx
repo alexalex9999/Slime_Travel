@@ -8,6 +8,29 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>depth = -y
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -25,55 +48,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>switch(y){
-case 96: depth = -1
-break;
-case 192: depth = -2
-break;
-case 288: depth = -3
-break;
-case 384: depth = -4
-break;
-case 480: depth = -5
-break;
-case 576: depth = -6
-break;
-case 672: depth = -7
-break;
-case 768: depth = -8
-break;
-case 864: depth = -9
-break;
-case 960: depth = -10
-break;
-case 1056: depth = -11
-break;
-case 1152: depth = -12
-break;
-case 1248: depth = -13
-break;
-case 1344: depth = -14
-break;
-case 1440: depth = -15
-break;
-case 1536: depth = -16
-break;
-case 1632: depth = -17
-break;
-case 1728: depth = -18
-break;
-case 1824: depth = -19
-break;
-case 1920: depth = -20
-break;
-}
-if(slime.y &lt; y){
-    depth = -2
-}
-else{
-    depth = 2
-}
-if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_locked || sprite_index == pillar_locking)){
+            <string>if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_locked || sprite_index == pillar_locking)){
     sprite_index = pillar_unlocking;
     switch(image_index){
     case 1: 
@@ -106,6 +81,9 @@ if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_unlocked |
 }
 if(sprite_index == pillar_locking &amp;&amp; image_index == 6){
     sprite_index = pillar_locked
+}
+if(sprite_index == pillar_unlocked){
+    depth = 10000
 }
 </string>
           </argument>

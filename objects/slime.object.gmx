@@ -28,7 +28,6 @@
             <string>isAlive = true;
 sprite_index = slime_idle_front 
 image_speed = 1/3
-depth = 0
 </string>
           </argument>
         </arguments>
@@ -51,49 +50,7 @@ depth = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(y);
-switch(y){
-case 96: depth = -1
-break;
-case 192: depth = -2
-break;
-case 288: depth = -3
-break;
-case 384: depth = -4
-break;
-case 480: depth = -5
-break;
-case 576: depth = -6
-break;
-case 672: depth = -7
-break;
-case 768: depth = -8
-break;
-case 864: depth = -9
-break;
-case 960: depth = -10
-break;
-case 1056: depth = -11
-break;
-case 1152: depth = -12
-break;
-case 1248: depth = -13
-break;
-case 1344: depth = -14
-break;
-case 1440: depth = -15
-break;
-case 1536: depth = -16
-break;
-case 1632: depth = -17
-break;
-case 1728: depth = -18
-break;
-case 1824: depth = -19
-break;
-case 1920: depth = -20
-break;
-}
+            <string>depth = -y
 if(sprite_index == slime_jump_right &amp;&amp; image_index == 6){
     sprite_index = slime_idle_right
     x+=96
