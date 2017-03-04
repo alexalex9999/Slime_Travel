@@ -53,7 +53,7 @@
     </sprites>
     <sprite>sprites\spr_wall</sprite>
     <sprite>sprites\empty_sprite</sprite>
-    <sprite>sprites\sprite27</sprite>
+    <sprite>sprites\next_room</sprite>
     <sprite>sprites\candle_sprite</sprite>
     <sprite>sprites\candles_sprite</sprite>
   </sprites>
@@ -77,8 +77,8 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\reset_test</room>
-    <room>rooms\level_test</room>
     <room>rooms\follow_test</room>
+    <room>rooms\level_test</room>
     <room>rooms\wall_test</room>
   </rooms>
   <help>

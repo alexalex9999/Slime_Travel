@@ -62,16 +62,8 @@ for(i=0; i&lt;instance_number(switch_button) || i&lt;instance_number(pillar); i+
     <instance objName="pushable_box" x="1248" y="384" name="inst_95793665" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="switch_button" x="1344" y="384" name="inst_D14D329B" locked="0" code="switch_num = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="1920" y="288" name="inst_410548D8" locked="0" code="pillar_num = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="2048" y="320" name="inst_2A009A16" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="288" y="672" name="inst_7DF85F6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroom" x="2016" y="288" name="inst_EA06A7C8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="2016" y="320" name="inst_77A13EB6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="2016" y="352" name="inst_7210B1DF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="2016" y="288" name="inst_FF1D04B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="2080" y="352" name="inst_7B4F5CC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="2080" y="288" name="inst_5C06EC6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="2080" y="320" name="inst_86ADFAA0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="2016" y="384" name="inst_EC8EC7D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="slime" x="1440" y="480" name="inst_7B9ABC67" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="96" name="inst_4E46E88B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="192" y="96" name="inst_F78BBF44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

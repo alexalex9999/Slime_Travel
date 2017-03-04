@@ -77,7 +77,7 @@ pit_filled = false
           <argument>
             <kind>1</kind>
             <string>if(pit_filled == false){
-instance_deactivate_region(x, y, 96, 96, true, true)
+instance_deactivate_region(x, y, 95, 95, true, true)
 image_index = 0
 sprite_index = pit_animation
 }
