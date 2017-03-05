@@ -65,6 +65,12 @@
     <background>background\final_tileset</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\drawText.gml</script>
+  </scripts>
+  <shaders name="shaders">
+    <shader type="GLSLES">shaders\shader0.shader</shader>
+  </shaders>
   <objects name="objects">
     <object>objects\slime</object>
     <object>objects\wall</object>

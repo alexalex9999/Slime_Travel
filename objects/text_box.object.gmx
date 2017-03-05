@@ -25,7 +25,110 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//im gonna make it so each room can have text at the beginning of the room creation
+            <string>self.depth = -1000;
+sprite_index=blank_textbox;
+draw_set_alpha(1);
+draw_set_color(c_yellow);
+alarm[8]=10;
+global.chars_drawn=1;
+global.pagedone = 1;
+global.lines_drawn = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*/if(global.multipage){
+drawText(true,global.displaytext[],self.x,self.y,global.pageno);
+}else{
+drawText(false,global.displaytext[],self.x,self.y,global.pageno);
+}
+/*/
+
+global.chars_drawn++;
+if(global.chars_drawn&lt; string_length(global.currentstring))
+{
+alarm[8]=10;
+}else{
+global.pagedone++;
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+draw_sprite(blank_textbox, -1, x, y);
+
+if(global.multipage){
+
+    for(var u = 0; u&lt;global.pageno;u++;){
+
+        global.currentstring = global.displaytext[u];
+        drawText(true,global.currentstring,self.x,self.y);
+
+}
+}else{
+drawText(false,global.displaytext[0],self.x,self.y);
+}
+/*/
+if(global.multipage = true){
+    for(var i = 0;i&lt;=global.pageno;i++)
+        {
+            for(var j = 0; v&gt;0; j++)
+                {
+                
+                }
+        }
+}else{
+ 
+    textlength = string_length(global.displaytext[0]);
+    textstring = global.displaytext[0];
+    stringArray[textlength-1] = 0;
+    for(var i=textlength-1;i&gt;=0;i--){
+        stringArray[i] = string_char_at(textstring,i+1);
+    }
+    for(var k = 0; k&lt;textlength; k++){
+    draw_text(x,y,stringArray[k]);
+    }
+}
+
 </string>
           </argument>
         </arguments>
