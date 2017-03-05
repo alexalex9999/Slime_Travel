@@ -50,7 +50,7 @@ pit_filled = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sprite_index == pit_animation &amp;&amp; image_index == 5){
+            <string>if(sprite_index == pit_animation &amp;&amp; image_index == 4){
     sprite_index = pit_closed
     pit_filled = true
 }
