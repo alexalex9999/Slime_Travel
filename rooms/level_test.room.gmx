@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="384" vborder="384" hspeed="-1" vspeed="-1"/>
+    <view visible="0" objName="slime" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="384" vborder="384" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -110,7 +110,7 @@
     <instance objName="wall" x="192" y="0" name="inst_E7A653C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="288" y="0" name="inst_137FB6EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="slime" x="384" y="960" name="inst_8D67E77C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pillar" x="384" y="192" name="inst_C7E8DBD4" locked="0" code="pillar_num = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pillar" x="384" y="192" name="inst_C7E8DBD4" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num] = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="384" y="0" name="inst_5385531F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="288" y="288" name="inst_DDB1950B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="480" y="288" name="inst_30A69A70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -123,11 +123,11 @@
     <instance objName="pushable_box" x="576" y="576" name="inst_B486C8AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="288" y="672" name="inst_FF8F3234" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="480" y="672" name="inst_0C144E65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pushable_box" x="384" y="768" name="inst_1F439029" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pushable_box" x="384" y="672" name="inst_1F439029" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="576" y="768" name="inst_9D4F4657" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="192" y="768" name="inst_8674A6C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="switch_button" x="384" y="576" name="inst_421987AC" locked="0" code="switch_num = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pushable_box" x="384" y="672" name="inst_761BBE6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="switch_button" x="384" y="576" name="inst_421987AC" locked="0" code="switch_num = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pushable_box" x="384" y="768" name="inst_761BBE6F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="castle_tile_set_unfinished" x="384" y="384" w="96" h="96" xo="96" yo="480" id="10000694" name="inst_0CA1B608" depth="1000001" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

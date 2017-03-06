@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>self.depth = -1000;
 draw_set_alpha(1);
-draw_set_color(c_yellow);
+draw_set_color(c_white);
 alarm[8]=10;
 alarm[7]=5;
 global.chars_drawn=0;
@@ -70,7 +70,7 @@ drawText(false,global.displaytext[],self.x,self.y,global.pageno);
 if(global.chars_drawn&lt;= string_length(global.currentstring))
 {
 global.currenttext = string_copy(global.displaytext[global.pagedoneno], 0, global.chars_drawn);
-alarm[8]=10;
+alarm[8]=1.5;
 global.chars_drawn++;
 
 }else{
