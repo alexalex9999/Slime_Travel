@@ -122,8 +122,8 @@
     <object>objects\wall_candles</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\final_tileset_test</room>
     <room>rooms\reset_test</room>
+    <room>rooms\final_tileset_test</room>
     <room>rooms\follow_test</room>
     <room>rooms\level_test</room>
     <room>rooms\wall_test</room>
