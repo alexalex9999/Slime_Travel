@@ -3,6 +3,25 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
+  <datafiles number="1" name="datafiles">
+    <datafile>
+      <name>config.ini</name>
+      <exists>-1</exists>
+      <size>59</size>
+      <exportAction>2</exportAction>
+      <exportDir></exportDir>
+      <overwrite>0</overwrite>
+      <freeData>-1</freeData>
+      <removeEnd>0</removeEnd>
+      <store>0</store>
+      <ConfigOptions>
+        <Config name="Default">
+          <CopyToMask>9223372036854775807</CopyToMask>
+        </Config>
+      </ConfigOptions>
+      <filename>config.ini</filename>
+    </datafile>
+  </datafiles>
   <NewExtensions/>
   <sounds name="sound">
     <sound>sound\button_push_snd</sound>
@@ -58,15 +77,33 @@
     <sprite>sprites\empty_sprite</sprite>
     <sprite>sprites\next_room</sprite>
     <sprite>sprites\candle_sprite</sprite>
+    <sprite>sprites\textbox_arrow</sprite>
+    <sprites name="Textbox">
+      <sprite>sprites\textbox_phil_angry</sprite>
+      <sprite>sprites\textbox_phil_indifferent</sprite>
+      <sprite>sprites\textbox_phil_normal</sprite>
+      <sprite>sprites\textbox_phil_sad</sprite>
+      <sprite>sprites\textbox_phil_surprised</sprite>
+      <sprite>sprites\textbox_slime_indifferent</sprite>
+      <sprite>sprites\textbox_slime_angry</sprite>
+      <sprite>sprites\textbox_slime_sad</sprite>
+    </sprites>
     <sprite>sprites\candles_sprite</sprite>
+    <sprite>sprites\arrow_left</sprite>
+    <sprite>sprites\arrow_right</sprite>
+    <sprite>sprites\arrow_up</sprite>
+    <sprite>sprites\box_fall</sprite>
+    <sprite>sprites\sprite44</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\castle_tile_set_unfinished</background>
     <background>background\final_tileset</background>
+    <background>background\double_final_</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\drawText.gml</script>
+    <script>scripts\waitscript.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -85,11 +122,11 @@
     <object>objects\wall_candles</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\final_tileset_test</room>
     <room>rooms\reset_test</room>
     <room>rooms\follow_test</room>
     <room>rooms\level_test</room>
     <room>rooms\wall_test</room>
-    <room>rooms\final_tileset_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

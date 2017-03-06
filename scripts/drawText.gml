@@ -1,7 +1,4 @@
-pages = argument0;
-text = argument1;
-xpos = argument2;
-ypos = argument3;
+
 /*/if(pages = true){
     for(var l = 0;l<=pagenumber;l++)
         {
@@ -24,7 +21,11 @@ ypos = argument3;
         }
 }else{
 /*/
-    textlength = string_length(text);
+    
+   // for(var k = 0; k<textlength; k++){
+  //  draw_text(xpos,ypos,stringArray[k]);
+  //  }
+/*/  textlength = string_length(text);
     textstring = text;
     stringArray[textlength-1] = 0;
     width_drawn = 0;
@@ -32,10 +33,7 @@ ypos = argument3;
     for(var i=textlength-1;i>=0;i--){
         stringArray[i] = string_char_at(textstring,i+1);
     }
-   // for(var k = 0; k<textlength; k++){
-  //  draw_text(xpos,ypos,stringArray[k]);
-  //  }
-   draw_text(xpos,ypos,stringArray[0]);
+     draw_text(xpos,ypos,stringArray[0]);
    width_drawn+=string_width(stringArray[0]);
   for(var o = 1; o<global.chars_drawn;o++){
   if(stringArray[o]=='#'){

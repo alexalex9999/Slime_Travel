@@ -26,13 +26,17 @@
           <argument>
             <kind>1</kind>
             <string>self.depth = -1000;
-sprite_index=blank_textbox;
 draw_set_alpha(1);
 draw_set_color(c_yellow);
 alarm[8]=10;
-global.chars_drawn=1;
-global.pagedone = 1;
+alarm[7]=5;
+global.chars_drawn=0;
+global.pagedoneno = 0;
 global.lines_drawn = 0;
+global.messageno=0;
+global.currenttext = "";
+global.pagesdone = false;
+global.stringdone = false;
 </string>
           </argument>
         </arguments>
@@ -62,21 +66,28 @@ drawText(false,global.displaytext[],self.x,self.y,global.pageno);
 }
 /*/
 
-global.chars_drawn++;
-if(global.chars_drawn&lt; string_length(global.currentstring))
+
+if(global.chars_drawn&lt;= string_length(global.currentstring))
 {
+global.currenttext = string_copy(global.displaytext[global.pagedoneno], 0, global.chars_drawn);
 alarm[8]=10;
+global.chars_drawn++;
+
 }else{
-global.pagedone++;
+alarm[8]=-5;
+if(array_length_1d(global.displaytext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
+global.pagesdone = true;
+}else{
+global.pagesdone = false;
 }
 
-
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="2" enumb="7">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -93,20 +104,51 @@ global.pagedone++;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>global.currentstring = global.displaytext[global.pagedoneno];
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_sprite(global.textboxarray[global.pagedoneno], -1, 0, 0);
+draw_text_ext( self.x+ 5, self.y+5,global.currenttext, 12, 800);
+
+
+/*/
 draw_sprite(blank_textbox, -1, x, y);
-
+var currentpage = 0;
 if(global.multipage){
-
-    for(var u = 0; u&lt;global.pageno;u++;){
-
-        global.currentstring = global.displaytext[u];
+var currentpage = 0;
+var pagetotal = global.pageno;
+alarm[8] = 10;
+        global.currentstring = global.displaytext[currentpage];
         drawText(true,global.currentstring,self.x,self.y);
+        currentpage++;
 
-}
+
 }else{
-drawText(false,global.displaytext[0],self.x,self.y);
+global.currentstring = global.displaytext[currentpage];
+drawText(false,global.displaytext[currentpage],self.x,self.y);
 }
+/*/
 /*/
 if(global.multipage = true){
     for(var i = 0;i&lt;=global.pageno;i++)
@@ -129,6 +171,90 @@ if(global.multipage = true){
     }
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="13">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.chars_drawn&gt;=string_length(global.currentstring)){
+global.stringdone = true;
+}else{
+global.stringdone = false;
+}
+if(global.pagesdone){
+    instance_destroy()
+    global.stringdone = false;
+}else if(global.pagedoneno&lt;array_length_1d(global.displaytext)){
+    
+    if((array_length_1d(global.displaytext)-global.pagedoneno)==1){
+        if(global.stringdone){
+        instance_destroy();
+        }else{
+        global.stringdone = true;
+        global.pagesdone = true;
+        global.chars_drawn=string_length(global.currentstring);
+        }
+    }
+    
+    else if(array_length_1d(global.displaytext)-global.pagedoneno&gt;1){
+    if(global.stringdone){
+        global.currenttext = "";
+        global.pagedoneno+=1;
+        alarm[8] = 10;
+        global.chars_drawn = 0;
+        global.currentstring = global.displaytext[global.pagedoneno];
+     }
+     else{
+     global.chars_drawn=string_length(global.currentstring);
+     global.stringdone = true;
+     } 
+}
+
+}
+
+
+
+
+/*/
+if(global.pagesdone&amp;&amp;global.pagedoneno==array_length_1d(global.displaytext)&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
+instance_destroy();
+}else if(!global.pagesdone){
+if(!global.chars_drawn==string_length(global.currentstring)){
+global.chars_drawn=string_length(global.currentstring);
+}
+if(global.pagedoneno&lt;array_length_1d(global.displaytext)){
+if(global.pagedoneno-1==array_length_1d(global.displaytext)){
+global.currenttext = "";
+global.pagedoneno+=1;
+alarm[8] = 10;
+global.chars_drawn = 0;
+global.currentstring = global.displaytext[global.pagedoneno];
+}
+else{
+global.chars_drawn=string_length(global.currentstring);
+}
+}else{
+global.chars_drawn=string_length(global.currentstring);
+}
+}else if(!global.pagedoneno==array_length_1d(global.displaytext)){
+global.chars_drawn=string_length(global.currentstring);
 </string>
           </argument>
         </arguments>

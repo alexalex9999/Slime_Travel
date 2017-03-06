@@ -163,7 +163,11 @@ if(sprite_index == slime_push_down &amp;&amp; image_index == 6){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
+            <string>if(instance_exists(text_box)){
+
+}else{
+
+if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
@@ -188,6 +192,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         }
     }
 }
+}
 </string>
           </argument>
         </arguments>
@@ -210,7 +215,10 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
+            <string>if(instance_exists(text_box)){
+
+}else{
+if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
@@ -232,6 +240,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         (instance_position(x+96, y, pushable_box)).sprite_index = empty_sprite
         }
     }
+}
 }
 </string>
           </argument>
@@ -255,7 +264,10 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
+            <string>if(instance_exists(text_box)){
+
+}else{
+if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
@@ -277,6 +289,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         (instance_position(x, y-96, pushable_box)).sprite_index = empty_sprite
         }
     }
+}
 }
 </string>
           </argument>
@@ -300,7 +313,10 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
+            <string>if(instance_exists(text_box)){
+
+}else{
+if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
@@ -323,6 +339,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         }
     }
 
+}
 }
 </string>
           </argument>
