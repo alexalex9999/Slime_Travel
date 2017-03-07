@@ -124,10 +124,11 @@
   <rooms name="rooms">
     <rooms name="Actual Levels">
       <room>rooms\level_1</room>
+      <room>rooms\level_2_incomplete</room>
       <room>rooms\level_3</room>
       <room>rooms\level_4</room>
+      <room>rooms\level_5_incomplete</room>
       <room>rooms\boss_level_incomplete</room>
-      <room>rooms\level_2_incomplete</room>
     </rooms>
     <room>rooms\level_test</room>
     <room>rooms\final_tileset_test</room>
