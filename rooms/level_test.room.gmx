@@ -110,7 +110,7 @@
     <instance objName="wall" x="192" y="0" name="inst_E7A653C3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="288" y="0" name="inst_137FB6EB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="slime" x="384" y="960" name="inst_8D67E77C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pillar" x="384" y="192" name="inst_C7E8DBD4" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num] = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pillar" x="384" y="192" name="inst_C7E8DBD4" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num] = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="384" y="0" name="inst_5385531F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="288" y="288" name="inst_DDB1950B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="480" y="288" name="inst_30A69A70" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

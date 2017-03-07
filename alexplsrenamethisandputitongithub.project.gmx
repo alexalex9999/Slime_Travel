@@ -122,17 +122,18 @@
     <object>objects\wall_candles</object>
   </objects>
   <rooms name="rooms">
+    <rooms name="Actual Levels">
+      <room>rooms\level_1</room>
+      <room>rooms\level_3</room>
+      <room>rooms\level_4</room>
+      <room>rooms\boss_level_incomplete</room>
+      <room>rooms\level_2_incomplete</room>
+    </rooms>
     <room>rooms\level_test</room>
     <room>rooms\final_tileset_test</room>
     <room>rooms\reset_test</room>
     <room>rooms\follow_test</room>
     <room>rooms\wall_test</room>
-    <rooms name="Actual Levels">
-      <room>rooms\level_1</room>
-      <room>rooms\boss_level</room>
-      <room>rooms\levl</room>
-    </rooms>
-    <room>rooms\room7</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
