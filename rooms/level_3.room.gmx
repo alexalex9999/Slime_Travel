@@ -55,7 +55,7 @@
     <instance objName="pushable_box" x="288" y="480" name="inst_BCE3748B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="384" y="768" name="inst_B7C16F23" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num] = false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroom" x="384" y="960" name="inst_34BC0428" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="slime" x="0" y="672" name="inst_A2F38950" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="slime" x="-96" y="672" name="inst_A2F38950" locked="0" code="sprite_index = slime_jump_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="0" y="0" name="inst_2746A1A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="0" y="0" name="inst_2B515A1B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="0" name="inst_0103D206" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -146,6 +146,9 @@
     <instance objName="wall" x="576" y="864" name="inst_D7EEC71C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="480" y="864" name="inst_D94D386C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="480" y="768" name="inst_E26E0636" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="invisible_button" x="0" y="672" name="inst_7897FCF1" locked="0" code="slime_direction = slime_jump_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pillar" x="0" y="672" name="inst_30683891" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pit" x="-96" y="672" name="inst_BAD2A431" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="actual_final_tileset" x="96" y="0" w="96" h="96" xo="96" yo="96" id="10001677" name="inst_12C79C28" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
