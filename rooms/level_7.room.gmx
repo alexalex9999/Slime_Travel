@@ -11,7 +11,7 @@
   <colour>12632256</colour>
   <showcolour>-1</showcolour>
   <code></code>
-  <enableViews>0</enableViews>
+  <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
   <makerSettings>
@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="0" objName="slime" xview="0" yview="0" wview="1056" hview="960" xport="0" yport="0" wport="1056" hport="960" hborder="384" vborder="384" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="slime" xview="0" yview="0" wview="1056" hview="960" xport="0" yport="0" wport="1056" hport="960" hborder="384" vborder="384" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -139,7 +139,6 @@
     <instance objName="wall" x="384" y="480" name="inst_CBF34E1A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="672" y="288" name="inst_9880BA73" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="672" y="192" name="inst_1EC653DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_box" x="96" y="0" name="inst_5585DA5E" locked="0" code="global.multipage = true;&#xA;global.displaytext[0] = &quot;The Komodo dragon[4] (Varanus komodoensis), also known as the Komodo monitor, is a large species of lizard found in the Indonesian islands of Komodo, Rinca, Flores, Gili Motang, and Padar.[5] A member of the monitor lizard family Varanidae, it is the largest living species of lizard, growing to a maximum length of 3 metres (10 ft) in rare cases and weighing up to approximately 70 kilograms (150 lb).[5]&quot;;&#xA;global.textboxarray[0] = textbox_phil_angry;&#xA;global.displaytext[1] = &quot;Test Text 2&quot;;&#xA;global.textboxarray[1] = textbox_slime_angry;&#xA;global.displaytext[2] = &quot;Test Text 3&quot;;&#xA;global.textboxarray[2] = textbox_slime_sad;&#xA;global.displaytext[3] = &quot;Test Text 4&quot;;&#xA;global.textboxarray[3] = textbox_slime_angry;&#xA;global.pageno = 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="0" y="0" name="inst_57598929" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="288" y="384" name="inst_59E523A7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="480" y="384" name="inst_CC3119AF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -153,9 +152,13 @@
     <instance objName="pit" x="768" y="672" name="inst_12C8C633" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="768" y="768" name="inst_127A3DD2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroom" x="768" y="0" name="inst_D222C449" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="slime" x="0" y="576" name="inst_DB4C923C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="slime" x="-96" y="576" name="inst_DB4C923C" locked="0" code="sprite_index = slime_jump_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_candle" x="480" y="96" name="inst_09B03996" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_candle" x="288" y="96" name="inst_DB3CEA7D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pillar" x="0" y="576" name="inst_068E91C9" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="invisible_button" x="0" y="576" name="inst_E3FD765F" locked="0" code="slime_direction = slime_jump_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pit" x="-96" y="576" name="inst_29E97794" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pushable_box" x="384" y="288" name="inst_98411B5B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="actual_final_tileset" x="192" y="96" w="96" h="96" xo="480" yo="0" id="10003064" name="inst_337C9DB0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -330,6 +333,7 @@
     <tile bgName="actual_final_tileset" x="864" y="864" w="96" h="96" xo="480" yo="192" id="10003179" name="inst_F2ACD468" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="actual_final_tileset" x="672" y="0" w="96" h="96" xo="480" yo="288" id="10003181" name="inst_D383070C" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="actual_final_tileset" x="384" y="384" w="96" h="96" xo="384" yo="0" id="10003214" name="inst_962B782D" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="actual_final_tileset" x="96" y="0" w="96" h="96" xo="384" yo="288" id="10003408" name="inst_7C5C3994" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
   </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
