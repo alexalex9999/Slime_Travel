@@ -149,6 +149,7 @@
     <instance objName="invisible_button" x="0" y="672" name="inst_7897FCF1" locked="0" code="slime_direction = slime_jump_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="0" y="672" name="inst_30683891" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="-96" y="672" name="inst_BAD2A431" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="text_box" x="96" y="0" name="inst_A3FDB360" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="actual_final_tileset" x="96" y="0" w="96" h="96" xo="96" yo="96" id="10001677" name="inst_12C79C28" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
