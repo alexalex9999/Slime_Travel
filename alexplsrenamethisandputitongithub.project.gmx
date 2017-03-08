@@ -39,6 +39,7 @@
       <sound>sound\move_box_should_work</sound>
       <sound>sound\pillar_Should_be_working_now</sound>
     </sounds>
+    <sound>sound\sound11</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="characters">
@@ -125,6 +126,9 @@
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
   </shaders>
+  <fonts name="fonts">
+    <font>fonts\font0</font>
+  </fonts>
   <objects name="objects">
     <object>objects\slime</object>
     <object>objects\wall</object>
@@ -139,12 +143,13 @@
     <object>objects\wall_candle</object>
     <object>objects\wall_candles</object>
     <object>objects\auto_jump</object>
+    <object>objects\musical_chairs</object>
   </objects>
   <rooms name="rooms">
     <rooms name="Actual Levels">
+      <room>rooms\level_1</room>
       <room>rooms\level_9</room>
       <room>rooms\level_10_incomplete</room>
-      <room>rooms\level_1</room>
       <room>rooms\level_2</room>
       <room>rooms\level_3</room>
       <room>rooms\level_4_NOPE</room>
