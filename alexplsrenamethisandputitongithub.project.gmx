@@ -36,8 +36,8 @@
     <sound>sound\startup_snd</sound>
     <sound>sound\talking_snd</sound>
     <sounds name="not working">
-      <sound>sound\move_box_not_working</sound>
-      <sound>sound\pillar_not_working</sound>
+      <sound>sound\move_box_should_work</sound>
+      <sound>sound\pillar_Should_be_working_now</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -142,17 +142,17 @@
   </objects>
   <rooms name="rooms">
     <rooms name="Actual Levels">
+      <room>rooms\level_9</room>
+      <room>rooms\level_10_incomplete</room>
       <room>rooms\level_1</room>
       <room>rooms\level_2</room>
       <room>rooms\level_3</room>
-      <room>rooms\level_4</room>
+      <room>rooms\level_4_NOPE</room>
       <room>rooms\level_5</room>
-      <room>rooms\level_7</room>
+      <room>rooms\level_7_NOPE</room>
       <room>rooms\level_8_incomplete</room>
-      <room>rooms\level_6_incompete</room>
+      <room>rooms\level_6_NOPE</room>
       <room>rooms\boss_level_incomplete</room>
-      <room>rooms\level_10_incomplete</room>
-      <room>rooms\level_9_incomplete</room>
     </rooms>
     <room>rooms\final_tileset_test</room>
     <room>rooms\follow_test</room>
