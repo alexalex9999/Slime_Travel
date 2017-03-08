@@ -80,6 +80,7 @@ pit_filled = false
 instance_deactivate_region(x, y, 95, 95, true, true)
 image_index = 0
 sprite_index = pit_animation
+audio_play_sound(box_pit_snd, 1, false)
 }
 </string>
           </argument>
