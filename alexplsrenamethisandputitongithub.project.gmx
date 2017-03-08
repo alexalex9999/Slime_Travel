@@ -133,12 +133,12 @@
       <room>rooms\level_2</room>
       <room>rooms\level_3</room>
       <room>rooms\level_4</room>
-      <room>rooms\level_5_incomplete</room>
-      <room>rooms\level_6</room>
-      <room>rooms\level_7</room>
-      <room>rooms\level_8</room>
-      <room>rooms\level_9</room>
-      <room>rooms\level_10</room>
+      <room>rooms\level_5</room>
+      <room>rooms\level_6_incomplete</room>
+      <room>rooms\level_7_incomplete</room>
+      <room>rooms\level_8_incomplete</room>
+      <room>rooms\level_9_incomplete</room>
+      <room>rooms\level_10_incomplete</room>
       <room>rooms\boss_level_incomplete</room>
     </rooms>
     <room>rooms\final_tileset_test</room>

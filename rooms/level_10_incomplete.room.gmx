@@ -190,9 +190,10 @@
     <instance objName="pillar" x="480" y="960" name="inst_30E9C59D" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num]= false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="576" y="576" name="inst_EABC09AE" locked="0" code="pillar_num = 1;&#xA;global.pillar_down[pillar_num]= false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="864" y="480" name="inst_DFCFA5A0" locked="0" code="pillar_num = 2;&#xA;global.pillar_down[pillar_num]= false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_box" x="0" y="0" name="inst_2BAE387C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="text_box" x="0" y="0" name="inst_2BAE387C" locked="0" code="global.multipage = true;&#xA;global.displaytext[0] = &quot;The Komodo dragon[4] (Varanus komodoensis), also known as the Komodo monitor, is a large species of lizard found in the Indonesian islands of Komodo, Rinca, Flores, Gili Motang, and Padar.[5] A member of the monitor lizard family Varanidae, it is the largest living species of lizard, growing to a maximum length of 3 metres (10 ft) in rare cases and weighing up to approximately 70 kilograms (150 lb).[5]&quot;;&#xA;global.textboxarray[0] = textbox_phil_angry;&#xA;global.displaytext[1] = &quot;Test Text 2&quot;;&#xA;global.textboxarray[1] = textbox_slime_angry;&#xA;global.displaytext[2] = &quot;Test Text 3&quot;;&#xA;global.textboxarray[2] = textbox_slime_sad;&#xA;global.displaytext[3] = &quot;Test Text 4&quot;;&#xA;global.textboxarray[3] = textbox_slime_angry;&#xA;global.pageno = 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="96" y="0" name="inst_C350FF8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="192" y="672" name="inst_31B5416E" locked="0" code="pillar_num = 3;&#xA;global.pillar_down[pillar_num]= false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="door_nextroom" x="384" y="0" name="inst_BD3DE87F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
