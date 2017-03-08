@@ -44,6 +44,7 @@ if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_locked || s
     }
     }
     sprite_index = pillar_unlocking;
+    audio_play_sound(pillar_snd, 1, false)
 }
 if(sprite_index == pillar_unlocking &amp;&amp; image_index == 6){
     sprite_index = pillar_unlocked
@@ -65,6 +66,7 @@ if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_unlocked |
     }
     }
     sprite_index = pillar_locking
+    audio_play_sound(pillar_snd, 1, false)
 }
 if(sprite_index == pillar_locking &amp;&amp; image_index == 6){
     sprite_index = pillar_locked
