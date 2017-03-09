@@ -29,22 +29,17 @@
       <sound>sound\slime_land_snd</sound>
       <sound>sound\bonk_snd</sound>
       <sound>sound\box_pit_snd</sound>
-      <sound>sound\level_change_snd</sound>
-      <sound>sound\move_box_snd</sound>
-      <sound>sound\pillar_snd</sound>
     </sounds>
+    <sound>sound\level_change_snd</sound>
     <sound>sound\phone_snd</sound>
     <sound>sound\start_button_snd</sound>
     <sound>sound\startup_snd</sound>
     <sound>sound\talking_snd</sound>
-<<<<<<< HEAD
     <sounds name="not working">
       <sound>sound\move_box_should_work</sound>
       <sound>sound\pillar_Should_be_working_now</sound>
     </sounds>
     <sound>sound\sound11</sound>
-=======
->>>>>>> origin/master
   </sounds>
   <sprites name="sprites">
     <sprites name="characters">

@@ -243,7 +243,6 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         else{
         sprite_index = slime_push_down;
         (instance_position(x, y+96, pushable_box)).sprite_index = empty_sprite
-        audio_play_sound(move_box_snd, 1, false)
         }
     }
 }
@@ -295,7 +294,6 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         else{
         sprite_index = slime_push_right;
         (instance_position(x+96, y, pushable_box)).sprite_index = empty_sprite
-        audio_play_sound(move_box_snd, 1, false)
         }
     }
 }
@@ -347,7 +345,6 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         else{
         sprite_index = slime_push_up;
         (instance_position(x, y-96, pushable_box)).sprite_index = empty_sprite
-        audio_play_sound(move_box_snd, 1, false)
         }
     }
 }
@@ -399,7 +396,6 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         else{
         sprite_index = slime_push_left;
         (instance_position(x-96, y, pushable_box)).sprite_index = empty_sprite
-        audio_play_sound(move_box_snd, 1, false)
         }
     }
 
