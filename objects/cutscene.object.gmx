@@ -50,11 +50,13 @@
             <kind>1</kind>
             <string>if(image_index == 6 &amp;&amp; !global.cutscene_done){
     image_speed = 0;
-    global.cutscene_done = true;
+    
 }
 if(image_index == 12){
+    
     room_goto_next();
     global.cutscene_done = false;
+    
 }
 </string>
           </argument>
