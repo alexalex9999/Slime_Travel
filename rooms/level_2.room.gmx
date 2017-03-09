@@ -41,7 +41,7 @@
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
   </backgrounds>
   <views>
-    <view visible="-1" objName="slime" xview="0" yview="96" wview="1280" hview="720" xport="0" yport="0" wport="1280" hport="720" hborder="384" vborder="384" hspeed="-1" vspeed="-1"/>
+    <view visible="-1" objName="smooth_scrolling" xview="0" yview="192" wview="1280" hview="720" xport="0" yport="0" wport="1280" hport="720" hborder="384" vborder="384" hspeed="8" vspeed="8"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
@@ -270,7 +270,7 @@
     <instance objName="wall" x="1152" y="480" name="inst_590FC29C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="864" y="672" name="inst_3E673FB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="0" y="0" name="inst_67C70356" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="door_nextroom" x="1248" y="576" name="inst_511B9CDC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="door_nextroom" x="1248" y="576" name="inst_511B9CDC" locked="0" code="sprite_index = arrow_right;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="0" y="480" name="inst_E0D60329" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="480" name="inst_AE6BE9B1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="192" y="480" name="inst_79130827" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

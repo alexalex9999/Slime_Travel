@@ -51,7 +51,9 @@ instance_destroy()
             <kind>1</kind>
             <string>if(place_meeting(x, y, slime)){
     slime.sprite_index = slime_direction;
+    slime.mask_index = no_mask;
     slime.image_speed = 1/2;
+    slime.image_index = 0;
     alarm[0] = 10;
 }
 </string>
