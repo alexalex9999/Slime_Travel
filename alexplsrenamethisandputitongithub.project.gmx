@@ -182,8 +182,7 @@
     <object>objects\cutscene</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\level_1</room>
-    <room>rooms\cutscene_1_room</room>
+    <room>rooms\level_9</room>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_room_2</room>
       <room>rooms\cutscene_room_3</room>
@@ -198,17 +197,18 @@
       <room>rooms\cutscene_room_12</room>
       <room>rooms\cutscene_room_14</room>
       <room>rooms\cutscene_room_13</room>
+      <room>rooms\cutscene_1_room</room>
     </rooms>
     <rooms name="Actual Levels">
-      <room>rooms\level_9</room>
-      <room>rooms\level_10_incomplete</room>
+      <room>rooms\level_1</room>
       <room>rooms\level_2</room>
       <room>rooms\level_3</room>
       <room>rooms\level_4_NOPE</room>
       <room>rooms\level_5</room>
-      <room>rooms\level_7_NOPE</room>
-      <room>rooms\level_8_incomplete</room>
       <room>rooms\level_6_NOPE</room>
+      <room>rooms\level_7</room>
+      <room>rooms\level_8_incomplete</room>
+      <room>rooms\level_10_incomplete</room>
       <room>rooms\boss_level_incomplete</room>
     </rooms>
     <room>rooms\follow_test</room>
