@@ -280,7 +280,7 @@
     <instance objName="switch_button" x="576" y="480" name="inst_502FB052" locked="0" code="switch_num = 3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="switch_button" x="96" y="2016" name="inst_3DF0BC8A" locked="0" code="switch_num = 4;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="576" y="2112" name="inst_DCE31D26" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pit" x="576" y="2208" name="inst_0DEA6F69" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pit" x="576" y="2208" name="inst_0DEA6F69" locked="0" code="sprite_index = empty_sprite;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="576" y="2112" name="inst_66DD941A" locked="0" code="slime_direction = slime_jump_up;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

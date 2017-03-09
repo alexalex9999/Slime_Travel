@@ -130,7 +130,7 @@
     <instance objName="auto_jump" x="576" y="0" name="inst_3D07AE5A" locked="0" code="slime_direction = slime_jump_down&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="576" y="96" name="inst_4B0289E7" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="576" y="96" name="inst_611D4C1F" locked="0" code="slime_direction = slime_jump_down&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pit" x="576" y="-96" name="inst_ECBBC5B5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pit" x="576" y="-96" name="inst_ECBBC5B5" locked="0" code="sprite_index = empty_sprite;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="0" name="inst_2E09405C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="96" name="inst_163CB73E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="0" y="0" name="inst_297D02A3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

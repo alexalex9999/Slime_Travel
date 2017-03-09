@@ -2,10 +2,10 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>sound\audio\pillar_snd.wav</origname>
+  <origname>sound\audio\move_box_snd.wav</origname>
   <effects>0</effects>
   <volume>
-    <volume>0.58</volume>
+    <volume>1</volume>
   </volume>
   <pan>0</pan>
   <bitRates>
@@ -21,9 +21,9 @@
     <bitDepth>16</bitDepth>
   </bitDepths>
   <preload>-1</preload>
-  <data>pillar_snd.wav</data>
-  <compressed>0</compressed>
-  <streamed>0</streamed>
+  <data>move_box_snd.wav</data>
+  <compressed>1</compressed>
+  <streamed>1</streamed>
   <uncompressOnLoad>0</uncompressOnLoad>
   <audioGroup>0</audioGroup>
 </sound>

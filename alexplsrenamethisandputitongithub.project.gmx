@@ -29,16 +29,14 @@
       <sound>sound\slime_land_snd</sound>
       <sound>sound\bonk_snd</sound>
       <sound>sound\box_pit_snd</sound>
+      <sound>sound\move_box_snd</sound>
     </sounds>
     <sound>sound\level_change_snd</sound>
     <sound>sound\phone_snd</sound>
     <sound>sound\start_button_snd</sound>
     <sound>sound\startup_snd</sound>
     <sound>sound\talking_snd</sound>
-    <sounds name="not working">
-      <sound>sound\move_box_should_work</sound>
-      <sound>sound\pillar_Should_be_working_now</sound>
-    </sounds>
+    <sound>sound\pillar_snd</sound>
     <sound>sound\sound11</sound>
   </sounds>
   <sprites name="sprites">
@@ -182,7 +180,6 @@
     <object>objects\cutscene</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\level_9</room>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_room_2</room>
       <room>rooms\cutscene_room_3</room>
@@ -203,11 +200,12 @@
       <room>rooms\level_1</room>
       <room>rooms\level_2</room>
       <room>rooms\level_3</room>
-      <room>rooms\level_4_NOPE</room>
+      <room>rooms\level_4</room>
       <room>rooms\level_5</room>
-      <room>rooms\level_6_NOPE</room>
+      <room>rooms\level_6</room>
       <room>rooms\level_7</room>
       <room>rooms\level_8_incomplete</room>
+      <room>rooms\level_9</room>
       <room>rooms\level_10_incomplete</room>
       <room>rooms\boss_level_incomplete</room>
     </rooms>
