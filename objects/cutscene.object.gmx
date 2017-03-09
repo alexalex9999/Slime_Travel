@@ -50,7 +50,6 @@
             <kind>1</kind>
             <string>if(image_index == 6 &amp;&amp; !global.cutscene_done){
     image_speed = 0;
-    
 }
 if(image_index == 12){
     

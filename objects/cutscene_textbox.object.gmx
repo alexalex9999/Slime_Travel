@@ -71,7 +71,7 @@ drawText(false,global.displaytext[],self.x,self.y,global.pageno);
 if(global.chars_drawn&lt;= string_length(global.currentstring))
 {
 global.currenttext = string_copy(global.cutscenetext, 0, global.chars_drawn);
-alarm[8]=2.5;
+alarm[8]=1.5;
 audio_play_sound(talking_snd, 1, false);
 global.chars_drawn++;
 
@@ -130,8 +130,8 @@ global.cutscene_done = true;
             <string>var ypos = 0;
 var xpos = 0;
 
-draw_sprite(test_cutscene_texbox,1,70,312);
-draw_text_ext_transformed(75, 332,global.currenttext, 12,424,1,1,0);
+draw_sprite(test_cutscene_texbox,1,360,562);
+draw_text_ext_transformed(365, 568,global.currenttext, 36,565,1,1,0);
 
 
 /*/

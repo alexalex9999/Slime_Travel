@@ -173,8 +173,8 @@
     <object>objects\pit</object>
     <object>objects\Reset_Button</object>
     <object>objects\door_nextroom</object>
-    <object>objects\text_box</object>
     <object>objects\cutscene_textbox</object>
+    <object>objects\text_box</object>
     <object>objects\wall_candle</object>
     <object>objects\wall_candles</object>
     <object>objects\auto_jump</object>
@@ -182,9 +182,9 @@
     <object>objects\cutscene</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\final_tileset_test</room>
+    <room>rooms\level_1</room>
+    <room>rooms\cutscene_1_room</room>
     <rooms name="Cutscenes">
-      <room>rooms\cutscene_1_room</room>
       <room>rooms\cutscene_room_2</room>
       <room>rooms\cutscene_room_3</room>
       <room>rooms\cutscene_room_4</room>
@@ -196,11 +196,10 @@
       <room>rooms\cutscene_room_10</room>
       <room>rooms\cutscene_room_11</room>
       <room>rooms\cutscene_room_12</room>
-      <room>rooms\cutscene_room_13</room>
       <room>rooms\cutscene_room_14</room>
+      <room>rooms\cutscene_room_13</room>
     </rooms>
     <rooms name="Actual Levels">
-      <room>rooms\level_1</room>
       <room>rooms\level_9</room>
       <room>rooms\level_10_incomplete</room>
       <room>rooms\level_2</room>
@@ -215,6 +214,7 @@
     <room>rooms\follow_test</room>
     <room>rooms\reset_test</room>
     <room>rooms\level_test</room>
+    <room>rooms\final_tileset_test</room>
     <room>rooms\wall_test</room>
   </rooms>
   <help>
