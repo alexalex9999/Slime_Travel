@@ -197,9 +197,9 @@
     <object>objects\titletext</object>
   </objects>
   <rooms name="rooms">
-<<<<<<< HEAD
+
     <room>rooms\boss_level_incomplete</room>
-=======
+
     <rooms name="Actual Levels">
       <room>rooms\level_1</room>
       <room>rooms\level_2</room>
@@ -213,7 +213,7 @@
       <room>rooms\level_10_incomplete</room>
       <room>rooms\boss_level_incomplete</room>
     </rooms>
->>>>>>> origin/master
+
     <room>rooms\Start_Room</room>
     <room>rooms\cutscene_1_room</room>
     <rooms name="Cutscenes">
@@ -231,7 +231,7 @@
       <room>rooms\cutscene_room_13</room>
       <room>rooms\cutscene_room_14</room>
     </rooms>
-<<<<<<< HEAD
+
     <rooms name="Actual Levels">
       <room>rooms\level_1</room>
       <room>rooms\level_2</room>
@@ -244,8 +244,8 @@
       <room>rooms\level_9</room>
       <room>rooms\level_10_incomplete</room>
     </rooms>
-=======
->>>>>>> origin/master
+
+
     <room>rooms\follow_test</room>
     <room>rooms\reset_test</room>
     <room>rooms\level_test</room>
