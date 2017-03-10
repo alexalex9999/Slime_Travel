@@ -12,7 +12,9 @@
   <showcolour>-1</showcolour>
   <code>global.reset_times = 0; 
 global.philspeech = "youre a dumbus";
-global.help_needed =false;</code>
+global.help_needed =false;
+global.solutions[] = array(3,0,0,0,0,0,0,0,);
+global.solution_length = 8;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

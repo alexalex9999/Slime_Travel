@@ -77,11 +77,12 @@ pit_filled = false
           <argument>
             <kind>1</kind>
             <string>if(pit_filled == false){
-instance_deactivate_region(x, y, 95, 95, true, true)
+instance_deactivate_object(instance_position(x, y, pushable_box))
 image_index = 0
 sprite_index = pit_animation
 audio_play_sound(box_pit_snd, 1, false)
 }
+global.done_moving = true;
 </string>
           </argument>
         </arguments>
