@@ -197,26 +197,19 @@
     <object>objects\titletext</object>
   </objects>
   <rooms name="rooms">
-<<<<<<< HEAD
     <room>rooms\level_1</room>
-    <room>rooms\level_6_nosolution</room>
-    <room>rooms\level_5_nosolution</room>
-=======
-
+    <room>rooms\level_8_nosolution</room>
     <room>rooms\boss_level_incomplete</room>
-
->>>>>>> origin/master
     <rooms name="Actual Levels">
       <room>rooms\level_2</room>
       <room>rooms\level_3</room>
       <room>rooms\level_4</room>
-      <room>rooms\level_7_nosolution</room>
-      <room>rooms\level_8_nosolution</room>
+      <room>rooms\level_5</room>
+      <room>rooms\level_6</room>
+      <room>rooms\level_7</room>
       <room>rooms\level_9_nosolution</room>
       <room>rooms\level_10_nosolution</room>
-      <room>rooms\boss_level_incomplete</room>
     </rooms>
-
     <room>rooms\Start_Room</room>
     <room>rooms\cutscene_1_room</room>
     <rooms name="Cutscenes">
@@ -234,21 +227,6 @@
       <room>rooms\cutscene_room_13</room>
       <room>rooms\cutscene_room_14</room>
     </rooms>
-
-    <rooms name="Actual Levels">
-      <room>rooms\level_1</room>
-      <room>rooms\level_2</room>
-      <room>rooms\level_3</room>
-      <room>rooms\level_4</room>
-      <room>rooms\level_5</room>
-      <room>rooms\level_6</room>
-      <room>rooms\level_8</room>
-      <room>rooms\level_7</room>
-      <room>rooms\level_9</room>
-      <room>rooms\level_10_incomplete</room>
-    </rooms>
-
-
     <room>rooms\follow_test</room>
     <room>rooms\reset_test</room>
     <room>rooms\level_test</room>
