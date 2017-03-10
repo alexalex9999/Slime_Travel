@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.reset_times = 0; 
+  <code>sound_fade(openingsound,0,5);
+global.reset_times = 0; 
 global.philspeech = "youre a dumbus";
 global.help_needed =false;
 global.solutions[] = array(3,0,0,0,0,0,0,0,);
@@ -130,7 +131,7 @@ global.solution_length = 8;</code>
     <instance objName="wall" x="1248" y="384" name="inst_15FCB0F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1152" y="672" name="inst_42719FA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1248" y="672" name="inst_0BD80DE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_box" x="0" y="0" name="inst_E45AA23F" locked="0" code="global.speaking[0] = &quot;slime&quot;;&#xA;global.displaytext[0] = &quot;Gah….. What did Phil do this time….? I don’t recognize this place.&quot;;&#xA;global.textboxarray[0] = slime_angry;&#xA;&#xA;global.speaking[1] = &quot;slime&quot;;&#xA;global.displaytext[1] = &quot;I should be chasing that thief, not fooling around!&quot;;&#xA;global.textboxarray[1] = slime_angry;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="text_box" x="0" y="0" name="inst_E45AA23F" locked="0" code="global.speaking[0] = &quot;slime&quot;;&#xA;global.displaytext[0] = &quot;Gah….. What did Phil do this time….? I don’t recognize this place. [Press space]&quot;;&#xA;global.textboxarray[0] = slime_angry;&#xA;&#xA;global.speaking[1] = &quot;slime&quot;;&#xA;global.displaytext[1] = &quot;I should be chasing that thief, not fooling around!&quot;;&#xA;global.textboxarray[1] = slime_angry;&#xA;&#xA;global.speaking[2] = &quot;sean&quot;;&#xA;global.displaytext[2] = &quot;Ring Ring Ring&quot;;&#xA;global.textboxarray[2] = blank_textbox;&#xA;&#xA;global.speaking[3] = &quot;phil&quot;;&#xA;global.displaytext[3] = &quot;Hey hey hey, howya doing Slime ol pal? Did you go back in slime?&quot;;&#xA;global.textboxarray[3] = phil_happy;&#xA;&#xA;global.speaking[4] = &quot;slime&quot;;&#xA;global.displaytext[4] = &quot;Phil, I am done with your shenanigans.&quot;;&#xA;global.textboxarray[4] = slime_indifferent;&#xA;&#xA;global.speaking[5] = &quot;slime&quot;;&#xA;global.displaytext[5] = &quot;Anyways, it seems it was successful. #I have been transported to a castle,&quot;;&#xA;global.textboxarray[5] = slime_angry;&#xA;&#xA;global.speaking[6] = &quot;slime&quot;;&#xA;global.displaytext[6] = &quot;the architecture looks around the time of the Great Slime Wars.&quot;;&#xA;global.textboxarray[6] = slime_angry;&#xA;  &#xA;global.speaking[7] = &quot;phil&quot;;&#xA;global.displaytext[7] = &quot;Great. Why don't you go and take a look around with the &lt;arrow keys&gt;?&quot;;&#xA;global.textboxarray[7] = phil_happy;&#xA;&#xA;global.speaking[8] = &quot;slime&quot;;&#xA;global.displaytext[8] = &quot;All right, its slime time!&quot;&#xA;global.textboxarray[8] = slime_giggle;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="final_tileset" x="96" y="0" w="96" h="96" xo="96" yo="96" id="10001167" name="inst_FA1C948B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
