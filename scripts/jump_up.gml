@@ -2,7 +2,7 @@ if(slime.sprite_index == slime_idle_front || slime.sprite_index == slime_idle_ba
 slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right){
     slime.image_index = 0
     slime.image_speed = 1/2
-    if(instance_position(slime.x, slime.y-96, all)==noone || (instance_position(slime.x, slime.y-96, invisible_button)!=noone) || (instance_position(slime.x, slime.y-96, switch_button)!=noone) || instance_position(slime.x, slime.y-96, door_nextroom)){
+    if(instance_position(slime.x, slime.y-96, all)==noone || (instance_position(slime.x, slime.y-96, invisible_button)!=noone) || ((instance_position(slime.x, slime.y-96, switch_button)!=noone) && (instance_position(slime.x, slime.y-96, pushable_box)==noone)) || instance_position(slime.x, slime.y-96, door_nextroom)){
         slime.sprite_index = slime_jump_up
         return true
     }
