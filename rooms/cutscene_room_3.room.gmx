@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="cutscene" x="360" y="72" name="inst_D817085B" locked="0" code="sprite_index = cutscene_3&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cutscene_textbox" x="0" y="64" name="inst_BE32CF5A" locked="0" code="global.cutscenetext = &quot;Test slime had a good test time.&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cutscene_textbox" x="0" y="64" name="inst_BE32CF5A" locked="0" code="global.cutscenetext[0] = &quot;'Nobel Prize winning scientist Prof. Phil has designed the world's first operational time machine.&quot;;&#xA;global.cutscenetext[1] = &quot;Here we are at the stage.'&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

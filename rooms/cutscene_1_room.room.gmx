@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="cutscene" x="360" y="72" name="inst_D817085B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cutscene_textbox" x="0" y="32" name="inst_3DC4DA65" locked="0" code="global.cutscenetext = &quot;Test slime had a good test time.&quot;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cutscene_textbox" x="0" y="0" name="inst_1D3470EA" locked="0" code="global.cutscenetext[0] = &quot;On a peaceful autumn day… #A slime wakes up to the morning news.&quot;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

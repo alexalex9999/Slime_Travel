@@ -25,9 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.depth = -1000;
+            <string>global.cutscenetext[] = "";
+self.depth = -1000;
 draw_set_alpha(1);
 draw_set_color(c_white);
+alarm[4]=-1;
 alarm[8]=5;
 alarm[7]=2;
 global.chars_drawn=0;
@@ -35,9 +37,11 @@ global.pagedoneno = 0;
 global.lines_drawn = 0;
 global.messageno=0;
 global.currenttext= "";
+global.currentstring = "";
 global.pagesdone = false;
 global.stringdone = false;
 draw_set_font(minipixel);
+global.cutsceneTextNo = 0;
 </string>
           </argument>
         </arguments>
@@ -70,14 +74,14 @@ drawText(false,global.displaytext[],self.x,self.y,global.pageno);
 
 if(global.chars_drawn&lt;= string_length(global.currentstring))
 {
-global.currenttext = string_copy(global.cutscenetext, 0, global.chars_drawn);
-alarm[8]=1.5;
+global.currenttext = string_copy(global.cutscenetext[global.cutsceneTextNo], 0, global.chars_drawn);
+alarm[8]=1;
 audio_play_sound(talking_snd, 1, false);
 global.chars_drawn++;
 
 }else{
 alarm[8]=-5;
-global.cutscene_done = true;
+alarm[4] = 30;
 
 
 }
@@ -103,7 +107,50 @@ global.cutscene_done = true;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.currentstring = global.cutscenetext;
+            <string>
+global.currentstring = global.cutscenetext[global.cutsceneTextNo];
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+global.currenttext = "";
+global.cutsceneTextNo++;
+if(global.cutsceneTextNo&lt;array_length_1d(global.cutscenetext)){
+if(array_length_1d(global.cutscenetext)==1){
+global.cutscene_done = true;
+instance_destroy();
+}else{
+
+global.chars_drawn = 0;
+alarm[8] = 10;
+global.currentstring = global.cutscenetext[global.cutsceneTextNo];
+}
+
+}else{
+global.cutscene_done = true;
+instance_destroy();
+}
+
 
 </string>
           </argument>
@@ -131,8 +178,7 @@ global.cutscene_done = true;
 var xpos = 0;
 
 draw_sprite(test_cutscene_texbox,1,360,562);
-draw_text_ext_transformed(365, 568,global.currenttext, 36,565,1,1,0);
-
+draw_text_ext_transformed(365, 538,global.currenttext, 36,565,1,1,0);
 
 /*/
 draw_sprite(blank_textbox, -1, x, y);

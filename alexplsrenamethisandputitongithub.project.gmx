@@ -143,6 +143,12 @@
     <sprite>sprites\test_cutscene_texbox</sprite>
     <sprite>sprites\blank</sprite>
     <sprite>sprites\no_mask</sprite>
+    <sprite>sprites\sprite77</sprite>
+    <sprite>sprites\space_button</sprite>
+    <sprite>sprites\r_button</sprite>
+    <sprite>sprites\arrowkeys_button</sprite>
+    <sprite>sprites\sprite81</sprite>
+    <sprite>sprites\sprite82</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\castle_tile_set_unfinished</background>
@@ -155,6 +161,7 @@
     <script>scripts\waitscript.gml</script>
     <script>scripts\script2.gml</script>
     <script>scripts\script3.gml</script>
+    <script>scripts\reset_counter.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -180,10 +187,12 @@
     <object>objects\wall_candles</object>
     <object>objects\auto_jump</object>
     <object>objects\cutscene</object>
+    <object>objects\space_bar_button</object>
+    <object>objects\title</object>
+    <object>objects\titletext</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\boss_level_incomplete</room>
-    <room>rooms\level_10_incomplete</room>
+    <room>rooms\Start_Room</room>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_1_room</room>
       <room>rooms\cutscene_room_2</room>
@@ -210,6 +219,8 @@
       <room>rooms\level_8</room>
       <room>rooms\level_7</room>
       <room>rooms\level_9</room>
+      <room>rooms\boss_level_incomplete</room>
+      <room>rooms\level_10_incomplete</room>
     </rooms>
     <room>rooms\follow_test</room>
     <room>rooms\reset_test</room>

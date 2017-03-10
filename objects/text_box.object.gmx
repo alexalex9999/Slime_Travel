@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>self.depth = -1000;
+            <string>
+self.depth = -1000;
 draw_set_alpha(1);
 draw_set_color(c_white);
 alarm[8]=10;
@@ -147,10 +148,12 @@ if(room_height&gt;720){
 ypos = room_height - 720;
 }
 
-draw_sprite(global.textboxarray[global.pagedoneno], -1, 0, ypos);
-draw_text_ext_transformed(xpos+15+global.speakshift, 500+ypos,global.currenttext, 50,1220-global.speakshift,1,1,0);
-
-
+draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
+if(!global.help_needed){
+draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
+}else{
+draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.philspeech, 50,1220-global.speakshift,1,1,0);
+}
 /*/
 draw_sprite(blank_textbox, -1, x, y);
 var currentpage = 0;

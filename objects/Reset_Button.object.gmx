@@ -151,7 +151,8 @@ audio_pause_sound(sound11)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>audio_play_sound(level_change_snd,1,false)
+            <string>reset_counter();
+audio_play_sound(level_change_snd,1,false)
 alarm[2] = 2
 </string>
           </argument>
