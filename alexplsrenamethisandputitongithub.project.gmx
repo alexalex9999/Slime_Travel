@@ -159,9 +159,13 @@
   <scripts name="scripts">
     <script>scripts\drawText.gml</script>
     <script>scripts\waitscript.gml</script>
-    <script>scripts\script2.gml</script>
-    <script>scripts\script3.gml</script>
     <script>scripts\reset_counter.gml</script>
+    <script>scripts\solutions_script.gml</script>
+    <script>scripts\array.gml</script>
+    <script>scripts\jump_down.gml</script>
+    <script>scripts\jump_up.gml</script>
+    <script>scripts\jump_right.gml</script>
+    <script>scripts\jump_left.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -192,6 +196,19 @@
     <object>objects\titletext</object>
   </objects>
   <rooms name="rooms">
+    <rooms name="Actual Levels">
+      <room>rooms\level_1</room>
+      <room>rooms\level_2</room>
+      <room>rooms\level_3</room>
+      <room>rooms\level_4</room>
+      <room>rooms\level_5</room>
+      <room>rooms\level_6</room>
+      <room>rooms\level_7</room>
+      <room>rooms\level_8</room>
+      <room>rooms\level_9</room>
+      <room>rooms\level_10_incomplete</room>
+      <room>rooms\boss_level_incomplete</room>
+    </rooms>
     <room>rooms\Start_Room</room>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_1_room</room>
@@ -208,19 +225,6 @@
       <room>rooms\cutscene_room_12</room>
       <room>rooms\cutscene_room_13</room>
       <room>rooms\cutscene_room_14</room>
-    </rooms>
-    <rooms name="Actual Levels">
-      <room>rooms\level_1</room>
-      <room>rooms\level_2</room>
-      <room>rooms\level_3</room>
-      <room>rooms\level_4</room>
-      <room>rooms\level_5</room>
-      <room>rooms\level_6</room>
-      <room>rooms\level_8</room>
-      <room>rooms\level_7</room>
-      <room>rooms\level_9</room>
-      <room>rooms\boss_level_incomplete</room>
-      <room>rooms\level_10_incomplete</room>
     </rooms>
     <room>rooms\follow_test</room>
     <room>rooms\reset_test</room>
