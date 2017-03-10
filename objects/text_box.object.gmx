@@ -152,7 +152,7 @@ draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yvie
 if(!global.help_needed){
 draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
 }else{
-draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.philspeech, 50,1220-global.speakshift,1,1,0);
+draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],"Wow, you REALLY don't get this one. Press H to get some help.", 50,1220-global.speakshift,1,1,0);
 }
 /*/
 draw_sprite(blank_textbox, -1, x, y);
@@ -222,13 +222,15 @@ global.stringdone = true;
 global.stringdone = false;
 }
 if(global.pagesdone){
-    instance_destroy()
+    instance_destroy();
+    global.displaytext[] = 0;
     global.stringdone = false;
 }else if(global.pagedoneno&lt;array_length_1d(global.displaytext)){
     
     if((array_length_1d(global.displaytext)-global.pagedoneno)==1){
         if(global.stringdone){
         instance_destroy();
+        global.displaytext[] = 0;
         }else{
         global.stringdone = true;
         global.pagesdone = true;
