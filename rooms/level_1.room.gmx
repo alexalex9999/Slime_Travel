@@ -130,7 +130,7 @@ global.solution_length = 8;</code>
     <instance objName="wall" x="1248" y="384" name="inst_15FCB0F9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1152" y="672" name="inst_42719FA5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1248" y="672" name="inst_0BD80DE8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="text_box" x="0" y="0" name="inst_E45AA23F" locked="0" code="global.speaking[0] = &quot;slime&quot;;&#xA;global.displaytext[0] = &quot;Gah….. What did Phil do this time….? I don’t recognize this place.&quot;;&#xA;global.textboxarray[0] = slime_angry;&#xA;&#xA;global.speaking[1] = &quot;slime&quot;;&#xA;global.displaytext[1] = &quot;I should be chasing that thief, not fooling around!&quot;;&#xA;global.textboxarray[1] = slime_angry;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="text_box" x="0" y="0" name="inst_E45AA23F" locked="0" code="global.speaking[0] = &quot;slime&quot;;&#xA;global.displaytext[0] = &quot;Gah….. What did Phil do this time….? I don’t recognize this place.&quot;;&#xA;global.textboxarray[0] = slime_angry;&#xA;&#xA;global.speaking[1] = &quot;slime&quot;;&#xA;global.displaytext[1] = &quot;I should be chasing that thief, not fooling around!&quot;;&#xA;global.textboxarray[1] = slime_angry;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="final_tileset" x="96" y="0" w="96" h="96" xo="96" yo="96" id="10001167" name="inst_FA1C948B" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
