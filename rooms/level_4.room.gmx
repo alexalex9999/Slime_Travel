@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>//room_set_view(level_4, 0, true, -192, 0, 1280, 720, 0, 0, 1280, 720, 384, 384, 8, 8, smooth_scrolling);</code>
+  <code>global.solutions[] = array(3,2,2,0,0,3,3,3,3,3,3);
+global.solution_length = array_length_1d(global.solutions)</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

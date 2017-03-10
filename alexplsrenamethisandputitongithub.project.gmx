@@ -196,17 +196,17 @@
     <object>objects\titletext</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\level_1</room>
+    <room>rooms\level_6_nosolution</room>
+    <room>rooms\level_5_nosolution</room>
     <rooms name="Actual Levels">
-      <room>rooms\level_1</room>
       <room>rooms\level_2</room>
       <room>rooms\level_3</room>
       <room>rooms\level_4</room>
-      <room>rooms\level_5</room>
-      <room>rooms\level_6</room>
-      <room>rooms\level_7</room>
-      <room>rooms\level_8</room>
-      <room>rooms\level_9</room>
-      <room>rooms\level_10_incomplete</room>
+      <room>rooms\level_7_nosolution</room>
+      <room>rooms\level_8_nosolution</room>
+      <room>rooms\level_9_nosolution</room>
+      <room>rooms\level_10_nosolution</room>
       <room>rooms\boss_level_incomplete</room>
     </rooms>
     <room>rooms\Start_Room</room>
