@@ -32,8 +32,18 @@ else{
     audio_play_sound(sound11, 1, true)
 }
 count = 0;
+
 global.cheater = false;
 global.finished_entering = false;
+if(global.help_needed){
+instance_deactivate_object(text_box)
+instance_create(0,0,text_box);
+global.displaytext[] = 0;
+global.displaytext[0] = global.philspeech;
+global.textboxarray[0] = phil_deadpan;
+global.speaking[0] = "phil";
+}
+
 </string>
           </argument>
         </arguments>
@@ -130,6 +140,7 @@ audio_pause_sound(sound11)
           <argument>
             <kind>1</kind>
             <string>if(global.help_needed &amp;&amp; keyboard_check(ord('H')) &amp;&amp; !instance_exists(text_box)){
+    
     global.cheater = true;
     alarm[5] = 4;
 }

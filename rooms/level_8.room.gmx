@@ -184,12 +184,12 @@ global.solution_length = array_length_1d(global.solutions)</code>
     <instance objName="pit" x="480" y="288" name="inst_81CB53D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="672" y="288" name="inst_B59C9B2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="slime" x="576" y="1152" name="inst_7A70BCB8" locked="0" code="sprite_index = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="Reset_Button" x="0" y="0" name="inst_AEE2B25B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroom" x="576" y="0" name="inst_FE5FAA46" locked="0" code="sprite_index = arrow_up;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="576" y="1056" name="inst_EB77C1B0" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="576" y="1056" name="inst_63611CAE" locked="0" code="slime_direction = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="auto_jump" x="576" y="1344" name="inst_0534BFED" locked="0" code="slime_direction = slime_jump_up;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="576" y="1152" name="inst_FF51A37D" locked="0" code="sprite_index = empty_sprite;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="Reset_Button" x="0" y="0" name="inst_AEE2B25B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="actual_final_tileset" x="192" y="192" w="96" h="96" xo="480" yo="0" id="10003321" name="inst_F828888D" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
