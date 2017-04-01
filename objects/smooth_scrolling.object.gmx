@@ -2,7 +2,7 @@
 <object>
   <spriteName>slime_idle_front</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -71,10 +71,14 @@ if(slime.sprite_index == slime_push_down &amp;&amp; slime.image_index == 0){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_hspeed[0] = 8;
+            <string>if(!keyboard_check(vk_shift)){
+view_hspeed[0] = 8;
 view_vspeed[0] = 8;
+}
 if(keyboard_check(vk_shift) &amp;&amp; y&lt;room_height-384){
-    speed=8;
+    speed=20;
+    view_hspeed[0] = 20;
+    view_vspeed[0] = 20;
     direction = 270;
 }
 if(y&gt;room_height-384)
@@ -101,13 +105,17 @@ if(y&gt;room_height-384)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_hspeed[0] = 8;
+            <string>if(!keyboard_check(vk_shift)){
+view_hspeed[0] = 8;
 view_vspeed[0] = 8;
-if(keyboard_check(vk_shift) &amp;&amp; x&lt;room_width-384){
-    speed=8;
+}
+if(keyboard_check(vk_shift) &amp;&amp; x&lt;room_width-576){
+    speed=20;
+    view_hspeed[0] = 20;
+    view_vspeed[0] = 20;
     direction = 0;
 }
-if(x&gt;room_width-384)
+if(x&gt;room_width-576)
     speed = 0;
 </string>
           </argument>
@@ -131,10 +139,14 @@ if(x&gt;room_width-384)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_hspeed[0] = 8;
+            <string>if(!keyboard_check(vk_shift)){
+view_hspeed[0] = 8;
 view_vspeed[0] = 8;
+}
 if(keyboard_check(vk_shift) &amp;&amp; y&gt;384){
-    speed=8;
+    speed=20;
+    view_hspeed[0] = 20;
+    view_vspeed[0] = 20;
     direction = 90;
 }
 if(y&lt;384)
@@ -161,14 +173,42 @@ if(y&lt;384)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>view_hspeed[0] = 8;
+            <string>if(!keyboard_check(vk_shift)){
+view_hspeed[0] = 8;
 view_vspeed[0] = 8;
-if(keyboard_check(vk_shift) &amp;&amp; x&gt;384){
-    speed=8;
+}
+if(keyboard_check(vk_shift) &amp;&amp; x&gt;576){
+    speed=20;
+    view_hspeed[0] = 20;
+    view_vspeed[0] = 20;
     direction = 180;
 }
-if(x&lt;384)
+if(x&lt;576)
     speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="16">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>x=view_xview[0]+view_wview[0]/2;
+y=view_yview[0]+view_hview[0]/2;
 </string>
           </argument>
         </arguments>
