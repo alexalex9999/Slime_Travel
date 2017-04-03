@@ -199,6 +199,7 @@ if(sprite_index == slime_push_down &amp;&amp; image_index == 6){
 }
 global.reset_times = 0;
 global.help_needed = false;
+global.cheater = false;
 room_goto_next();
 if(audio_is_playing(sound11)){
     audio_pause_sound(sound11)

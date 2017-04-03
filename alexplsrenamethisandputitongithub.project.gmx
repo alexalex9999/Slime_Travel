@@ -165,7 +165,7 @@
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\drawText.gml</script>
+    <script>scripts\not_used.gml</script>
     <script>scripts\waitscript.gml</script>
     <script>scripts\reset_counter.gml</script>
     <script>scripts\solutions_script.gml</script>
@@ -207,13 +207,13 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <room>rooms\level_7</room>
     <rooms name="Actual Levels">
       <room>rooms\level_1</room>
       <room>rooms\level_2</room>
       <room>rooms\level_3</room>
       <room>rooms\level_4</room>
       <room>rooms\level_5</room>
+      <room>rooms\level_7</room>
       <room>rooms\level_8</room>
       <room>rooms\level_9</room>
       <room>rooms\level_10</room>
