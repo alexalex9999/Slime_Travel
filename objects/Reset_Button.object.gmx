@@ -35,7 +35,7 @@ count = 0;
 
 //global.cheater = false;
 global.finished_entering = false;
-if(global.cheater = true){
+if(global.cheater /*&amp;&amp; !instance_exists(text_box)*/){
     alarm[5] = 90;
 }
 /*/if(global.help_needed){
@@ -139,19 +139,15 @@ audio_pause_sound(sound11)
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.help_needed &amp;&amp; keyboard_check(ord('H')) &amp;&amp; !instance_exists(text_box)){
-    
-    global.cheater = true;
-    room_restart();
+            <string>/*if(global.cheater &amp;&amp; !instance_exists(text_box)){
+    alarm[5] = 5;
 }
-
-//&amp;&amp; global.finished_entering
 </string>
           </argument>
         </arguments>
@@ -177,6 +173,38 @@ audio_pause_sound(sound11)
             <string>reset_counter();
 audio_play_sound(level_change_snd,1,false)
 alarm[2] = 2
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="10" enumb="72">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(global.cheater==true){
+    global.cheater = false;
+    alarm[5]=-1;
+}
+
+if(global.help_needed &amp;&amp;!global.cheater){
+    
+    global.cheater = true;
+    room_restart();
+}
 </string>
           </argument>
         </arguments>

@@ -207,6 +207,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
+    <room>rooms\crate_box_move_test</room>
     <rooms name="Actual Levels">
       <room>rooms\level_1</room>
       <room>rooms\level_2</room>

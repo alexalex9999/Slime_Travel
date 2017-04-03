@@ -14,9 +14,9 @@
 sound_fade(beginning, 100, 10);
 global.philspeech = "Okay just stop. You’re gonna hurt yourself thinking so hard. It was entertaining the first few times, but I’m seriously done. If you press H, you’ll move forward in time to when you finish this puzzle. Legit.";
 
-global.help_needed =false;
+//global.help_needed =false;
 global.solutions[] = array(3,0,0,0,0,0,0,0,);
-global.solution_length = 8;</code>
+global.solution_length = array_length_1d(global.solutions);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -59,7 +59,7 @@ global.solution_length = 8;</code>
   <instances>
     <instance objName="wall_candle" x="384" y="96" name="inst_D2AE5338" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall_candle" x="576" y="96" name="inst_518478DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="slime" x="480" y="480" name="inst_3F158E88" locked="0" code="image_speed = 1/3;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="slime" x="480" y="480" name="inst_3F158E88" locked="0" code="image_speed = 1/3;&#xA;global.done_moving = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroom" x="1152" y="576" name="inst_F0D3E158" locked="0" code="sprite_index = arrow_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="0" name="inst_AC18656B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="192" y="0" name="inst_8DA8E294" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

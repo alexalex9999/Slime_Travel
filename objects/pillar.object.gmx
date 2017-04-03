@@ -97,9 +97,9 @@ if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_unlocked |
 if(sprite_index == pillar_locking &amp;&amp; image_index == 6){
     sprite_index = pillar_locked
 }
+}
 if(sprite_index == pillar_unlocked){
     depth = 10000
-}
 }
 </string>
           </argument>
