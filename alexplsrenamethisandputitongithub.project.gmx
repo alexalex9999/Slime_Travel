@@ -157,6 +157,7 @@
     <sprite>sprites\ending_2</sprite>
     <sprite>sprites\ending_3</sprite>
     <sprite>sprites\ebenezer_angry</sprite>
+    <sprite>sprites\sprite88</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\castle_tile_set_unfinished</background>
@@ -181,6 +182,7 @@
   <fonts name="fonts">
     <font>fonts\minipixel</font>
     <font>fonts\pixel</font>
+    <font>fonts\creepygirl</font>
   </fonts>
   <objects name="objects">
     <object>objects\slime</object>
@@ -204,10 +206,10 @@
     <object>objects\titletext</object>
     <object>objects\opsound</object>
     <object>objects\ebenezer</object>
+    <object>objects\textbox_arrow_object</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <room>rooms\crate_box_move_test</room>
     <rooms name="Actual Levels">
       <room>rooms\level_1</room>
       <room>rooms\level_2</room>
@@ -220,6 +222,7 @@
       <room>rooms\level_10</room>
       <room>rooms\fake_level</room>
     </rooms>
+    <room>rooms\crate_box_move_test</room>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_1_room</room>
       <room>rooms\cutscene_room_2</room>

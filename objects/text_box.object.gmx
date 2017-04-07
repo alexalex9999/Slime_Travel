@@ -3,7 +3,7 @@
   <spriteName>spr_dialog</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>2000000</depth>
+  <depth>-1454759936</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>global.displaytext[0] = "";
 self.depth = -1000;
 draw_set_alpha(1);
 draw_set_color(c_white);
@@ -39,8 +39,9 @@ global.currenttext = "";
 global.pagesdone = false;
 global.stringdone = false;
 global.speakshift = 0;
-draw_set_font(pixel);
+draw_set_font(creepygirl);
 sprite_index = empty_sprite;
+alarm[4] = 1;
 /*
 if(global.help_needed){
 global.displaytext[] = 0;
@@ -97,22 +98,63 @@ drawText(false,global.displaytext[],self.x,self.y,global.pageno);
 }
 /*/
 
+if(global.help_needed){
+    if(global.cheater){
+        if(global.chars_drawn&lt;= string_length(global.currentstring)){
+            global.currenttext = string_copy(global.cheatertext[global.pagedoneno], 0, global.chars_drawn);
+            alarm[8]=1.5;
+            audio_play_sound(talking_snd, 1, false);
+            global.chars_drawn++;
 
-if(global.chars_drawn&lt;= string_length(global.currentstring))
-{
-global.currenttext = string_copy(global.displaytext[global.pagedoneno], 0, global.chars_drawn);
-alarm[8]=1.5;
-audio_play_sound(talking_snd, 1, false);
-global.chars_drawn++;
+        }else{
+            alarm[8]=-5;
+            if(array_length_1d(global.cheatertext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.cheatertext[global.pagedoneno])){
+                global.pagesdone = true;
+            }else{
+                global.pagesdone = false;
+            }
 
+        }
+    }else{
+        if(global.chars_drawn&lt;= string_length(global.currentstring)){
+            global.currenttext = string_copy(global.helptext[global.pagedoneno], 0, global.chars_drawn);
+            alarm[8]=1.5;
+            audio_play_sound(talking_snd, 1, false);
+            global.chars_drawn++;
+
+        }else{
+            alarm[8]=-5;
+            if(array_length_1d(global.helptext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.helptext[global.pagedoneno])){
+                global.pagesdone = true;
+            }else{
+                global.pagesdone = false;
+            }
+
+        }
+    }
+    
 }else{
-alarm[8]=-5;
-if(array_length_1d(global.displaytext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
-global.pagesdone = true;
-}else{
-global.pagesdone = false;
+    if(global.chars_drawn&lt;= string_length(global.currentstring)){
+        global.currenttext = string_copy(global.displaytext[global.pagedoneno], 0, global.chars_drawn);
+        alarm[8]=1.5;
+        audio_play_sound(talking_snd, 1, false);
+        global.chars_drawn++;
+
+    }else{
+        alarm[8]=-5;
+        if(array_length_1d(global.displaytext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
+            global.pagesdone = true;
+        }else{
+            global.pagesdone = false;
+        }
+    }
 }
-
+if(global.chars_drawn&gt;=string_length(global.currentstring)){
+if(!instance_exists(textbox_arrow_object)){
+instance_create(1200,700,textbox_arrow_object)
+}
+}else{
+instance_deactivate_object(textbox_arrow_object);
 }
 </string>
           </argument>
@@ -136,16 +178,60 @@ global.pagesdone = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.currentstring = global.displaytext[global.pagedoneno];
-if(global.speaking[global.pagedoneno]=="phil"){
-global.speakshift = 174;
-}else if (global.speaking[global.pagedoneno]=="slime"){
-global.speakshift = 222;
-}else if (global.speaking[global.pagedoneno]=="ebenezer"){
-global.speakshift = 355;
+            <string>
+if(global.help_needed){
+    global.speakshift = 174;
+    if(global.cheater){
+        global.currentstring = global.cheatertext[global.pagedoneno];
+    }else{
+        global.currentstring = global.helptext[global.pagedoneno];
+    }
 }else{
-                global.speakshift = 40;
+    if(global.displaytext[0]=""){
+        instance_destroy();
+    }else{
+    global.currentstring = global.displaytext[global.pagedoneno];
+    
+    if(global.speaking[global.pagedoneno]=="phil"){
+        global.speakshift = 174;
+    }else if (global.speaking[global.pagedoneno]=="slime"){
+        global.speakshift = 222;
+    }else if (global.speaking[global.pagedoneno]=="ebenezer"){
+        global.speakshift = 355;
+    }else{
+        global.speakshift = 40;
             }
+    }           
+}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(!global.help_needed){
+if(global.displaytext[0]=""){
+instance_destroy();
+}
+}
 </string>
           </argument>
         </arguments>
@@ -195,9 +281,21 @@ global.speaking[0] ="phil";
 global.textboxarray[0] = phil_happy;
 }
 /*/
-draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
-draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
-
+if(global.help_needed){
+    
+    if(global.cheater){
+        draw_sprite(global.cheatertextboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
+    }else{
+        draw_sprite(global.helptextboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
+    }
+}else{
+    
+        draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
+    
+}
 /*/
 draw_sprite(blank_textbox, -1, x, y);
 var currentpage = 0;
@@ -241,6 +339,34 @@ if(global.multipage = true){
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(room == asset_get_index("level_1")){
+    if(global.pagedoneno==0){
+        if(global.chars_drawn&gt;=67){
+            if(!global.pagesdone){
+                draw_sprite(space_button,0,840,700);
+
+}}}}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="9" enumb="32">
       <action>
@@ -259,7 +385,83 @@ if(global.multipage = true){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>if(global.help_needed){
+    if(global.cheater){
+    //Cheater Text Start
+        if(global.chars_drawn&gt;=string_length(global.currentstring)){
+            global.stringdone = true;
+        }else{
+            global.stringdone = false;
+        }
+        if(global.pagesdone){
+            instance_destroy();
+            global.stringdone = false;
+        }else if(global.pagedoneno&lt;array_length_1d(global.cheatertext)){
+            if((array_length_1d(global.cheatertext)-global.pagedoneno)==1){
+                if(global.stringdone){
+                    instance_destroy();
+                
+                }else{
+                    global.stringdone = true;
+                    global.pagesdone = true;
+                    global.chars_drawn=string_length(global.currentstring);
+                }
+            }else if(array_length_1d(global.cheatertext)-global.pagedoneno&gt;1){
+                if(global.stringdone){
+                    global.currenttext = "";
+                    global.pagedoneno+=1;
+                    alarm[8] = 10;
+                    global.chars_drawn = 0;
+                    global.currentstring = global.cheatertext[global.pagedoneno];
+                    global.speakshift = 174;
+                }else{
+                    global.chars_drawn=string_length(global.currentstring);
+                    global.stringdone = true;
+                } 
+            }
+
+        }
+        
+    }//Cheater Text End
+else{
+    //Help Text Start
+    if(global.chars_drawn&gt;=string_length(global.currentstring)){
+            global.stringdone = true;
+        }else{
+            global.stringdone = false;
+        }
+        if(global.pagesdone){
+            instance_destroy();
+            global.stringdone = false;
+        }else if(global.pagedoneno&lt;array_length_1d(global.helptext)){
+            if((array_length_1d(global.helptext)-global.pagedoneno)==1){
+                if(global.stringdone){
+                    instance_destroy();
+                    
+                }else{
+                    global.stringdone = true;
+                    global.pagesdone = true;
+                    global.chars_drawn=string_length(global.currentstring);
+                }
+            }else if(array_length_1d(global.helptext)-global.pagedoneno&gt;1){
+                if(global.stringdone){
+                    global.currenttext = "";
+                    global.pagedoneno+=1;
+                    alarm[8] = 10;
+                    global.chars_drawn = 0;
+                    global.currentstring = global.helptext[global.pagedoneno];
+                    global.speakshift = 174;
+                }else{
+                    global.chars_drawn=string_length(global.currentstring);
+                    global.stringdone = true;
+                } 
+            }
+
+        }
+        }
+        //Help Text End
+}else{
+//Regular Text Start
 if(global.chars_drawn&gt;=string_length(global.currentstring)){
 global.stringdone = true;
 }else{
@@ -307,6 +509,8 @@ if(global.pagesdone){
 }
 
 }
+}
+
 
 
 

@@ -35,9 +35,7 @@ count = 0;
 
 //global.cheater = false;
 global.finished_entering = false;
-if(global.cheater /*&amp;&amp; !instance_exists(text_box)*/){
-    alarm[5] = 90;
-}
+cheating = false
 /*/if(global.help_needed){
 instance_deactivate_object(text_box)
 instance_create(0,0,text_box);
@@ -82,6 +80,7 @@ global.speaking[i] = "phil";
         global.done_moving = true;
     }
 }
+cheating = true
 alarm[5] = 3;
 </string>
           </argument>
@@ -145,8 +144,9 @@ audio_pause_sound(sound11)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*if(global.cheater &amp;&amp; !instance_exists(text_box)){
+            <string>if(global.cheater &amp;&amp; !instance_exists(text_box)&amp;&amp; !cheating){
     alarm[5] = 5;
+    cheating = true
 }
 </string>
           </argument>
@@ -195,16 +195,19 @@ alarm[2] = 2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.cheater==true){
-    global.cheater = false;
-    alarm[5]=-1;
-}
+            <string>
 
 if(global.help_needed &amp;&amp;!global.cheater){
     
     global.cheater = true;
     room_restart();
 }
+else if(global.cheater==true &amp;&amp; !instance_exists(text_box) ){
+    global.cheater = false;
+    alarm[5]=-1;
+    cheating = false
+}
+
 </string>
           </argument>
         </arguments>
