@@ -20,9 +20,9 @@
   <width>96</width>
   <height>96</height>
   <frames>
-    <frame index="0">images\sprite83_0.png</frame>
-    <frame index="1">images\sprite83_1.png</frame>
-    <frame index="2">images\sprite83_2.png</frame>
-    <frame index="3">images\sprite83_3.png</frame>
+    <frame index="0">images\purple_purge_0.png</frame>
+    <frame index="1">images\purple_purge_1.png</frame>
+    <frame index="2">images\purple_purge_2.png</frame>
+    <frame index="3">images\purple_purge_3.png</frame>
   </frames>
 </sprite>

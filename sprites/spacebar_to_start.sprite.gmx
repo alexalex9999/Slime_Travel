@@ -20,7 +20,7 @@
   <width>434</width>
   <height>41</height>
   <frames>
-    <frame index="0">images\sprite82_0.png</frame>
-    <frame index="1">images\sprite82_1.png</frame>
+    <frame index="0">images\spacebar_to_start_0.png</frame>
+    <frame index="1">images\spacebar_to_start_1.png</frame>
   </frames>
 </sprite>
