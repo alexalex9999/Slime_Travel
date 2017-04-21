@@ -153,6 +153,28 @@ audio_pause_sound(sound11)
         </arguments>
       </action>
     </event>
+    <event eventtype="10" enumb="122">
+      <action>
+        <libid>1</libid>
+        <id>531</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_fullscreen</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="10" enumb="82">
       <action>
         <libid>1</libid>
@@ -200,7 +222,7 @@ alarm[2] = 2
 if(global.help_needed &amp;&amp;!global.cheater){
     
     global.cheater = true;
-    room_restart();
+    alarm[2] = 2;
 }
 else if(global.cheater==true &amp;&amp; !instance_exists(text_box) ){
     global.cheater = false;

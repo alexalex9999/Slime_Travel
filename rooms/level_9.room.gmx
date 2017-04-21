@@ -167,6 +167,7 @@ global.solution_length = array_length_1d(global.solutions)</code>
     <instance objName="pillar" x="576" y="192" name="inst_9B8346A6" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num] = false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="576" y="96" name="inst_09BF839B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="192" y="96" name="inst_ABB40A79" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="text_box" x="96" y="192" name="inst_D6A9AC6D" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="actual_final_tileset" x="192" y="0" w="96" h="96" xo="96" yo="96" id="10003466" name="inst_324DA4D5" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

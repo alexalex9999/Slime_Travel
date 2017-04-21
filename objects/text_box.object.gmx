@@ -151,7 +151,7 @@ if(global.help_needed){
 }
 if(global.chars_drawn&gt;=string_length(global.currentstring)){
 if(!instance_exists(textbox_arrow_object)){
-instance_create(1200,700,textbox_arrow_object)
+instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object)
 }
 }else{
 instance_deactivate_object(textbox_arrow_object);
@@ -361,7 +361,9 @@ if(global.multipage = true){
             if(!global.pagesdone){
                 draw_sprite(space_button,0,840,700);
 
-}}}}
+}}
+draw_sprite(phil_animation_on,0,100,100);
+}}
 
 </string>
           </argument>
