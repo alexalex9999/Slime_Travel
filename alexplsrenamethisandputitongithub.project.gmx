@@ -48,6 +48,7 @@
       <sprite>sprites\blank_textbox</sprite>
       <sprite>sprites\ebenezer_sad</sprite>
       <sprite>sprites\ebenezer_neutral</sprite>
+      <sprite>sprites\ebenezer_angry</sprite>
       <sprite>sprites\phil_angry</sprite>
       <sprite>sprites\phil_deadpan</sprite>
       <sprite>sprites\phil_indifferent</sprite>
@@ -60,7 +61,6 @@
       <sprite>sprites\r_button</sprite>
       <sprite>sprites\space_button</sprite>
       <sprite>sprites\arrowkeys_button</sprite>
-      <sprite>sprites\ebenezer_angry</sprite>
       <sprite>sprites\test_cutscene_texbox</sprite>
     </sprites>
     <sprites name="characters">
@@ -117,6 +117,7 @@
       <sprite>sprites\spr_reset</sprite>
       <sprite>sprites\spr_dialog</sprite>
       <sprite>sprites\spr_wall</sprite>
+      <sprite>sprites\npc_sprite</sprite>
     </sprites>
     <sprites name="Level_Stuff">
       <sprite>sprites\arrow_up</sprite>
@@ -154,6 +155,7 @@
     </sprites>
     <sprite>sprites\start_room_background</sprite>
     <sprite>sprites\spacebar_to_start</sprite>
+    <sprite>sprites\sprite86</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\final_tileset</background>
@@ -170,6 +172,7 @@
     <script>scripts\jump_right.gml</script>
     <script>scripts\jump_left.gml</script>
     <script>scripts\script9.gml</script>
+    <script>scripts\script10.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -202,9 +205,23 @@
     <object>objects\opsound</object>
     <object>objects\ebenezer</object>
     <object>objects\textbox_arrow_object</object>
+    <object>objects\NPC_Interact</object>
+    <object>objects\NPC_StepTrigger</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
+    <rooms name="Actual Levels">
+      <room>rooms\level_1</room>
+      <room>rooms\level_2</room>
+      <room>rooms\level_3</room>
+      <room>rooms\level_4</room>
+      <room>rooms\level_5</room>
+      <room>rooms\level_7</room>
+      <room>rooms\level_8</room>
+      <room>rooms\level_9</room>
+      <room>rooms\level_10</room>
+      <room>rooms\fake_level</room>
+    </rooms>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_1_room</room>
       <room>rooms\cutscene_room_2</room>
@@ -218,18 +235,6 @@
       <room>rooms\cutscene_room_10</room>
       <room>rooms\cutscene_room_11</room>
       <room>rooms\cutscene_room_12</room>
-    </rooms>
-    <rooms name="Actual Levels">
-      <room>rooms\level_1</room>
-      <room>rooms\level_2</room>
-      <room>rooms\level_3</room>
-      <room>rooms\level_4</room>
-      <room>rooms\level_5</room>
-      <room>rooms\level_7</room>
-      <room>rooms\level_8</room>
-      <room>rooms\level_9</room>
-      <room>rooms\level_10</room>
-      <room>rooms\fake_level</room>
     </rooms>
     <room>rooms\ending_cutscene_1</room>
     <room>rooms\ending_cutscene_2</room>
