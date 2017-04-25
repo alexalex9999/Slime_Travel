@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="cutscene" x="360" y="72" name="inst_D817085B" locked="0" code="sprite_index = cutscene_8&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="cutscene_textbox" x="0" y="64" name="inst_A3674B96" locked="0" code="global.cutscenetext[0] = &quot;A brilliant flash lights up the stage…&quot;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="cutscene_textbox" x="0" y="64" name="inst_A3674B96" locked="0" code="global.cutscenetext[0] = &quot;With a bright flash...&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
