@@ -34,6 +34,43 @@ global.done_moving = false;
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>    if(sprite_index == slime_bounce_left &amp;&amp; !position_meeting(x-96, y, pillar)){
+        audio_pause_sound(bonk_snd)
+        sprite_index = slime_jump_left
+    }
+    if(sprite_index == slime_bounce_right &amp;&amp; !position_meeting(x+96, y, pillar)){
+        audio_pause_sound(bonk_snd)
+        sprite_index = slime_jump_right
+    }
+    if(sprite_index == slime_bounce_up &amp;&amp; !position_meeting(x, y-96, pillar)){
+        audio_pause_sound(bonk_snd)
+        sprite_index = slime_jump_up
+    }
+    if(sprite_index == slime_idle_front &amp;&amp; !position_meeting(x, y+96, pillar)){
+        sprite_index = slime_jump_down
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -237,9 +274,13 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     if(instance_position(x, y+96, all)==noone || instance_position(x, y+96, door_nextroom) || (instance_position(x, y+96, invisible_button)!=noone) || (instance_position(x, y+96, switch_button)!=noone)){
         sprite_index = slime_jump_down
     }
-    if(instance_position(x, y+96, wall)!=noone || instance_position(x, y+96, pillar)!=noone){
+    if(instance_position(x, y+96, wall)!=noone){
         sprite_index = slime_idle_front
         //sprite_index = slime_bounce_down
+    }
+    if(position_meeting(x, y+96, pillar)){
+        sprite_index = slime_idle_front
+        alarm[0] = 1;
     }
     if((instance_position(x, y+96, pit)!=noone)){
         sprite_index = slime_idle_front
@@ -290,9 +331,14 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     if(instance_position(x+96, y, all)==noone || instance_position(x+96, y, door_nextroom) || (instance_position(x+96, y, invisible_button)!=noone) || (instance_position(x+96, y, switch_button)!=noone)){
         sprite_index = slime_jump_right
     }
-    if(instance_position(x+96, y, wall)!=noone || instance_position(x+96, y, pillar)!=noone){
+    if(instance_position(x+96, y, wall)!=noone){
         sprite_index = slime_bounce_right
         audio_play_sound(bonk_snd, 1, false)
+    }
+    if(position_meeting(x+96, y, pillar)){
+        sprite_index = slime_bounce_right
+        audio_play_sound(bonk_snd, 1, false)
+        alarm[0] = 1;
     }
     if((instance_position(x+96, y, pit)!=noone)){
         sprite_index = slime_idle_right
@@ -343,9 +389,14 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     if(instance_position(x, y-96, all)==noone || (instance_position(x, y-96, invisible_button)!=noone) || (instance_position(x, y-96, switch_button)!=noone) || instance_position(x, y-96, door_nextroom)){
         sprite_index = slime_jump_up
     }
-    if((instance_position(x, y-96, wall)!=noone) || (instance_position(x, y-96, pillar)!=noone)){
+    if((instance_position(x, y-96, wall)!=noone)){
         sprite_index = slime_bounce_up
         audio_play_sound(bonk_snd, 1, false)
+    }
+    if(position_meeting(x, y-96, pillar)){
+        sprite_index = slime_bounce_up
+        audio_play_sound(bonk_snd, 1, false)
+        alarm[0] = 1;
     }
     if((instance_position(x, y-96, pit)!=noone)){
         sprite_index = slime_idle_back
@@ -393,18 +444,23 @@ if(sprite_index == slime_idle_front || sprite_index == slime_idle_back ||
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
-    if((instance_position(x-96, y, all)==noone) || (instance_position(x-96, y, invisible_button)!=noone) || (instance_position(x-96, y, switch_button)!=noone) || (instance_position(x-96, y, door_nextroom)!=noone)){
+    if(!position_meeting(x-96, y, all) || position_meeting(x-96, y, invisible_button) || position_meeting(x-96, y, switch_button) || position_meeting(x-96, y, door_nextroom)){
         sprite_index = slime_jump_left
     }
-    if((instance_position(x-96, y, wall)!=noone) || (instance_position(x-96, y, pillar)!=noone)){
+    if(position_meeting(x-96, y, wall)){
         sprite_index = slime_bounce_left
         audio_play_sound(bonk_snd, 1, false)
     }
-    if((instance_position(x-96, y, pit)!=noone)){
+    if(position_meeting(x-96, y, pillar)){
+        sprite_index = slime_bounce_left
+        audio_play_sound(bonk_snd, 1, false)
+        alarm[0] = 1;
+    }
+    if(position_meeting(x-96, y, pit)){
         sprite_index = slime_idle_left
     }
-    if(instance_position(x-96, y, pushable_box)!=noone){
-        if(instance_position(x-192, y, wall)!=noone || instance_position(x-192, y, pushable_box)!=noone || instance_position(x-192, y, pillar)!=noone){
+    if(position_meeting(x-96, y, pushable_box)){
+        if(position_meeting(x-192, y, wall) || position_meeting(x-192, y, pushable_box) || position_meeting(x-192, y, pillar)){
             sprite_index=slime_bounce_left
             audio_play_sound(bonk_snd, 1, false)
         }
