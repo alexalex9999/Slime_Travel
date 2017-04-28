@@ -393,67 +393,27 @@ if(sprite_index == slime_idle_front || sprite_index == slime_idle_back ||
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
-    
-    if(!position_meeting(x-96, y, all) || position_meeting(x-96, y, invisible_button) || position_meeting(x-96, y, switch_button) || position_meeting(x-96, y, door_nextroom)){
+    if((instance_position(x-96, y, all)==noone) || (instance_position(x-96, y, invisible_button)!=noone) || (instance_position(x-96, y, switch_button)!=noone) || (instance_position(x-96, y, door_nextroom)!=noone)){
         sprite_index = slime_jump_left
-    }//normal jump
-    
-    if(position_meeting(x-96, y, pillar)){
-        if(position_meeting(x,y,switch_button)){
-            if((instance_position(x,y,switch_button).switch_num == instance_position(x-96, y, pillar).pillar_num)){
-                if(global.pillar_down[instance_position(x-96, y, pillar).pillar_num]){
-                    sprite_index = slime_bounce_left;
-                    audio_play_sound(bonk_snd, 1, false)
-                }
-                else{
-                sprite_index = slime_jump_left;
-                }
-            }
-        }
-        else{
-            if(global.pillar_down[instance_position(x-96, y, pillar).pillar_num]){
-                sprite_index = slime_jump_left;
-                pillar_is_down=true;
-            }
-            else{
-                sprite_index = slime_bounce_left;
-                audio_play_sound(bonk_snd, 1, false);
-            }
-        }
-    }//complicated pillar stuff
-    
-    if(position_meeting(x-96, y, wall) || (position_meeting(x-96, y, pillar)&amp;&amp;!position_meeting(x, y, switch_button)) ){
+    }
+    if((instance_position(x-96, y, wall)!=noone) || (instance_position(x-96, y, pillar)!=noone)){
         sprite_index = slime_bounce_left
         audio_play_sound(bonk_snd, 1, false)
-    }//bounce(need special for box)
-    if(position_meeting(x-96, y, pit)){
+    }
+    if((instance_position(x-96, y, pit)!=noone)){
         sprite_index = slime_idle_left
-    }//do nothing
-    if(position_meeting(x-96, y, pushable_box)){
-        if(position_meeting(x-192, y, wall) || position_meeting(x-192, y, pushable_box)||position_meeting(x-192, y, pillar)){
-            if(position_meeting(x-192, y, pillar)){
-                if(global.pillar_down[instance_position(x-192,y,pillar).pillar_num]){
-                    sprite_index = slime_push_left
-                    pushboxonpillar=true;
-                }
-                else{
-                    pushboxonpillar=false;
-                    sprite_index=slime_bounce_left
-                    audio_play_sound(bonk_snd, 1, false)
-                }
-            }
-            if(!pushboxonpillar){
-                sprite_index=slime_bounce_left
-                audio_play_sound(bonk_snd, 1, false)
-            }
-            pushboxonpillar=false;
+    }
+    if(instance_position(x-96, y, pushable_box)!=noone){
+        if(instance_position(x-192, y, wall)!=noone || instance_position(x-192, y, pushable_box)!=noone || instance_position(x-192, y, pillar)!=noone){
+            sprite_index=slime_bounce_left
+            audio_play_sound(bonk_snd, 1, false)
         }
         else{
         sprite_index = slime_push_left;
         (instance_position(x-96, y, pushable_box)).sprite_index = empty_sprite
         audio_play_sound(move_box_snd, 1, false);
         }
-    }//box
+    }
     mask_index = no_mask;
 }
 }
