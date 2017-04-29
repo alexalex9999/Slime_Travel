@@ -70,7 +70,7 @@ global.speaking[i] = "phil";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.done_moving &amp;&amp; global.cheater){
+            <string>if(global.done_moving &amp;&amp; global.cheater &amp;&amp; keyboard_check(vk_shift)){
     solutions_script(global.solutions[count])
     if(jump_succeeded){
         count++

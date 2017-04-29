@@ -118,6 +118,7 @@
       <sprite>sprites\spr_dialog</sprite>
       <sprite>sprites\spr_wall</sprite>
       <sprite>sprites\npc_sprite</sprite>
+      <sprite>sprites\spr_ice</sprite>
     </sprites>
     <sprites name="Level_Stuff">
       <sprite>sprites\arrow_up</sprite>
@@ -171,8 +172,6 @@
     <script>scripts\jump_up.gml</script>
     <script>scripts\jump_right.gml</script>
     <script>scripts\jump_left.gml</script>
-    <script>scripts\script9.gml</script>
-    <script>scripts\script10.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -185,28 +184,37 @@
   <objects name="objects">
     <object>objects\slime</object>
     <object>objects\smooth_scrolling</object>
-    <object>objects\wall</object>
-    <object>objects\pushable_box</object>
-    <object>objects\switch_button</object>
-    <object>objects\invisible_button</object>
-    <object>objects\pillar</object>
-    <object>objects\pit</object>
-    <object>objects\Reset_Button</object>
-    <object>objects\door_nextroom</object>
-    <object>objects\cutscene_textbox</object>
-    <object>objects\text_box</object>
-    <object>objects\wall_candle</object>
-    <object>objects\wall_candles</object>
-    <object>objects\auto_jump</object>
-    <object>objects\cutscene</object>
-    <object>objects\space_bar_button</object>
-    <object>objects\title</object>
-    <object>objects\titletext</object>
-    <object>objects\opsound</object>
-    <object>objects\ebenezer</object>
-    <object>objects\textbox_arrow_object</object>
-    <object>objects\NPC_Interact</object>
-    <object>objects\NPC_StepTrigger</object>
+    <objects name="puzzle mechanics">
+      <object>objects\wall</object>
+      <object>objects\pushable_box</object>
+      <object>objects\switch_button</object>
+      <object>objects\pit</object>
+      <object>objects\pillar</object>
+      <object>objects\ice_floor</object>
+    </objects>
+    <objects name="puzzle room stuff">
+      <object>objects\invisible_button</object>
+      <object>objects\Reset_Button</object>
+      <object>objects\door_nextroom</object>
+      <object>objects\text_box</object>
+      <object>objects\auto_jump</object>
+      <object>objects\textbox_arrow_object</object>
+      <object>objects\wall_candle</object>
+      <object>objects\wall_candles</object>
+    </objects>
+    <objects name="cutscene/title screen">
+      <object>objects\cutscene</object>
+      <object>objects\space_bar_button</object>
+      <object>objects\cutscene_textbox</object>
+      <object>objects\title</object>
+      <object>objects\opsound</object>
+      <object>objects\titletext</object>
+    </objects>
+    <objects name="NPCs">
+      <object>objects\ebenezer</object>
+      <object>objects\NPC_StepTrigger</object>
+      <object>objects\NPC_Interact</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
@@ -237,10 +245,13 @@
       <room>rooms\cutscene_room_11</room>
       <room>rooms\cutscene_room_12</room>
     </rooms>
-    <room>rooms\ending_cutscene_1</room>
-    <room>rooms\ending_cutscene_2</room>
-    <room>rooms\ending_cutscene_3</room>
-    <room>rooms\end_room</room>
+    <rooms name="The End">
+      <room>rooms\ending_cutscene_1</room>
+      <room>rooms\ending_cutscene_2</room>
+      <room>rooms\ending_cutscene_3</room>
+      <room>rooms\creditsTBD</room>
+      <room>rooms\end_room</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
