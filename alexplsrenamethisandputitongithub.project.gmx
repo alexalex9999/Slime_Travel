@@ -172,6 +172,7 @@
     <script>scripts\jump_up.gml</script>
     <script>scripts\jump_right.gml</script>
     <script>scripts\jump_left.gml</script>
+    <script>scripts\ice_box_slime.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
