@@ -292,15 +292,9 @@ if(sliding){
         }
         else{
             if(place_meeting(x,y+12,pushable_box)){
-                if(ice_box_slime("down", instance_place(x,y+12,pushable_box))){
-                    y+=12
-                    smooth_scrolling.x = x;
-                    smooth_scrolling.y = y;
-                }
-                else{
-                    sliding=false;
-                    image_speed = 1/3;
-                }
+                (instance_place(x,y+12,pushable_box)).sliding = "down";
+                sliding=false;
+                image_speed = 1/3;
             }
             else{
                 y+=12
@@ -316,15 +310,9 @@ if(sliding){
         }
         else{
             if(place_meeting(x,y-12,pushable_box)){
-                if(ice_box_slime("up", instance_place(x,y-12,pushable_box))){
-                    y-=12
-                    smooth_scrolling.x = x;
-                    smooth_scrolling.y = y;
-                }
-                else{
-                    sliding=false;
-                    image_speed = 1/3;
-                }
+                (instance_place(x,y-12,pushable_box)).sliding = "up";
+                sliding=false;
+                image_speed = 1/3;
             }
             else{
                 y-=12
@@ -340,15 +328,9 @@ if(sliding){
         }
         else{
             if(place_meeting(x+12,y,pushable_box)){
-                if(ice_box_slime("right", instance_place(x+12,y,pushable_box))){
-                    x+=12
-                    smooth_scrolling.x = x;
-                    smooth_scrolling.y = y;
-                }
-                else{
-                    sliding=false;
-                    image_speed = 1/3;
-                }
+                (instance_place(x+12,y,pushable_box)).sliding = "right";
+                sliding=false;
+                image_speed = 1/3;
             }
             else{
                 x+=12
@@ -364,15 +346,9 @@ if(sliding){
         }
         else{
             if(place_meeting(x-12,y,pushable_box)){
-                if(ice_box_slime("left", instance_place(x-12,y,pushable_box))){
-                    x-=12
-                    smooth_scrolling.x = x;
-                    smooth_scrolling.y = y;
-                }
-                else{
-                    sliding=false;
-                    image_speed = 1/3;
-                }
+                (instance_place(x-12,y,pushable_box)).sliding = "left";
+                sliding=false;
+                image_speed = 1/3;
             }
             else{
                 x-=12
