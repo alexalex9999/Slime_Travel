@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel=stylesheet type="text/css" href="style.css">
+     <title>Slime Travel</title>
+    <script type="text/javascript">
+    function tabClick(pageClick){
+        var i; var buttonContent; var currentContent;
+            
+            var content = document.getElementsByTagName('tab');
+            var button = document.getElementsByClassName('tablinks');
+            for(i = 0; i < content.length; i++){
+                currentContent = content[i].id;
+                if (currentContent === pageClick) {
+                    content[i].style.display = "block";
+                } else {
+                    content[i].style.display = "none";
+                }
+            }
+            
+            for(i = 0; i < button.length; i++){
+                if(button[i].classList.contains('active')){
+                    button[i].classList.remove('active');
+                } else if(button[i].className.includes(pageClick)){
+                    button[i].classList.add('active');
+                }
+            }
+            }
+    
+    </script>
+    </head>
+<body>
+    
+    <header>
+        <center>
+    <img  src="logo_0.png" style="width:50%; height:50%">
+    </center>
+            <table align=center class='links'>
+        <tr>
+        <td>
+            <button id=default class="tablinks home" onclick="tabClick('home')">Home</button>
+            </td>
+            <td>
+            <button class="tablinks about" onclick="tabClick('about')">About</button>
+            </td>
+        </tr>
+        </table>
+    
+    </header>
+    <tab id='home'>
+    <p>
+    <a href="Slime_Travel.exe">Download Slime Travel</a>
+        </p>
+    </tab>
+    <tab id='about'>
+        <p class='indent'>
+    SLIME TRAVEL is a puzzle game about travelling through time. 
+            </p>
+    </tab>
+    <script>
+    document.getElementById('default').click();
+    </script>
+    </body>
+    
+</html>
