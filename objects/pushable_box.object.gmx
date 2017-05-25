@@ -50,10 +50,11 @@
             <kind>1</kind>
             <string>depth = -y
 if(sliding == "left"){
+    mask_index = mask_right
     if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)){
         sliding=false;
     }
-    if(position_meeting(x,y,pit)){
+    if(place_meeting(x,y,pit)){
         //pit stuff
         sliding=false;
     }
@@ -62,10 +63,11 @@ if(sliding == "left"){
     }
 }
 if(sliding == "right"){
+    mask_index= mask_left
     if(place_meeting(x+12,y,wall)||place_meeting(x+12,y,pillar)){
         sliding=false;
     }
-    if(position_meeting(x,y,pit)){
+    if(place_meeting(x,y,pit)){
         //pit stuff
         sliding=false;
     }
@@ -74,10 +76,11 @@ if(sliding == "right"){
     }
 }
 if(sliding == "up"){
+    mask_index= mask_bottom
     if(place_meeting(x,y-12,wall)||place_meeting(x,y-12,pillar)){
         sliding=false;
     }
-    if(position_meeting(x,y,pit)){
+    if(place_meeting(x,y,pit)){
         //pit stuff
         sliding=false;
     }
@@ -86,10 +89,11 @@ if(sliding == "up"){
     }
 }
 if(sliding == "down"){
+    mask_index= mask_top
     if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)){
         sliding=false;
     }
-    if(position_meeting(x,y,pit)){
+    if(place_meeting(x,y,pit)){
         //pit stuff
         sliding=false;
     }
@@ -97,7 +101,9 @@ if(sliding == "down"){
         y+=12;
     }
 }
-
+if(!sliding){
+    mask_index = -1
+}
 </string>
           </argument>
         </arguments>
