@@ -88,6 +88,12 @@
           <sprite>sprites\slime_push_up</sprite>
           <sprite>sprites\slime_push_down</sprite>
         </sprites>
+        <sprites name="slime_ice">
+          <sprite>sprites\slime_ice_down</sprite>
+          <sprite>sprites\slime_ice_up</sprite>
+          <sprite>sprites\slime_ice_left</sprite>
+          <sprite>sprites\slime_ice_right</sprite>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="interactive_items">
@@ -160,6 +166,8 @@
     <sprite>sprites\start_room_background</sprite>
     <sprite>sprites\spacebar_to_start</sprite>
     <sprite>sprites\sprite86</sprite>
+    <sprite>sprites\level_transition_forwards</sprite>
+    <sprite>sprites\level_transition_backwards</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\final_tileset</background>
@@ -221,20 +229,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <rooms name="Cutscenes">
-      <room>rooms\cutscene_1_room</room>
-      <room>rooms\cutscene_room_2</room>
-      <room>rooms\cutscene_room_3</room>
-      <room>rooms\cutscene_room_4</room>
-      <room>rooms\cutscene_room_5</room>
-      <room>rooms\cutscene_room_6</room>
-      <room>rooms\cutscene_room_7</room>
-      <room>rooms\cutscene_room_8</room>
-      <room>rooms\cutscene_room_9</room>
-      <room>rooms\cutscene_room_10</room>
-      <room>rooms\cutscene_room_11</room>
-      <room>rooms\cutscene_room_12</room>
-    </rooms>
+    <room>rooms\level_11</room>
     <rooms name="Actual Levels">
       <rooms name="Original Levels">
         <room>rooms\level_1</room>
@@ -248,9 +243,20 @@
         <room>rooms\level_10</room>
       </rooms>
       <room>rooms\fake_level</room>
-      <rooms name="Ice Levels">
-        <room>rooms\level_11</room>
-      </rooms>
+    </rooms>
+    <rooms name="Cutscenes">
+      <room>rooms\cutscene_1_room</room>
+      <room>rooms\cutscene_room_2</room>
+      <room>rooms\cutscene_room_3</room>
+      <room>rooms\cutscene_room_4</room>
+      <room>rooms\cutscene_room_5</room>
+      <room>rooms\cutscene_room_6</room>
+      <room>rooms\cutscene_room_7</room>
+      <room>rooms\cutscene_room_8</room>
+      <room>rooms\cutscene_room_9</room>
+      <room>rooms\cutscene_room_10</room>
+      <room>rooms\cutscene_room_11</room>
+      <room>rooms\cutscene_room_12</room>
     </rooms>
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>

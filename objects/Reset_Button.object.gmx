@@ -33,21 +33,11 @@ else{
 }
 count = 0;
 
-//global.cheater = false;
 global.finished_entering = false;
 cheating = false
-/*/if(global.help_needed){
-instance_deactivate_object(text_box)
-instance_create(0,0,text_box);
-global.displaytext[] = 0;
-global.textboxarray[] = 0;
-global.displaytext[0] = global.philspeech;
-global.textboxarray[0] = phil_deadpan;
-for(var i = 0; i &lt; array_length_1d(global.speaking[]); i++;){
-global.speaking[i] = "phil";
-}
-}
 
+image_speed = 1/2;
+sprite_index = level_transition_backwards
 </string>
           </argument>
         </arguments>
@@ -87,46 +77,6 @@ alarm[5] = 3;
         </arguments>
       </action>
     </event>
-    <event eventtype="2" enumb="2">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>
-if(audio_is_playing(sound11)){
-audio_pause_sound(sound11)
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -138,7 +88,7 @@ audio_pause_sound(sound11)
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>other</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -147,6 +97,40 @@ audio_pause_sound(sound11)
             <string>if(global.cheater &amp;&amp; !instance_exists(text_box)&amp;&amp; !cheating){
     alarm[5] = 5;
     cheating = true
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(sprite_index == level_transition_forwards&amp;&amp;image_index == 13){
+    if(audio_is_playing(sound11)){
+        audio_pause_sound(sound11)
+    }
+    room_restart();
+}
+if(sprite_index == level_transition_backwards){
+    /*if(image_index == 13){
+        global.done_moving = true
+    }
+    else{
+        global.done_moving = false;
+    }*/
 }
 </string>
           </argument>
@@ -193,8 +177,8 @@ audio_pause_sound(sound11)
           <argument>
             <kind>1</kind>
             <string>reset_counter();
+sprite_index = level_transition_forwards;
 audio_play_sound(level_change_snd,1,false)
-alarm[2] = 2
 </string>
           </argument>
         </arguments>

@@ -49,6 +49,7 @@
           <argument>
             <kind>1</kind>
             <string>depth = -y
+mask_index = -1
 if(sliding == "left"){
     mask_index = mask_right
     if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)){
@@ -56,7 +57,6 @@ if(sliding == "left"){
     }
     if(place_meeting(x,y,pit)){
         //pit stuff
-        sliding=false;
     }
     if(sliding == "left"){
         x-=12;
@@ -69,7 +69,6 @@ if(sliding == "right"){
     }
     if(place_meeting(x,y,pit)){
         //pit stuff
-        sliding=false;
     }
     if(sliding == "right"){
         x+=12
@@ -82,7 +81,6 @@ if(sliding == "up"){
     }
     if(place_meeting(x,y,pit)){
         //pit stuff
-        sliding=false;
     }
     if(sliding == "up"){
         y-=12;
@@ -95,15 +93,12 @@ if(sliding == "down"){
     }
     if(place_meeting(x,y,pit)){
         //pit stuff
-        sliding=false;
     }
     if(sliding == "down"){
         y+=12;
     }
 }
-if(!sliding){
-    mask_index = -1
-}
+
 </string>
           </argument>
         </arguments>

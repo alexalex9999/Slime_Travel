@@ -138,6 +138,7 @@ if(sprite_index = slime_jump_down){
 if(!instance_place(x,y,ice_floor)){
     sliding = false;
 }
+//normal jump
 if(sprite_index == slime_jump_right &amp;&amp; image_index == 6){
     sprite_index = slime_idle_right
     mask_index = -1;
@@ -147,9 +148,6 @@ if(sprite_index == slime_jump_right &amp;&amp; image_index == 6){
     image_speed = 1/3
     audio_play_sound(slime_land_snd, 1, false)
     global.done_moving = true;
-    if(instance_place(x,y,ice_floor)){
-        sliding=true;
-    }
 }
 if(sprite_index == slime_jump_left &amp;&amp; image_index == 6){
     sprite_index = slime_idle_left
@@ -160,9 +158,6 @@ if(sprite_index == slime_jump_left &amp;&amp; image_index == 6){
     image_speed = 1/3
     audio_play_sound(slime_land_snd, 1, false)
     global.done_moving = true;
-    if(instance_place(x,y,ice_floor)){
-        sliding=true;
-    }
 }
 if(sprite_index == slime_jump_up &amp;&amp; image_index == 6){
     sprite_index = slime_idle_back
@@ -173,9 +168,6 @@ if(sprite_index == slime_jump_up &amp;&amp; image_index == 6){
     image_speed = 1/3
     audio_play_sound(slime_land_snd, 1, false)
     global.done_moving = true;
-    if(instance_place(x,y,ice_floor)){
-        sliding=true;
-    }
 }
 if(sprite_index == slime_jump_down &amp;&amp; image_index == 6){
     sprite_index = slime_idle_front
@@ -186,10 +178,49 @@ if(sprite_index == slime_jump_down &amp;&amp; image_index == 6){
     image_speed = 1/3
     audio_play_sound(slime_land_snd, 1, false)
     global.done_moving = true;
-    if(instance_place(x,y,ice_floor)){
-        sliding=true;
-    }
 }
+//ice jump
+if(sprite_index == slime_ice_right &amp;&amp; image_index == 4){
+    sprite_index = slime_idle_right
+    mask_index = -1;
+    x+=96
+    smooth_scrolling.x = x;
+    smooth_scrolling.y = y;
+    image_speed = 1/3
+    audio_play_sound(slime_land_snd, 1, false)
+    sliding=true;
+}
+if(sprite_index == slime_ice_left &amp;&amp; image_index == 4){
+    sprite_index = slime_idle_left
+    mask_index = -1;
+    x-=96
+    smooth_scrolling.x = x;
+    smooth_scrolling.y = y;
+    image_speed = 1/3
+    audio_play_sound(slime_land_snd, 1, false)
+    sliding=true;
+}
+if(sprite_index == slime_ice_up &amp;&amp; image_index == 4){
+    sprite_index = slime_idle_back
+    mask_index = -1;
+    y-=96
+    smooth_scrolling.x = x;
+    smooth_scrolling.y = y;
+    image_speed = 1/3
+    audio_play_sound(slime_land_snd, 1, false)
+    sliding=true;
+}
+if(sprite_index == slime_ice_down &amp;&amp; image_index == 4){
+    sprite_index = slime_idle_front
+    mask_index = -1;
+    y+=96
+    smooth_scrolling.x = x;
+    smooth_scrolling.y = y;
+    image_speed = 1/3
+    audio_play_sound(slime_land_snd, 1, false)
+    sliding=true;
+}
+//bounce
 if(sprite_index == slime_bounce_right &amp;&amp; image_index == 5){
     sprite_index = slime_idle_right
     mask_index = -1;
@@ -218,6 +249,7 @@ if(sprite_index == slime_bounce_up &amp;&amp; image_index == 5){
 //    sprite_index = slime_idle_front
 //    image_speed = 1/3
 //}
+//pushing box
 if(sprite_index == slime_push_left &amp;&amp; image_index == 6){
     var boxid = (instance_position(x-96, y, pushable_box));
     x-=96
@@ -282,78 +314,142 @@ if(sprite_index == slime_push_down &amp;&amp; image_index == 6){
         sliding=true;
     }
 }
+//ice
 if(sliding){
     mask_index = -1
     if(sprite_index == slime_idle_front){
         
-        if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)||place_meeting(x,y+12,pit)){
+        if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)){
             sliding=false;
+            global.done_moving = true;
             image_speed = 1/3;
         }
         else{
             if(place_meeting(x,y+12,pushable_box)){
                 (instance_place(x,y+12,pushable_box)).sliding = "down";
                 sliding=false;
+                global.done_moving = true;
                 image_speed = 1/3;
             }
             else{
-                y+=12
-                smooth_scrolling.x = x;
-                smooth_scrolling.y = y;
+                if(place_meeting(x,y+12,pit)){
+                    if((instance_place(x,y+12,pit)).pit_filled){
+                        y+=12
+                        smooth_scrolling.x = x;
+                        smooth_scrolling.y = y;
+                    }
+                    else{
+                        sliding = false;
+                        global.done_moving = true;
+                        image_speed = 1/3;
+                    }
+                }
+                else{
+                    y+=12
+                    smooth_scrolling.x = x;
+                    smooth_scrolling.y = y;
+                }
             }
         }
     }
     if(sprite_index == slime_idle_back){
-        if(place_meeting(x,y-12,wall)||place_meeting(x,y-12,pillar)||place_meeting(x,y-12,pit)){
+        if(place_meeting(x,y-12,wall)||place_meeting(x,y-12,pillar)){
             sliding=false;
+            global.done_moving = true;
             image_speed = 1/3;
         }
         else{
             if(place_meeting(x,y-12,pushable_box)){
                 (instance_place(x,y-12,pushable_box)).sliding = "up";
                 sliding=false;
+                global.done_moving = true;
                 image_speed = 1/3;
             }
             else{
-                y-=12
-                smooth_scrolling.x = x;
-                smooth_scrolling.y = y;
+                if(place_meeting(x,y-12,pit)){
+                    if((instance_place(x,y-12,pit)).pit_filled){
+                        y-=12
+                        smooth_scrolling.x = x;
+                        smooth_scrolling.y = y;
+                    }
+                    else{
+                        sliding = false;
+                        global.done_moving = true;
+                        image_speed = 1/3;
+                    }
+                }
+                else{
+                    y-=12
+                    smooth_scrolling.x = x;
+                    smooth_scrolling.y = y;
+                }
             }
         }
     }
     if(sprite_index == slime_idle_right){
-        if(place_meeting(x+12,y,wall)||place_meeting(x+12,y,pillar)||place_meeting(x+12,y,pit)){
+        if(place_meeting(x+12,y,wall)||place_meeting(x+12,y,pillar)){
             sliding=false;
+            global.done_moving = true;
             image_speed = 1/3;
         }
         else{
             if(place_meeting(x+12,y,pushable_box)){
                 (instance_place(x+12,y,pushable_box)).sliding = "right";
                 sliding=false;
+                global.done_moving = true;
                 image_speed = 1/3;
             }
             else{
-                x+=12
-                smooth_scrolling.x = x;
-                smooth_scrolling.y = y;
+                if(place_meeting(x+12,y,pit)){
+                    if((instance_place(x+12,y,pit)).pit_filled){
+                        x+=12
+                        smooth_scrolling.x = x;
+                        smooth_scrolling.y = y;
+                    }
+                    else{
+                        sliding = false;
+                        global.done_moving = true;
+                        image_speed = 1/3;
+                    }
+                }
+                else{
+                    x+=12
+                    smooth_scrolling.x = x;
+                    smooth_scrolling.y = y;
+                }
             }
         }
     }
     if(sprite_index == slime_idle_left){
-        if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)||place_meeting(x-12,y,pit)){
+        if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)){
             sliding=false;
+            global.done_moving = true;
             image_speed = 1/3;
         }
         else{
             if(place_meeting(x-12,y,pushable_box)){
                 (instance_place(x-12,y,pushable_box)).sliding = "left";
                 sliding=false;
+                global.done_moving = true;
                 image_speed = 1/3;
-            }
-            else{
-                x-=12
-                smooth_scrolling.x = x;
-                smooth_scrolling.y = y;
+            }else{
+                if(place_meeting(x-12,y,pit)){
+                    if((instance_place(x-12,y,pit)).pit_filled){
+                        x-=12
+                        smooth_scrolling.x = x;
+                        smooth_scrolling.y = y;
+                    }
+                    else{
+                        sliding = false;
+                        global.done_moving = true;
+                        image_speed = 1/3;
+                    }
+                }
+                else{
+                    x-=12
+                    smooth_scrolling.x = x;
+                    smooth_scrolling.y = y;
+                }
             }
         }
     }
@@ -420,11 +516,14 @@ if(sprite_index == slime_idle_front || sprite_index == slime_idle_back ||
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
-    if(!position_meeting(x, y+96, all) || position_meeting(x, y+96, ice_floor) || position_meeting(x, y+96, door_nextroom) || position_meeting(x, y+96, invisible_button) || position_meeting(x, y+96, switch_button)){
+    //if(!position_meeting(x, y+96, all) || position_meeting(x, y+96, ice_floor) || position_meeting(x, y+96, door_nextroom) || position_meeting(x, y+96, invisible_button) || position_meeting(x, y+96, switch_button)){
         sprite_index = slime_jump_down
         if(position_meeting(x, y, switch_button)){
             alarm[1] = 1;
         }
+    //}
+    if(position_meeting(x, y+96, ice_floor)){
+        sprite_index = slime_ice_down;
     }
     if(position_meeting(x, y+96, wall)){
         sprite_index = slime_idle_front
@@ -480,11 +579,14 @@ if(sprite_index == slime_idle_front || sprite_index == slime_idle_back ||
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
-    if(!position_meeting(x+96, y, all) || position_meeting(x+96, y, ice_floor) || instance_position(x+96, y, door_nextroom) || (instance_position(x+96, y, invisible_button)!=noone) || (instance_position(x+96, y, switch_button)!=noone)){
+    //if(!position_meeting(x+96, y, all) || position_meeting(x+96, y, ice_floor) || instance_position(x+96, y, door_nextroom) || (instance_position(x+96, y, invisible_button)!=noone) || (instance_position(x+96, y, switch_button)!=noone)){
         sprite_index = slime_jump_right
         if(position_meeting(x, y, switch_button)){
             alarm[1] = 1;
         }
+    //}
+    if(position_meeting(x+96, y, ice_floor)){
+        sprite_index = slime_ice_right;
     }
     if(position_meeting(x+96, y, wall)){
         sprite_index = slime_bounce_right
@@ -541,11 +643,14 @@ if(sprite_index == slime_idle_front || sprite_index == slime_idle_back ||
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
-    if(!position_meeting(x, y-96, all) || position_meeting(x, y-96, ice_floor) || position_meeting(x, y-96, invisible_button) || position_meeting(x, y-96, switch_button) || position_meeting(x, y-96, door_nextroom)){
+    //if(!position_meeting(x, y-96, all) || position_meeting(x, y-96, ice_floor) || position_meeting(x, y-96, invisible_button) || position_meeting(x, y-96, switch_button) || position_meeting(x, y-96, door_nextroom)){
         sprite_index = slime_jump_up
         if(position_meeting(x, y, switch_button)){
             alarm[1] = 1;
         }
+    //}
+    if(position_meeting(x, y-96, ice_floor)){
+        sprite_index = slime_ice_up;
     }
     if(position_meeting(x, y-96, wall)){
         sprite_index = slime_bounce_up
@@ -602,11 +707,14 @@ if(sprite_index == slime_idle_front || sprite_index == slime_idle_back ||
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     image_index = 0
     image_speed = 1/2
-    if(!position_meeting(x-96, y, all) || position_meeting(x-96, y, ice_floor) || position_meeting(x-96, y, invisible_button) || position_meeting(x-96, y, switch_button) || position_meeting(x-96, y, door_nextroom)){
+    //if(!position_meeting(x-96, y, all) || position_meeting(x-96, y, ice_floor) || position_meeting(x-96, y, invisible_button) || position_meeting(x-96, y, switch_button) || position_meeting(x-96, y, door_nextroom)){
         sprite_index = slime_jump_left
         if(position_meeting(x, y, switch_button)){
             alarm[1] = 1;
         } 
+    //}
+    if(position_meeting(x-96, y, ice_floor)){
+        sprite_index = slime_ice_left;
     }
     if(position_meeting(x-96, y, wall)){
         sprite_index = slime_bounce_left
