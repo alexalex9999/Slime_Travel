@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(audio_is_paused(sound11)){
+            <string>//sprite_index = level_transition_backwards;
+if(audio_is_paused(sound11)){
     audio_resume_sound(sound11)
 }
 else{
@@ -38,6 +39,7 @@ cheating = false
 
 image_speed = 1/2;
 sprite_index = level_transition_backwards
+reseting = false;
 </string>
           </argument>
         </arguments>
@@ -60,7 +62,7 @@ sprite_index = level_transition_backwards
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.done_moving &amp;&amp; global.cheater &amp;&amp; keyboard_check(vk_shift)){
+            <string>if(global.done_moving &amp;&amp; global.cheater &amp;&amp; !keyboard_check(vk_shift)){
     solutions_script(global.solutions[count])
     if(jump_succeeded){
         count++
@@ -72,6 +74,35 @@ sprite_index = level_transition_backwards
 }
 cheating = true
 alarm[5] = 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+    if(audio_is_playing(sound11)){
+        audio_pause_sound(sound11)
+    }
+    reseting = false;
+    room_restart();
+    
 </string>
           </argument>
         </arguments>
@@ -97,40 +128,6 @@ alarm[5] = 3;
             <string>if(global.cheater &amp;&amp; !instance_exists(text_box)&amp;&amp; !cheating){
     alarm[5] = 5;
     cheating = true
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(sprite_index == level_transition_forwards&amp;&amp;image_index == 13){
-    if(audio_is_playing(sound11)){
-        audio_pause_sound(sound11)
-    }
-    room_restart();
-}
-if(sprite_index == level_transition_backwards){
-    /*if(image_index == 13){
-        global.done_moving = true
-    }
-    else{
-        global.done_moving = false;
-    }*/
 }
 </string>
           </argument>
@@ -176,9 +173,12 @@ if(sprite_index == level_transition_backwards){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>reset_counter();
-sprite_index = level_transition_forwards;
+            <string>if(!reseting){
+reset_counter();
+//sprite_index = level_transition_forwards;
 audio_play_sound(level_change_snd,1,false)
+alarm[2] = 2;
+}
 </string>
           </argument>
         </arguments>
@@ -202,11 +202,13 @@ audio_play_sound(level_change_snd,1,false)
           <argument>
             <kind>1</kind>
             <string>
-
+if(!reseting){
 if(global.help_needed &amp;&amp;!global.cheater){
     
     global.cheater = true;
     alarm[2] = 2;
+    reseting = true;
+}
 }
 else if(global.cheater==true &amp;&amp; !instance_exists(text_box) ){
     global.cheater = false;

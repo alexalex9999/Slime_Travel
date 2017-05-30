@@ -229,7 +229,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <room>rooms\level_11</room>
     <rooms name="Actual Levels">
       <rooms name="Original Levels">
         <room>rooms\level_1</room>
@@ -243,6 +242,7 @@
         <room>rooms\level_10</room>
       </rooms>
       <room>rooms\fake_level</room>
+      <room>rooms\level_11</room>
     </rooms>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_1_room</room>
