@@ -185,8 +185,6 @@ else{
             <string>var xscale = window_get_width()/sprite_get_width(level_transition);
 var yscale = window_get_height()/sprite_get_height(level_transition);
 
-var portratio = view_wport[0]/view_wview[0];
-
 if(lvltran&lt;=13&amp;&amp;!reseting){
     if(lvltran == 0){
         audio_sound_gain(sound11, .75, 0);
@@ -215,10 +213,7 @@ if(reseting){
      //   draw_sprite(level_transition, 0, 0, 0);
         alarm[2] = 1;
     }
-    show_debug_message(portratio);
 }
-
-//show_debug_message(string(xscale) +" "+ string(yscale));
 
 </string>
           </argument>
@@ -297,13 +292,13 @@ if(global.help_needed &amp;&amp;!global.cheater){
     global.cheater = true;
     reseting = true;
 }
-}
+
 else if(global.cheater==true &amp;&amp; !instance_exists(text_box) ){
     global.cheater = false;
     alarm[5]=-1;
     cheating = false
 }
-
+}
 </string>
           </argument>
         </arguments>
