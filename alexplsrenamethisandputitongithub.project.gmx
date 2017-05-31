@@ -41,8 +41,8 @@
     <sound>sound\beginning</sound>
     <sound>sound\openingsound</sound>
     <sound>sound\sound14</sound>
-    <sound>sound\codec_soft</sound>
-    <sound>sound\codec_loud</sound>
+    <sound>sound\codec</sound>
+    <sound>sound\sound18</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="New-Textboxes">
@@ -170,6 +170,7 @@
     <sprite>sprites\spacebar_to_start</sprite>
     <sprite>sprites\sprite86</sprite>
     <sprite>sprites\level_transition</sprite>
+    <sprite>sprites\big_phil</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\final_tileset</background>

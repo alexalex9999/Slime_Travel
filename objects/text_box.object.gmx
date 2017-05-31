@@ -42,6 +42,10 @@ global.speakshift = 0;
 draw_set_font(creepygirl);
 sprite_index = empty_sprite;
 alarm[4] = 1;
+alarm[2] = -1;
+count = 0;
+audio_sound_gain(codec,100,1);
+var soundplayed = false;
 /*
 if(global.help_needed){
 global.displaytext[] = 0;
@@ -256,6 +260,28 @@ instance_destroy();
         </arguments>
       </action>
     </event>
+    <event eventtype="2" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
@@ -374,17 +400,46 @@ if(global.multipage = true){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(room == asset_get_index("level_1")){
+            <string>soundplayed = false;
+var xscale = window_get_width()/sprite_get_width(big_phil);
+var yscale = window_get_height()/sprite_get_height(big_phil);
+show_debug_message("scales set");
+
+if(room == asset_get_index("level_1")){
     if(global.pagedoneno==0){
         if(global.chars_drawn&gt;=50){
             if(!global.pagesdone){
                 draw_sprite(space_button,0,840,700);
 
-}}
- if(global.pagedoneno==1){
- sound_play(codec_loud);
- }
-}}
+        }}}
+    if(global.pagedoneno == 1){
+        if(!soundplayed){
+            if((!audio_is_playing(codec))){
+                audio_play_sound(codec,1,false);
+                soundplayed = true;
+                audio_sound_gain(codec,0,20000);
+            }
+        }
+    }
+    if(global.pagedoneno==2){
+    
+    if(count&lt;=203){
+     xscale = window_get_width()/sprite_get_width(big_phil);
+    yscale = window_get_height()/sprite_get_height(big_phil);
+    draw_sprite_ext(big_phil, count/4, 0, 100, 1, 1, 0, c_white, 1);
+    show_debug_message(string(xscale) + string(yscale));
+    count++;
+    }else{
+    xscale = window_get_width()/sprite_get_width(big_phil);
+    yscale = window_get_height()/sprite_get_height(big_phil);
+    show_debug_message(string(xscale) + string(yscale));
+   
+    draw_sprite_ext(big_phil, 50, 0, 100, 1, 1, 0, c_white, 1);
+    }
+    
+    
+    } 
+}
 
 </string>
           </argument>
