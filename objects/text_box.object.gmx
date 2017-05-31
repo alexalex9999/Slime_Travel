@@ -103,7 +103,9 @@ if(global.help_needed){
         if(global.chars_drawn&lt;= string_length(global.currentstring)){
             global.currenttext = string_copy(global.cheatertext[global.pagedoneno], 0, global.chars_drawn);
             alarm[8]=1.5;
-            audio_play_sound(talking_snd, 1, false);
+           if(!global.transition){
+             audio_play_sound(talking_snd, 1, false);
+             }
             global.chars_drawn++;
 
         }else{
@@ -119,7 +121,9 @@ if(global.help_needed){
         if(global.chars_drawn&lt;= string_length(global.currentstring)){
             global.currenttext = string_copy(global.helptext[global.pagedoneno], 0, global.chars_drawn);
             alarm[8]=1.5;
+            if(!global.transition){
             audio_play_sound(talking_snd, 1, false);
+            }
             global.chars_drawn++;
 
         }else{
@@ -137,7 +141,9 @@ if(global.help_needed){
     if(global.chars_drawn&lt;= string_length(global.currentstring)){
         global.currenttext = string_copy(global.displaytext[global.pagedoneno], 0, global.chars_drawn);
         alarm[8]=1.5;
+        if(!global.transition){
         audio_play_sound(talking_snd, 1, false);
+        }
         global.chars_drawn++;
 
     }else{
@@ -149,6 +155,7 @@ if(global.help_needed){
         }
     }
 }
+
 if(global.chars_drawn&gt;=string_length(global.currentstring)){
 if(!instance_exists(textbox_arrow_object)){
 instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object)
@@ -156,6 +163,7 @@ instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object)
 }else{
 instance_deactivate_object(textbox_arrow_object);
 }
+
 </string>
           </argument>
         </arguments>
