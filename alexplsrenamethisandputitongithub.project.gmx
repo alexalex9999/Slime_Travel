@@ -41,6 +41,8 @@
     <sound>sound\beginning</sound>
     <sound>sound\openingsound</sound>
     <sound>sound\sound14</sound>
+    <sound>sound\codec_soft</sound>
+    <sound>sound\codec_loud</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="New-Textboxes">
@@ -53,6 +55,7 @@
       <sprite>sprites\phil_deadpan</sprite>
       <sprite>sprites\phil_indifferent</sprite>
       <sprite>sprites\phil_gasp</sprite>
+      <sprite>sprites\phil_empty</sprite>
       <sprite>sprites\phil_happy</sprite>
       <sprite>sprites\slime_giggle</sprite>
       <sprite>sprites\slime_angry</sprite>

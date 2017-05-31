@@ -157,12 +157,23 @@ if(global.help_needed){
 }
 
 if(global.chars_drawn&gt;=string_length(global.currentstring)){
-if(!instance_exists(textbox_arrow_object)){
-instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object)
-}
-}else{
-instance_deactivate_object(textbox_arrow_object);
-}
+    if(!instance_exists(textbox_arrow_object)){
+        if((room == asset_get_index("level_1"))){
+        //Change the pagedoneno to change the page with no arrow. 
+            if(global.pagedoneno == 2){
+            instance_deactivate_object(textbox_arrow_object);
+            
+            }else{
+            instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object);
+            }        
+        }else{
+            instance_create(view_xview[0]+1184,view_yview[0]=632,textbox_arrow_object);
+            }
+        }
+        
+    }else{
+        instance_deactivate_object(textbox_arrow_object);
+    }
 
 </string>
           </argument>
@@ -262,36 +273,6 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(room == asset_get_index("level_1")){
-    if(global.pagedoneno==0){
-        if(global.chars_drawn&gt;=67){
-            if(!global.pagesdone){
-                draw_sprite(space_button,0,840,700);
-
-}}
-draw_sprite(phil_animation_on,0,100,100);
-}}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>var ypos = 0;
 var xpos = 0;
 
@@ -372,6 +353,38 @@ if(global.multipage = true){
     draw_text(x,y,stringArray[k]);
     }
 }
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(room == asset_get_index("level_1")){
+    if(global.pagedoneno==0){
+        if(global.chars_drawn&gt;=50){
+            if(!global.pagesdone){
+                draw_sprite(space_button,0,840,700);
+
+}}
+ if(global.pagedoneno==1){
+ sound_play(codec_loud);
+ }
+}}
 
 </string>
           </argument>
