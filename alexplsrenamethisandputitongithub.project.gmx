@@ -41,6 +41,8 @@
     <sound>sound\beginning</sound>
     <sound>sound\openingsound</sound>
     <sound>sound\sound14</sound>
+    <sound>sound\codec</sound>
+    <sound>sound\sound18</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="New-Textboxes">
@@ -53,6 +55,7 @@
       <sprite>sprites\phil_deadpan</sprite>
       <sprite>sprites\phil_indifferent</sprite>
       <sprite>sprites\phil_gasp</sprite>
+      <sprite>sprites\phil_empty</sprite>
       <sprite>sprites\phil_happy</sprite>
       <sprite>sprites\slime_giggle</sprite>
       <sprite>sprites\slime_angry</sprite>
@@ -167,6 +170,7 @@
     <sprite>sprites\spacebar_to_start</sprite>
     <sprite>sprites\sprite86</sprite>
     <sprite>sprites\level_transition</sprite>
+    <sprite>sprites\big_phil</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\final_tileset</background>
@@ -182,6 +186,7 @@
     <script>scripts\jump_up.gml</script>
     <script>scripts\jump_right.gml</script>
     <script>scripts\jump_left.gml</script>
+    <script>scripts\script8.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
