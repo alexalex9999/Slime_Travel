@@ -162,7 +162,6 @@ global.solution_length = array_length_1d(global.solutions)</code>
     <instance objName="door_nextroom" x="576" y="0" name="inst_C375CDE9" locked="0" code="sprite_index = arrow_up;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="576" y="1056" name="inst_DF80C84B" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="576" y="1056" name="inst_2ABFBD62" locked="0" code="slime_direction = slime_jump_up;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pit" x="576" y="1152" name="inst_5ADDA487" locked="0" code="sprite_index = empty_sprite;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="switch_button" x="576" y="576" name="inst_3C8CCC32" locked="0" code="switch_num = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="576" y="192" name="inst_9B8346A6" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num] = false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="576" y="96" name="inst_09BF839B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

@@ -148,7 +148,6 @@ global.solution_length = array_length_1d(global.solutions)</code>
     <instance objName="wall" x="576" y="768" name="inst_E26E0636" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="0" y="672" name="inst_7897FCF1" locked="0" code="slime_direction = slime_jump_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="0" y="672" name="inst_30683891" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pit" x="-96" y="672" name="inst_BAD2A431" locked="0" code="sprite_index = empty_sprite;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="0" y="576" name="inst_3234FCEC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="0" y="480" name="inst_FD3D8C6B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="0" y="0" name="inst_F7E70AF3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

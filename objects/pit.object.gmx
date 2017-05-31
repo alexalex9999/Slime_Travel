@@ -63,6 +63,9 @@ if(position_meeting(x,y,pushable_box)){
         }
     global.done_moving = true;
 }
+if(position_meeting(x, y, slime)&amp;&amp;position_meeting(x+95, y+95, slime)){
+    //slime.sprite_index = slime.slimedirection;
+}
 </string>
           </argument>
         </arguments>

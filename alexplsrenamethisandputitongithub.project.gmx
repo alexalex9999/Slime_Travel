@@ -97,6 +97,20 @@
           <sprite>sprites\slime_ice_left</sprite>
           <sprite>sprites\slime_ice_right</sprite>
         </sprites>
+        <sprites name="slime_pit">
+          <sprites name="into_pit">
+            <sprite>sprites\slime_into_pit_down</sprite>
+            <sprite>sprites\slime_into_pit_up</sprite>
+            <sprite>sprites\slime_into_pit_left</sprite>
+            <sprite>sprites\slime_into_pit_right</sprite>
+          </sprites>
+          <sprites name="idle_pit">
+            <sprite>sprites\slime_idle_pit_left</sprite>
+            <sprite>sprites\slime_idle_pit_right</sprite>
+            <sprite>sprites\slime_idle_pit_front</sprite>
+            <sprite>sprites\slime_idle_pit_back</sprite>
+          </sprites>
+        </sprites>
       </sprites>
     </sprites>
     <sprites name="interactive_items">
@@ -233,6 +247,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
+    <room>rooms\ice_test_room</room>
     <rooms name="Actual Levels">
       <rooms name="Original Levels">
         <room>rooms\level_1</room>
@@ -268,7 +283,6 @@
       <room>rooms\ending_cutscene_3</room>
       <room>rooms\creditsTBD</room>
       <room>rooms\end_room</room>
-      <room>rooms\ice_test_room</room>
     </rooms>
   </rooms>
   <help>

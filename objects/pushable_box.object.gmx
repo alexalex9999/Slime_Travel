@@ -50,6 +50,9 @@
             <kind>1</kind>
             <string>depth = -y
 mask_index = -1
+if(place_meeting(x, y, ice_floor)&amp;&amp; sliding == false){
+    sliding = true;
+}
 if(sliding == "left"){
     mask_index = mask_right
     if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)){
