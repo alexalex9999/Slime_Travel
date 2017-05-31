@@ -188,7 +188,6 @@ global.solution_length = array_length_1d(global.solutions)</code>
     <instance objName="pillar" x="576" y="1056" name="inst_EB77C1B0" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="576" y="1056" name="inst_63611CAE" locked="0" code="slime_direction = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="auto_jump" x="576" y="1056" name="inst_0534BFED" locked="0" code="slime_direction = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pit" x="576" y="1152" name="inst_FF51A37D" locked="0" code="sprite_index = empty_sprite;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="0" y="0" name="inst_AEE2B25B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="text_box" x="0" y="96" name="inst_58AE7F5F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
