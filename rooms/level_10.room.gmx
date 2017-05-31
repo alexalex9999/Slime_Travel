@@ -196,6 +196,7 @@ global.solution_length = array_length_1d(global.solutions)</code>
     <instance objName="invisible_button" x="768" y="1248" name="inst_33BB617E" locked="0" code="slime_direction = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="768" y="1344" name="inst_B1630D3D" locked="0" code="sprite_index = empty_sprite;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="96" y="0" name="inst_C350FF8B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="text_box" x="0" y="192" name="inst_ECC6336F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="actual_final_tileset" x="0" y="0" w="96" h="96" xo="96" yo="96" id="10003610" name="inst_7637E2B0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

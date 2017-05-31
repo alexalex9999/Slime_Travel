@@ -54,35 +54,15 @@ pit_filled = false
     sprite_index = pit_closed
     pit_filled = true
 }
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="pushable_box">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(pit_filled == false){
-instance_deactivate_object(instance_position(x, y, pushable_box))
-image_index = 0
-sprite_index = pit_animation
-audio_play_sound(box_pit_snd, 1, false)
+if(position_meeting(x,y,pushable_box)){
+    if(pit_filled == false){
+        instance_deactivate_object(instance_position(x, y, pushable_box))
+        image_index = 0
+        sprite_index = pit_animation
+        audio_play_sound(box_pit_snd, 1, false)
+        }
+    global.done_moving = true;
 }
-global.done_moving = true;
 </string>
           </argument>
         </arguments>

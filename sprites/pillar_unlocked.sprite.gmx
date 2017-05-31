@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>2</bboxmode>
-  <bbox_left>70</bbox_left>
-  <bbox_right>69</bbox_right>
-  <bbox_top>140</bbox_top>
-  <bbox_bottom>130</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>95</bbox_right>
+  <bbox_top>136</bbox_top>
+  <bbox_bottom>191</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -21,5 +21,22 @@
   <height>192</height>
   <frames>
     <frame index="0">images\pillar_unlocked_0.png</frame>
+    <frame index="1">images\pillar_unlocked_1.png</frame>
+    <frame index="2">images\pillar_unlocked_2.png</frame>
+    <frame index="3">images\pillar_unlocked_3.png</frame>
+    <frame index="4">images\pillar_unlocked_4.png</frame>
+    <frame index="5">images\pillar_unlocked_5.png</frame>
+    <frame index="6">images\pillar_unlocked_6.png</frame>
+    <frame index="7">images\pillar_unlocked_7.png</frame>
+    <frame index="8">images\pillar_unlocked_8.png</frame>
+    <frame index="9">images\pillar_unlocked_9.png</frame>
+    <frame index="10">images\pillar_unlocked_10.png</frame>
+    <frame index="11">images\pillar_unlocked_11.png</frame>
+    <frame index="12">images\pillar_unlocked_12.png</frame>
+    <frame index="13">images\pillar_unlocked_13.png</frame>
+    <frame index="14">images\pillar_unlocked_14.png</frame>
+    <frame index="15">images\pillar_unlocked_15.png</frame>
+    <frame index="16">images\pillar_unlocked_16.png</frame>
+    <frame index="17">images\pillar_unlocked_17.png</frame>
   </frames>
 </sprite>

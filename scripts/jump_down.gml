@@ -5,6 +5,7 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
     if(instance_position(slime.x, slime.y+96, all)==noone || instance_position(slime.x, slime.y+96, door_nextroom) || (instance_position(slime.x, slime.y+96, invisible_button)!=noone) || ((instance_position(slime.x, slime.y+96, switch_button)!=noone) && (instance_position(slime.x, slime.y+96, pushable_box)==noone))){
         slime.sprite_index = slime_jump_down
         return true;
+        //must not return true on land on ice
     }
     if(instance_position(slime.x, slime.y+96, wall)!=noone || instance_position(slime.x, slime.y+96, pillar)!=noone){
         slime.sprite_index = slime_idle_front

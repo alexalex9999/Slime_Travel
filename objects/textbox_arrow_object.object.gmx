@@ -54,6 +54,9 @@ instance_destroy();
 if(global.chars_drawn&lt;string_length(global.currentstring)){
 instance_destroy();
 }
+if(!(instance_exists(text_box))){
+instance_destroy();
+}
 </string>
           </argument>
         </arguments>
