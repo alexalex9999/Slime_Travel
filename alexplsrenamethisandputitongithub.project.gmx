@@ -166,8 +166,7 @@
     <sprite>sprites\start_room_background</sprite>
     <sprite>sprites\spacebar_to_start</sprite>
     <sprite>sprites\sprite86</sprite>
-    <sprite>sprites\level_transition_forwards</sprite>
-    <sprite>sprites\level_transition_backwards</sprite>
+    <sprite>sprites\level_transition</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\final_tileset</background>

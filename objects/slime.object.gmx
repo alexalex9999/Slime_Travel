@@ -508,7 +508,7 @@ if(audio_is_playing(sound11)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding){
+            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding||global.transition){
 
 }else{
 
@@ -572,7 +572,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding){
+            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding||global.transition){
 
 }else{
 if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
@@ -636,7 +636,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding){
+            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding||global.transition){
 
 }else{
 if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
@@ -700,7 +700,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box)|| global.cheater || keyboard_check(vk_shift)||sliding){
+            <string>if(instance_exists(text_box)|| global.cheater || keyboard_check(vk_shift)||sliding||global.transition){
 
 }else{
 if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
