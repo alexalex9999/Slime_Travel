@@ -182,12 +182,18 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(lvltran&lt;=13&amp;&amp;!reseting){
+            <string>var xscale = window_get_width()/sprite_get_width(level_transition);
+var yscale = window_get_height()/sprite_get_height(level_transition);
+
+var portratio = view_wport[0]/view_wview[0];
+
+if(lvltran&lt;=13&amp;&amp;!reseting){
     if(lvltran == 0){
         audio_sound_gain(sound11, .75, 0);
         audio_sound_gain(sound11, 1, 750);
     }
-    draw_sprite(level_transition, lvltran, 0, 0);
+    draw_sprite_ext(level_transition, lvltran, 0, -1, xscale, yscale, 0, c_white, 1);
+    //draw_sprite_stretched_ext(level_transition, lvltran, 0, 0, view_wview[0], view_hview[0], c_white, 1);
     lvltran++;
 }
 
@@ -196,16 +202,23 @@ if(reseting){
         if(lvltran == 14){
             audio_sound_gain(sound11, .75, 750);
         }
-        draw_sprite(level_transition, lvltran, 0, 0);
+        draw_sprite_ext(level_transition, lvltran, 0, -1, xscale, yscale, 0, c_white, 1);
+     //   draw_sprite_stretched_ext(level_transition, lvltran, 0, 0, view_wview[0], view_hview[0], c_white, 1);
+      //  draw_sprite(level_transition, lvltran, 0, 0);
         lvltran--;
         if(lvltran == 2)
             audio_play_sound(level_change_snd,1,false)
     }
     else{
-        draw_sprite(level_transition, 0, 0, 0);
+    draw_sprite_ext(level_transition, 0, 0, -1, xscale, yscale, 0, c_white, 1);
+    //draw_sprite_stretched_ext(level_transition, 0, 0, 0, view_wview[0], view_hview[0], c_white, 1);
+     //   draw_sprite(level_transition, 0, 0, 0);
         alarm[2] = 1;
     }
+    show_debug_message(portratio);
 }
+
+//show_debug_message(string(xscale) +" "+ string(yscale));
 
 </string>
           </argument>
