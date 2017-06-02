@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>sliding = false;
+image_speed = 1/2
 </string>
           </argument>
         </arguments>
@@ -50,6 +51,12 @@
             <kind>1</kind>
             <string>depth = -y
 mask_index = -1
+if(image_index == 4){
+    image_index = 0;
+    sprite_index = box;
+}
+
+
 if(sliding == "left"){
     if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)){
         sliding=false;

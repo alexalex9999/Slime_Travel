@@ -64,7 +64,20 @@ if(position_meeting(x,y,pushable_box)&amp;&amp; position_meeting(x+95,y+95,pusha
     global.done_moving = true;
 }
 if(position_meeting(x, y, slime)&amp;&amp;position_meeting(x+95, y+95, slime)){
-    //slime.sprite_index = slime.slimedirection;
+    if(pit_filled == false){
+        if(slime.sprite_index == slime_idle_right){
+        
+        }
+        if(slime.sprite_index == slime_idle_left){
+        
+        }
+        if(slime.sprite_index == slime_idle_back){
+        
+        }
+        if(slime.sprite_index == slime_idle_front){
+        
+        }
+    }
 }
 </string>
           </argument>
