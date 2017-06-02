@@ -54,7 +54,7 @@ pit_filled = false
     sprite_index = pit_closed
     pit_filled = true
 }
-if(position_meeting(x,y,pushable_box)){
+if(position_meeting(x,y,pushable_box)&amp;&amp; position_meeting(x+95,y+95,pushable_box)){
     if(pit_filled == false){
         instance_deactivate_object(instance_position(x, y, pushable_box))
         image_index = 0
