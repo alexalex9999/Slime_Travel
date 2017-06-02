@@ -50,57 +50,40 @@
             <kind>1</kind>
             <string>depth = -y
 mask_index = -1
-if(place_meeting(x, y, ice_floor)&amp;&amp; sliding == false){
-    sliding = true;
-}
 if(sliding == "left"){
-    mask_index = mask_right
     if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)){
         sliding=false;
-    }
-    if(place_meeting(x,y,pit)){
-        //pit stuff
     }
     if(sliding == "left"){
         x-=12;
     }
 }
 if(sliding == "right"){
-    mask_index= mask_left
     if(place_meeting(x+12,y,wall)||place_meeting(x+12,y,pillar)){
         sliding=false;
-    }
-    if(place_meeting(x,y,pit)){
-        //pit stuff
     }
     if(sliding == "right"){
         x+=12
     }
 }
 if(sliding == "up"){
-    mask_index= mask_bottom
     if(place_meeting(x,y-12,wall)||place_meeting(x,y-12,pillar)){
         sliding=false;
-    }
-    if(place_meeting(x,y,pit)){
-        //pit stuff
     }
     if(sliding == "up"){
         y-=12;
     }
 }
 if(sliding == "down"){
-    mask_index= mask_top
     if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)){
         sliding=false;
-    }
-    if(place_meeting(x,y,pit)){
-        //pit stuff
     }
     if(sliding == "down"){
         y+=12;
     }
 }
+if(!place_meeting(x,y,ice_floor))
+    sliding = false;
 
 </string>
           </argument>

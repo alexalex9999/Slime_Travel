@@ -141,10 +141,6 @@
       <sprite>sprites\npc_sprite</sprite>
       <sprite>sprites\spr_ice</sprite>
       <sprite>sprites\no_mask</sprite>
-      <sprite>sprites\mask_left</sprite>
-      <sprite>sprites\mask_right</sprite>
-      <sprite>sprites\mask_top</sprite>
-      <sprite>sprites\mask_bottom</sprite>
     </sprites>
     <sprites name="Level_Stuff">
       <sprite>sprites\arrow_up</sprite>
@@ -187,8 +183,8 @@
     <sprite>sprites\big_phil</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\final_tileset</background>
-    <background>background\actual_final_tileset</background>
+    <background>background\default_tileset</background>
+    <background>background\ice_tileset</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -247,7 +243,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <room>rooms\ice_test_room</room>
     <rooms name="Actual Levels">
       <rooms name="Original Levels">
         <room>rooms\level_1</room>
@@ -283,6 +278,7 @@
       <room>rooms\ending_cutscene_3</room>
       <room>rooms\creditsTBD</room>
       <room>rooms\end_room</room>
+      <room>rooms\ice_test_room</room>
     </rooms>
   </rooms>
   <help>
