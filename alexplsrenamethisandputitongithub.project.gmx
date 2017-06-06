@@ -92,10 +92,18 @@
           <sprite>sprites\slime_push_down</sprite>
         </sprites>
         <sprites name="slime_ice">
-          <sprite>sprites\slime_ice_down</sprite>
-          <sprite>sprites\slime_ice_up</sprite>
-          <sprite>sprites\slime_ice_left</sprite>
-          <sprite>sprites\slime_ice_right</sprite>
+          <sprites name="jump">
+            <sprite>sprites\slime_ice_down</sprite>
+            <sprite>sprites\slime_ice_right</sprite>
+            <sprite>sprites\slime_ice_left</sprite>
+            <sprite>sprites\slime_ice_up</sprite>
+          </sprites>
+          <sprites name="slide">
+            <sprite>sprites\slime_iceslide_left</sprite>
+            <sprite>sprites\slime_iceslide_right</sprite>
+            <sprite>sprites\slime_iceslide_up</sprite>
+            <sprite>sprites\slime_iceslide_down</sprite>
+          </sprites>
         </sprites>
         <sprites name="slime_pit">
           <sprites name="into_pit">
