@@ -263,10 +263,10 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <room>rooms\ice_test_room</room>
+    <room>rooms\level_1</room>
+    <room>rooms\lvl_something</room>
     <rooms name="Actual Levels">
       <rooms name="Original Levels">
-        <room>rooms\level_1</room>
         <room>rooms\level_2</room>
         <room>rooms\level_3</room>
         <room>rooms\level_4</room>
@@ -293,6 +293,7 @@
       <room>rooms\cutscene_room_11</room>
       <room>rooms\cutscene_room_12</room>
     </rooms>
+    <room>rooms\ice_test_room</room>
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>
       <room>rooms\ending_cutscene_2</room>
