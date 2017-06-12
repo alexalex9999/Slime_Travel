@@ -53,7 +53,7 @@
   <instances>
     <instance objName="switch_button" x="576" y="0" name="inst_7D6CCA89" locked="0" code="switch_num = 0&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="switch_button" x="480" y="0" name="inst_0F550202" locked="0" code="switch_num = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pushable_box" x="576" y="384" name="inst_2A723C76" locked="0" code="sliding = &quot;left&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pushable_box" x="480" y="288" name="inst_2A723C76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="672" y="0" name="inst_CC65E9BA" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[0] = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="480" y="192" name="inst_6445C63B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="480" y="288" name="inst_F1A04275" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -97,15 +97,15 @@
     <instance objName="ice_floor" x="288" y="384" name="inst_F9185BE7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="192" y="480" name="inst_324E7DCB" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="576" y="480" name="inst_7C36F359" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ice_floor" x="288" y="192" name="inst_57CB7186" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ice_floor" x="288" y="288" name="inst_57CB7186" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="576" y="384" name="inst_B2107D84" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="384" y="480" name="inst_9E06F29F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ice_floor" x="288" y="288" name="inst_5C3D2ADD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ice_floor" x="384" y="288" name="inst_5C3D2ADD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="192" y="384" name="inst_56D3603E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="96" y="192" name="inst_A95E2B54" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="192" y="192" name="inst_74F77648" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="672" y="288" name="inst_F3D9C275" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ice_floor" x="576" y="288" name="inst_8EA0F47A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ice_floor" x="864" y="0" name="inst_8EA0F47A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="288" y="0" name="inst_95914F9E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="288" y="480" name="inst_FF54AAF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="192" y="288" name="inst_A5EA796E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
