@@ -135,8 +135,16 @@ if(sprite_index = slime_jump_down){
           <argument>
             <kind>1</kind>
             <string>depth = -y
-if(!instance_place(x,y,ice_floor)){
+if(!instance_place(x,y,ice_floor)&amp;&amp;sliding){
     sliding = false;
+    if(sprite_index == slime_iceslide_left)
+        sprite_index = slime_idle_left;
+    if(sprite_index == slime_iceslide_right)
+        sprite_index = slime_idle_right;
+    if(sprite_index == slime_iceslide_up)
+        sprite_index = slime_idle_back;
+    if(sprite_index == slime_iceslide_down)
+        sprite_index = slime_idle_front;
 }
 //normal jump
 if(sprite_index == slime_jump_right &amp;&amp; image_index == 6){
@@ -641,7 +649,7 @@ if(audio_is_playing(sound11)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding||global.transition){
+            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||global.transition){
 
 }else{
 
@@ -717,7 +725,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding||global.transition){
+            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||global.transition){
 
 }else{
 if(sprite_index == slime_idle_pit_front || sprite_index == slime_idle_pit_back || 
@@ -793,7 +801,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||sliding||global.transition){
+            <string>if(instance_exists(text_box) || global.cheater || keyboard_check(vk_shift)||global.transition){
 
 }else{
 if(sprite_index == slime_idle_pit_front || sprite_index == slime_idle_pit_back || 
@@ -869,7 +877,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box)|| global.cheater || keyboard_check(vk_shift)||sliding||global.transition){
+            <string>if(instance_exists(text_box)|| global.cheater || keyboard_check(vk_shift)||global.transition){
 
 }else{
 if(sprite_index == slime_idle_pit_front || sprite_index == slime_idle_pit_back || 
