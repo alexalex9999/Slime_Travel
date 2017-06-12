@@ -206,6 +206,7 @@
     <sprite>sprites\sprite86</sprite>
     <sprite>sprites\level_transition</sprite>
     <sprite>sprites\big_phil</sprite>
+    <sprite>sprites\big_phil_out</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\default_tileset</background>
@@ -301,6 +302,7 @@
       <room>rooms\fake_level</room>
       <room>rooms\level_ice</room>
     </rooms>
+
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>
       <room>rooms\ending_cutscene_2</room>
