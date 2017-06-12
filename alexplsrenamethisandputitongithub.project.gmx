@@ -206,6 +206,7 @@
     <sprite>sprites\sprite86</sprite>
     <sprite>sprites\level_transition</sprite>
     <sprite>sprites\big_phil</sprite>
+    <sprite>sprites\big_phil_out</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\default_tileset</background>
@@ -268,20 +269,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <rooms name="Cutscenes">
-      <room>rooms\cutscene_1_room</room>
-      <room>rooms\cutscene_room_2</room>
-      <room>rooms\cutscene_room_3</room>
-      <room>rooms\cutscene_room_4</room>
-      <room>rooms\cutscene_room_5</room>
-      <room>rooms\cutscene_room_6</room>
-      <room>rooms\cutscene_room_7</room>
-      <room>rooms\cutscene_room_8</room>
-      <room>rooms\cutscene_room_9</room>
-      <room>rooms\cutscene_room_10</room>
-      <room>rooms\cutscene_room_11</room>
-      <room>rooms\cutscene_room_12</room>
-    </rooms>
     <rooms name="Actual Levels">
       <rooms name="Original Levels">
         <room>rooms\level_1</room>
@@ -299,6 +286,20 @@
       </rooms>
       <room>rooms\fake_level</room>
       <room>rooms\level_ice</room>
+    </rooms>
+    <rooms name="Cutscenes">
+      <room>rooms\cutscene_1_room</room>
+      <room>rooms\cutscene_room_2</room>
+      <room>rooms\cutscene_room_3</room>
+      <room>rooms\cutscene_room_4</room>
+      <room>rooms\cutscene_room_5</room>
+      <room>rooms\cutscene_room_6</room>
+      <room>rooms\cutscene_room_7</room>
+      <room>rooms\cutscene_room_8</room>
+      <room>rooms\cutscene_room_9</room>
+      <room>rooms\cutscene_room_10</room>
+      <room>rooms\cutscene_room_11</room>
+      <room>rooms\cutscene_room_12</room>
     </rooms>
     <room>rooms\ice_test_room</room>
     <rooms name="The End">
