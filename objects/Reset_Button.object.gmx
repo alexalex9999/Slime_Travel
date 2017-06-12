@@ -34,6 +34,7 @@ else{
 }
 count = 0;
 lvltran = 0;
+nextroom = false;
 
 global.finished_entering = false;
 cheating = false
@@ -74,6 +75,36 @@ reseting = false;
 }
 cheating = true
 alarm[5] = 3;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+    if(audio_is_playing(sound11)){
+        audio_pause_sound(sound11)
+    }
+    reseting = false;
+    lvltran = 0;
+    room_goto_next();
+    
 </string>
           </argument>
         </arguments>
@@ -211,7 +242,12 @@ if(reseting){
     draw_sprite_ext(level_transition, 0, 0, -1, xscale, yscale, 0, c_white, 1);
     //draw_sprite_stretched_ext(level_transition, 0, 0, 0, view_wview[0], view_hview[0], c_white, 1);
      //   draw_sprite(level_transition, 0, 0, 0);
-        alarm[2] = 1;
+        if(nextroom){
+            alarm[3] = 1;
+        }
+        else{
+            alarm[2] = 1;
+        }
     }
 }
 
