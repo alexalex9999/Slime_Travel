@@ -269,7 +269,6 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <room>rooms\ice_test_room</room>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_1_room</room>
       <room>rooms\cutscene_room_2</room>
@@ -302,7 +301,6 @@
       <room>rooms\fake_level</room>
       <room>rooms\level_ice</room>
     </rooms>
-
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>
       <room>rooms\ending_cutscene_2</room>
@@ -310,6 +308,7 @@
       <room>rooms\creditsTBD</room>
       <room>rooms\end_room</room>
     </rooms>
+    <room>rooms\ice_test_room</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
