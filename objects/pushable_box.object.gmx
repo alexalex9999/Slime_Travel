@@ -56,6 +56,16 @@ if(image_index == 4){
     sprite_index = box;
 }
 
+if(position_meeting(x,y,pit)&amp;&amp;instance_position(x,y,pit)==instance_position(x+95,y+95,pit)){
+    pit_index = instance_position(x,y,pit)
+    if(pit_index.pit_filled == false){
+        pit_index.image_index = 0
+        pit_index.sprite_index = pit_animation
+        audio_play_sound(box_pit_snd, 1, false)
+        instance_deactivate_object(id)
+        }
+    global.done_moving = true;
+}
 
 if(sliding == "left"){
     if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)){

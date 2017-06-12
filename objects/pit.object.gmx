@@ -54,7 +54,7 @@ pit_filled = false
     sprite_index = pit_closed
     pit_filled = true
 }
-if(position_meeting(x,y,pushable_box)&amp;&amp; position_meeting(x+95,y+95,pushable_box)){
+if(position_meeting(x,y,pushable_box)&amp;&amp;instance_position(x,y,pushable_box)==instance_position(x+95,y+95,pushable_box)){
     if(pit_filled == false){
         instance_deactivate_object(instance_position(x, y, pushable_box))
         image_index = 0
@@ -63,7 +63,7 @@ if(position_meeting(x,y,pushable_box)&amp;&amp; position_meeting(x+95,y+95,pusha
         }
     global.done_moving = true;
 }
-if(position_meeting(x, y, slime)&amp;&amp;position_meeting(x+95, y+95, slime)){
+if(position_meeting(x, y, slime)&amp;&amp;instance_position(x, y, slime)==instance_position(x+95, y+95, slime)){
     if(pit_filled == false){
         if(slime.sprite_index == slime_iceslide_right){
             slime.sprite_index = slime_idle_pit_right;
