@@ -26,6 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>sprite_index = empty_sprite;
+spoke = false;
 </string>
           </argument>
         </arguments>
@@ -51,13 +52,13 @@
             <string>if(room == asset_get_index("level_4")){
 if(global.pillar_down[0] = false){
 if(!instance_exists(text_box)){
-if(slime.x==x&amp;&amp;slime.y==y){
+if(slime.x==x&amp;&amp;slime.y==y&amp;&amp;spoke==false){
     
     global.speaking[] = '';
     global.displaytext[] = '';
     global.textboxarray[] = '';
     instance_create(view_current.x,view_current.y,text_box);
-    
+    spoke = true;
    
 global.displaytext[0] = "Ha! Get rekt m8! You screwed up the first time didn’t you? You pushed the two boxes on the buttons right? ";
 global.speaking[0] ="phil";
