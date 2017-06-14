@@ -101,32 +101,35 @@ global.speaking[i] = "phil";
             <string>if(instance_exists(text_box)){
 if(!(global.currentx=view_xview[0])||!(global.currenty=view_yview[0])){
      instance_deactivate_object(textbox_arrow_object);
-    alarm[9] = 4;
+    alarm[9] = 1;
     }
     }
 if(global.chars_drawn&gt;=string_length(global.currentstring)){
     if(!instance_exists(textbox_arrow_object)){
+    
         if((room == asset_get_index("level_1"))){
         //Change the pagedoneno to change the page with no arrow. 
             if(global.pagedoneno == 2){
             instance_deactivate_object(textbox_arrow_object);
-            
-            }else{
+            }
+            else{
             instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object);
             global.currentx = view_xview[0];
             global.currenty = view_yview[0];
-            }        
+           }       
         }else{
             instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object);
             global.currentx = view_xview[0];
             global.currenty = view_yview[0];
             }
-        }
+        
+        
+        
+    }
     }else{
         instance_deactivate_object(textbox_arrow_object);
     }
    
-
 </string>
           </argument>
         </arguments>

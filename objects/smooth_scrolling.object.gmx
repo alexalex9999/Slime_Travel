@@ -190,6 +190,31 @@ if(x&lt;576)
         </arguments>
       </action>
     </event>
+    <event eventtype="5" enumb="16">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(instance_exists(text_box)){
+text_box.alarm[9] = 1;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="9" enumb="16">
       <action>
         <libid>1</libid>
@@ -209,7 +234,9 @@ if(x&lt;576)
             <kind>1</kind>
             <string>x=view_xview[0]+view_wview[0]/2;
 y=view_yview[0]+view_hview[0]/2;
+if(instance_exists(text_box)){
 text_box.alarm[9] = 1;
+}
 </string>
           </argument>
         </arguments>
@@ -328,7 +355,9 @@ text_box.alarm[9] = 1;
 y=slime.y
 view_hspeed[0] = 50;
 view_vspeed[0] = 50;
+if(instance_exists(text_box)){
 text_box.alarm[9] = 1;
+}
 </string>
           </argument>
         </arguments>

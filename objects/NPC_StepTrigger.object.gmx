@@ -53,7 +53,7 @@ spoke = false;
 if(global.pillar_down[0] = false){
 if(!instance_exists(text_box)){
 if(slime.x==x&amp;&amp;slime.y==y&amp;&amp;spoke==false){
-    
+
     global.speaking[] = '';
     global.displaytext[] = '';
     global.textboxarray[] = '';
@@ -79,6 +79,7 @@ global.textboxarray[1] = phil_happy;
 
 if(!instance_exists(text_box)){
 if(slime.x==x&amp;&amp;slime.y==y){
+
     
     global.speaking[] = '';
     global.displaytext[] = '';
