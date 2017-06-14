@@ -100,6 +100,7 @@ if(sprite_index == pillar_locking &amp;&amp; image_index == 6){
 }
 if(sprite_index == pillar_unlocked){
     depth = 10000
+    mask_index = no_mask;
 }
 else{
 }

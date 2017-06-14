@@ -283,6 +283,10 @@
         <room>rooms\level_11</room>
         <room>rooms\level_12</room>
       </rooms>
+      <rooms name="Ice Levels">
+        <room>rooms\level_ice_1</room>
+        <room>rooms\level_ice_2</room>
+      </rooms>
       <room>rooms\fake_level</room>
       <room>rooms\level_ice</room>
     </rooms>
