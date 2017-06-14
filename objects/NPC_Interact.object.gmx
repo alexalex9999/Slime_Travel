@@ -3,7 +3,7 @@
   <spriteName>npc_sprite</spriteName>
   <solid>-1</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-145475993</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>alarm[1] = 1;
+            <string>
+alarm[1] = 1;
+spoke = false;
+drawYes = false;
+slimeNear = false;
+spriteToDraw = empty_sprite;
 </string>
           </argument>
         </arguments>
@@ -74,7 +79,50 @@ pitid.sprite_index = empty_sprite;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>if(slime.y==self.y+96){
+slimeNear = true;
+if(painting){
+if(instance_exists(text_box)){
+drawYes = true;
+slimeNear = false;
+}else{
+drawYes = false;
+}
+}
+}else{
+drawYes = false;
+slimeNear = false;
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(drawYes){
+draw_sprite(spriteToDraw,40,view_xview[0],view_yview[0]);
+}
+if(slimeNear){
+draw_sprite(spacebar_to_start,0,self.x,self.y-96);
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -96,9 +144,14 @@ pitid.sprite_index = empty_sprite;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!instance_exists(text_box)){
-if(slime.x==x&amp;&amp;slime.y==y+96){
-    slime.sprite_index = slime_idle_back;
+            <string>spoke = false;
+
+if(!instance_exists(text_box)){
+if(slime.x==x&amp;&amp;slime.y==y+96&amp;&amp;slime.sprite_index==slime_idle_back&amp;&amp;spoke==false){
+
+
+
+
     global.speaking[] = '';
     global.displaytext[] = '';
     global.textboxarray[] = '';
@@ -110,7 +163,9 @@ if(slime.x==x&amp;&amp;slime.y==y+96){
     global.textboxarray[i] = global.textboxarrayNPC[i];
 
 
-}}
+}
+spoke = true;
+}
 }
 </string>
           </argument>
