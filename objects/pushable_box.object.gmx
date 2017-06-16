@@ -68,7 +68,7 @@ if(position_meeting(x,y,pit)&amp;&amp;instance_position(x,y,pit)==instance_posit
 }
 
 if(sliding == "left"){
-    if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)){
+    if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)||place_meeting(x-12,y,pushable_box)){
         sliding=false;
         sprite_index = box_ice_left;
     }
@@ -77,7 +77,7 @@ if(sliding == "left"){
     }
 }
 if(sliding == "right"){
-    if(place_meeting(x+12,y,wall)||place_meeting(x+12,y,pillar)){
+    if(place_meeting(x+12,y,wall)||place_meeting(x+12,y,pillar)||place_meeting(x+12,y,pushable_box)){
         sliding=false;
         sprite_index = box_ice_right;
     }
@@ -86,7 +86,7 @@ if(sliding == "right"){
     }
 }
 if(sliding == "up"){
-    if(place_meeting(x,y-12,wall)||place_meeting(x,y-12,pillar)){
+    if(place_meeting(x,y-12,wall)||place_meeting(x,y-12,pillar)||place_meeting(x,y-12,pushable_box)){
         sliding=false;
         sprite_index = box_ice_up;
     }
@@ -95,7 +95,7 @@ if(sliding == "up"){
     }
 }
 if(sliding == "down"){
-    if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)){
+    if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)|place_meeting(x,y+12,pushable_box)){
         sliding=false;
         sprite_index = box_ice_down;
     }
