@@ -660,6 +660,10 @@ sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
 }
 if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
+    if(position_meeting(x, y+96, NPC_Interact)){
+        sprite_index = slime_idle_front;
+    }
+    else{
     image_index = 0
     image_speed = 1/2
     //if(!position_meeting(x, y+96, all) || position_meeting(x, y+96, ice_floor) || position_meeting(x, y+96, door_nextroom) || position_meeting(x, y+96, invisible_button) || position_meeting(x, y+96, switch_button)){
@@ -701,6 +705,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         audio_play_sound(move_box_snd, 1, false);
         }
     }
+    }
     mask_index = no_mask;
 }
 }
@@ -733,8 +738,12 @@ if(sprite_index == slime_idle_pit_front || sprite_index == slime_idle_pit_back |
 sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
     sprite_index = slime_idle_pit_right;
 }
-if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
-sprite_index == slime_idle_left || sprite_index == slime_idle_right){
+if((sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
+sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
+    if(position_meeting(x+96, y, NPC_Interact)){
+        sprite_index = slime_idle_right;
+    }
+    else{
     image_index = 0
     image_speed = 1/2
     //if(!position_meeting(x+96, y, all) || position_meeting(x+96, y, ice_floor) || instance_position(x+96, y, door_nextroom) || (instance_position(x+96, y, invisible_button)!=noone) || (instance_position(x+96, y, switch_button)!=noone)){
@@ -777,6 +786,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         audio_play_sound(move_box_snd, 1, false);
         }
     }
+    }
     mask_index = no_mask;
 }
 }
@@ -809,8 +819,12 @@ if(sprite_index == slime_idle_pit_front || sprite_index == slime_idle_pit_back |
 sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
     sprite_index = slime_idle_pit_back;
 }
-if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
-sprite_index == slime_idle_left || sprite_index == slime_idle_right){
+if((sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
+sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
+    if(position_meeting(x, y-96, NPC_Interact)){
+        sprite_index = slime_idle_back;
+    }
+    else{
     image_index = 0
     image_speed = 1/2
     //if(!position_meeting(x, y-96, all) || position_meeting(x, y-96, ice_floor) || position_meeting(x, y-96, invisible_button) || position_meeting(x, y-96, switch_button) || position_meeting(x, y-96, door_nextroom)){
@@ -853,6 +867,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         audio_play_sound(move_box_snd, 1, false);
         }
     }
+    }
     mask_index = no_mask;
 }
 }
@@ -885,8 +900,12 @@ if(sprite_index == slime_idle_pit_front || sprite_index == slime_idle_pit_back |
 sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
     sprite_index = slime_idle_pit_left;
 }
-if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
-sprite_index == slime_idle_left || sprite_index == slime_idle_right){
+if((sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
+sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
+    if(position_meeting(x-96, y, NPC_Interact)){
+        sprite_index = slime_idle_left;
+    }
+    else{
     image_index = 0
     image_speed = 1/2
     //if(!position_meeting(x-96, y, all) || position_meeting(x-96, y, ice_floor) || position_meeting(x-96, y, invisible_button) || position_meeting(x-96, y, switch_button) || position_meeting(x-96, y, door_nextroom)){
@@ -928,6 +947,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
             (instance_position(x-96, y, pushable_box)).sprite_index = empty_sprite;
             audio_play_sound(move_box_snd, 1, false);
         }
+    }
     }
     mask_index = no_mask;
 }
