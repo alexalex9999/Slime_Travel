@@ -30,6 +30,27 @@ drawQuit = false;
 image_speed = 0;
 self.x = view_xview[0]+10;
 self.y = view_yview[0]+5;
+
+if(room_get_name(room)=="menu_room"){
+    if(sound_isplaying(beginning)){
+    }else{
+        sound_loop(beginning);
+    }
+}
+if(room_get_name(room)=="level_1"){
+    if(sound_isplaying(sound11)){
+    if(audio_
+    }else{
+        sound_loop(sound11);
+    }
+}
+if(room_get_name(room)=="level_1"){
+    if(sound_isplaying(sound11)){
+    }else{
+        sound_loop(sound11);
+    }
+}
+
 </string>
           </argument>
         </arguments>
