@@ -422,7 +422,7 @@
     <option_screenkey>True</option_screenkey>
     <option_screenshotkey>true</option_screenshotkey>
     <option_shortcircuit>True</option_shortcircuit>
-    <option_showcursor>True</option_showcursor>
+    <option_showcursor>False</option_showcursor>
     <option_showprogress>1</option_showprogress>
     <option_sizeable>True</option_sizeable>
     <option_stayontop>false</option_stayontop>
@@ -472,11 +472,11 @@
     <option_version>100</option_version>
     <option_version_build>0</option_version_build>
     <option_version_company>Johns Creek TSA</option_version_company>
-    <option_version_copyright></option_version_copyright>
-    <option_version_description></option_version_description>
+    <option_version_copyright>2017 TSA</option_version_copyright>
+    <option_version_description>A fun, cool indie game about a child who falls into the underground and has to fight or talk with monsters.</option_version_description>
     <option_version_major>1</option_version_major>
-    <option_version_minor>7</option_version_minor>
-    <option_version_product></option_version_product>
+    <option_version_minor>8</option_version_minor>
+    <option_version_product>Slime Travel</option_version_product>
     <option_version_release>0</option_version_release>
     <option_win8_advertising_appid></option_win8_advertising_appid>
     <option_win8_advertising_enable>0</option_win8_advertising_enable>
@@ -548,16 +548,16 @@
     <option_windows_alternate_sync_method>False</option_windows_alternate_sync_method>
     <option_windows_build_version>0</option_windows_build_version>
     <option_windows_company_info>Johns Creek TSA</option_windows_company_info>
-    <option_windows_copyright_info></option_windows_copyright_info>
+    <option_windows_copyright_info>2017 TSA</option_windows_copyright_info>
     <option_windows_create_textures_on_demand>False</option_windows_create_textures_on_demand>
-    <option_windows_description_info></option_windows_description_info>
+    <option_windows_description_info>A fun, cool indie game about a child who falls into the underground and has to fight or talk with monsters.</option_windows_description_info>
     <option_windows_enable_steam>0</option_windows_enable_steam>
     <option_windows_game_icon>Configs\Default\windows\runner_icon.ico</option_windows_game_icon>
     <option_windows_license>Configs\Default\windows\License.txt</option_windows_license>
-    <option_windows_mainor_version>7</option_windows_mainor_version>
+    <option_windows_mainor_version>8</option_windows_mainor_version>
     <option_windows_major_version>1</option_windows_major_version>
     <option_windows_nsis_file>Configs\Default\windows\RunnerInstaller.nsi</option_windows_nsis_file>
-    <option_windows_product_info></option_windows_product_info>
+    <option_windows_product_info>Slime Travel</option_windows_product_info>
     <option_windows_release_version>0</option_windows_release_version>
     <option_windows_runner_finished>Configs\Default\windows\Runner_finish.bmp</option_windows_runner_finished>
     <option_windows_runner_header>Configs\Default\windows\Runner_header.bmp</option_windows_runner_header>
