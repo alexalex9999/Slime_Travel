@@ -54,6 +54,7 @@ sound_loop(beginning);</code>
   <instances>
     <instance objName="cutscene" x="360" y="72" name="inst_D817085B" locked="0" code="sprite_index = ending_1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cutscene_textbox" x="144" y="72" name="inst_DE86E4A7" locked="0" code="global.cutscenetext[0] = &quot;Back in the future, Ebenezer is detained and the time machine returned.&quot;;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="quit" x="0" y="0" name="inst_9896C3AE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

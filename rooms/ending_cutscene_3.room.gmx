@@ -53,6 +53,7 @@
   <instances>
     <instance objName="cutscene" x="360" y="72" name="inst_D817085B" locked="0" code="sprite_index = ending_3;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="cutscene_textbox" x="144" y="72" name="inst_DE86E4A7" locked="0" code="global.cutscenetext[0] = &quot;Within his cell, he finds time to reflect upon his actions. Though he couldn’t change the past...&quot;;&#xA;global.cutscenetext[1] = &quot;... he can still change the future.&quot;;&#xA;global.cutscenetext[2] = &quot;FIN.&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="quit" x="0" y="0" name="inst_19CF67B4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
