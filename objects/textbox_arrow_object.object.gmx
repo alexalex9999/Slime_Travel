@@ -57,6 +57,7 @@ instance_destroy();
 if(!(instance_exists(text_box))){
 instance_destroy();
 }
+
 </string>
           </argument>
         </arguments>
