@@ -209,7 +209,9 @@
   </sprites>
   <backgrounds name="background">
     <background>background\default_tileset</background>
+    <background>background\icy_tileset</background>
     <background>background\ice_tileset</background>
+    <background>background\ice_decorations</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -276,8 +278,8 @@
         <room>rooms\level_4</room>
         <room>rooms\level_5</room>
         <room>rooms\level_6</room>
-        <room>rooms\level_7</room>
         <room>rooms\level_8</room>
+        <room>rooms\level_7</room>
         <room>rooms\level_9</room>
         <room>rooms\level_10</room>
         <room>rooms\level_11</room>
@@ -286,6 +288,9 @@
       <rooms name="Ice Levels">
         <room>rooms\level_ice_1</room>
         <room>rooms\level_ice_2</room>
+        <room>rooms\level_ice_3</room>
+        <room>rooms\level_ice_4</room>
+        <room>rooms\level_ice_5</room>
       </rooms>
       <room>rooms\fake_level</room>
       <room>rooms\level_ice</room>

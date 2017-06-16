@@ -132,6 +132,7 @@ global.solution_length = array_length_1d(global.solutions);</code>
     <instance objName="pillar" x="0" y="672" name="inst_1229C23E" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="0" y="672" name="inst_EBB9C6DF" locked="0" code="slime_direction = slime_jump_right;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroom" x="1152" y="288" name="inst_DCA9C528" locked="0" code="sprite_index = arrow_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="wall" x="1248" y="288" name="inst_9390F93A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="default_tileset" x="192" y="384" w="96" h="96" xo="96" yo="288" id="10005262" name="inst_B5F555C0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
