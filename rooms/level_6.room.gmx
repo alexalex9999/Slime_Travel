@@ -171,6 +171,7 @@ global.solution_length = array_length_1d(global.solutions);</code>
     <instance objName="Reset_Button" x="0" y="0" name="inst_118C86BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="768" y="960" name="inst_09ED49DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="switch_button" x="192" y="192" name="inst_BC96C6DF" locked="0" code="switch_num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="quit" x="0" y="0" name="inst_2E6C3D76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="default_tileset" x="0" y="384" w="96" h="96" xo="96" yo="288" id="10005148" name="inst_017DBEBF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

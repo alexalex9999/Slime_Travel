@@ -186,6 +186,7 @@ global.solution_length = array_length_1d(global.solutions);</code>
     <instance objName="wall" x="1056" y="288" name="inst_9A3A09BC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="768" y="288" name="inst_8E5BDE91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="576" y="960" name="inst_4DD6E1D0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="quit" x="0" y="0" name="inst_0EF35EC3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="default_tileset" x="672" y="864" w="96" h="96" xo="0" yo="96" id="10005862" name="inst_422E1F45" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
