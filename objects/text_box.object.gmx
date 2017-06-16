@@ -44,8 +44,11 @@ sprite_index = empty_sprite;
 alarm[4] = 1;
 alarm[2] = -1;
 count = 0;
+count2 = 0;
 audio_sound_gain(codec,100,1);
 var soundplayed = false;
+global.currentx = view_xview[0];
+global.currenty = view_yview[0];
 /*
 if(global.help_needed){
 global.displaytext[] = 0;
@@ -73,6 +76,60 @@ global.speaking[i] = "phil";
 
 
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="9">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(instance_exists(text_box)){
+if(!(global.currentx=view_xview[0])||!(global.currenty=view_yview[0])){
+     instance_deactivate_object(textbox_arrow_object);
+    alarm[9] = 1;
+    }
+    }
+if(global.chars_drawn&gt;=string_length(global.currentstring)){
+    if(!instance_exists(textbox_arrow_object)){
+    
+        if((room == asset_get_index("level_1"))){
+        //Change the pagedoneno to change the page with no arrow. 
+            if(global.pagedoneno == 2){
+            instance_deactivate_object(textbox_arrow_object);
+            }
+            else{
+            instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object);
+            global.currentx = view_xview[0];
+            global.currenty = view_yview[0];
+           }       
+        }else{
+            instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object);
+            global.currentx = view_xview[0];
+            global.currenty = view_yview[0];
+            }
+        
+        
+        
+    }
+    }else{
+        instance_deactivate_object(textbox_arrow_object);
+    }
+   
 </string>
           </argument>
         </arguments>
@@ -160,25 +217,7 @@ if(global.help_needed){
     }
 }
 
-if(global.chars_drawn&gt;=string_length(global.currentstring)){
-    if(!instance_exists(textbox_arrow_object)){
-        if((room == asset_get_index("level_1"))){
-        //Change the pagedoneno to change the page with no arrow. 
-            if(global.pagedoneno == 2){
-            instance_deactivate_object(textbox_arrow_object);
-            
-            }else{
-            instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object);
-            }        
-        }else{
-            instance_create(view_xview[0]+1184,view_yview[0]=632,textbox_arrow_object);
-            }
-        }
-        
-    }else{
-        instance_deactivate_object(textbox_arrow_object);
-    }
-
+alarm[9]=1;
 </string>
           </argument>
         </arguments>
@@ -330,15 +369,15 @@ if(global.help_needed){
     
     if(global.cheater){
         draw_sprite(global.cheatertextboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
-        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 55,1220-global.speakshift,1,1,0);
     }else{
         draw_sprite(global.helptextboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
-        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 55,1220-global.speakshift,1,1,0);
     }
 }else{
     
         draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
-        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 50,1220-global.speakshift,1,1,0);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 55,1220-global.speakshift,1,1,0);
     
 }
 /*/
@@ -403,7 +442,6 @@ if(global.multipage = true){
             <string>soundplayed = false;
 var xscale = window_get_width()/sprite_get_width(big_phil);
 var yscale = window_get_height()/sprite_get_height(big_phil);
-show_debug_message("scales set");
 
 if(room == asset_get_index("level_1")){
     if(global.pagedoneno==0){
@@ -423,22 +461,21 @@ if(room == asset_get_index("level_1")){
     }
     if(global.pagedoneno==2){
     
-    if(count&lt;=203){
-     xscale = window_get_width()/sprite_get_width(big_phil);
-    yscale = window_get_height()/sprite_get_height(big_phil);
-    draw_sprite_ext(big_phil, count/4, 0, 100, 1, 1, 0, c_white, 1);
-    show_debug_message(string(xscale) + string(yscale));
+    if(count&lt;=98){
+    draw_sprite_ext(big_phil, count/2, 0, 100, 1, 1, 0, c_white, 1);
     count++;
     }else{
-    xscale = window_get_width()/sprite_get_width(big_phil);
-    yscale = window_get_height()/sprite_get_height(big_phil);
-    show_debug_message(string(xscale) + string(yscale));
-   
     draw_sprite_ext(big_phil, 50, 0, 100, 1, 1, 0, c_white, 1);
     }
-    
-    
     } 
+    if(global.pagedoneno==3){
+    if(count2&lt;=23){
+    draw_sprite_ext(big_phil_out, count2, 0, 100, 1,1,0,c_white,1);
+    count2++;
+    }else{
+    draw_sprite_ext(big_phil_out, 23, 0, 100, 1,1,0,c_white,1); 
+    }
+    }
 }
 
 </string>

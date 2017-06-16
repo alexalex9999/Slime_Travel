@@ -51,6 +51,7 @@
             <string>id.depth = -y;
 if(!place_meeting(x,y,pushable_box)){
 if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_locked || sprite_index == pillar_locking)){
+    mask_index = no_mask;
     if(sprite_index == pillar_locking){
     switch(image_index){
     case 0: image_index = 6;
@@ -75,6 +76,7 @@ if(sprite_index == pillar_unlocking &amp;&amp; image_index == 6){
     id.depth = 100;
 }
 if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_unlocked || sprite_index == pillar_unlocking)){
+    mask_index = -1;
     if(sprite_index = pillar_unlocking){
     switch(image_index){
     case 0: image_index = 6;
@@ -96,10 +98,12 @@ if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_unlocked |
 }
 if(sprite_index == pillar_locking &amp;&amp; image_index == 6){
     sprite_index = pillar_locked
+    mask_index = -1;
 }
 }
 if(sprite_index == pillar_unlocked){
     depth = 10000
+    mask_index = no_mask;
 }
 else{
 }

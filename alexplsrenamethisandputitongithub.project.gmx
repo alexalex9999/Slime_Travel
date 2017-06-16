@@ -42,7 +42,6 @@
     <sound>sound\openingsound</sound>
     <sound>sound\sound14</sound>
     <sound>sound\codec</sound>
-    <sound>sound\sound18</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="New-Textboxes">
@@ -206,6 +205,7 @@
     <sprite>sprites\sprite86</sprite>
     <sprite>sprites\level_transition</sprite>
     <sprite>sprites\big_phil</sprite>
+    <sprite>sprites\big_phil_out</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\default_tileset</background>
@@ -298,8 +298,6 @@
         <room>rooms\level_11</room>
         <room>rooms\level_12</room>
       </rooms>
-      <room>rooms\fake_level</room>
-      <room>rooms\level_ice</room>
     </rooms>
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>
@@ -307,6 +305,13 @@
       <room>rooms\ending_cutscene_3</room>
       <room>rooms\creditsTBD</room>
       <room>rooms\end_room</room>
+      <room>rooms\fake_level</room>
+      <room>rooms\level_ice</room>
+      <room>rooms\ice_test_room</room>
+      <rooms name="Ice Levels">
+        <room>rooms\level_ice_1</room>
+        <room>rooms\level_ice_2</room>
+      </rooms>
     </rooms>
   </rooms>
   <help>
