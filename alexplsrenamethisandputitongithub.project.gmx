@@ -271,7 +271,7 @@
       <object>objects\space_bar_button</object>
       <object>objects\cutscene_textbox</object>
       <object>objects\title</object>
-	  <object>objects\title_noclick</object>
+      <object>objects\title_noclick</object>
       <object>objects\opsound</object>
       <object>objects\titletext</object>
       <object>objects\Menu_Obj</object>
