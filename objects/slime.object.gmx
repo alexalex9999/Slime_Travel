@@ -657,9 +657,7 @@ global.help_needed = false;
 global.cheater = false;
 Reset_Button.reseting = true;
 Reset_Button.nextroom = true;
-if(audio_is_playing(sound11)){
-    audio_pause_sound(sound11)
-}
+
 </string>
           </argument>
         </arguments>
