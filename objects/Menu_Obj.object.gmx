@@ -180,7 +180,7 @@ alarm[1] = 2;
           <argument>
             <kind>1</kind>
             <string>if(image_index == 0){
-room_goto(cutscene_1);
+room_goto(cutscene_room_1);
 }
 if(image_index == 1){
 room_goto(level_1);
