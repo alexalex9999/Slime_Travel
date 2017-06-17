@@ -26,12 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>//sprite_index = level_transition_backwards;
+/*
 if(audio_is_paused(sound11)){
     audio_resume_sound(sound11)
 }
 else{
     audio_play_sound(sound11, 1, true)
 }
+*/
 count = 0;
 lvltran = 0;
 nextroom = false;
@@ -98,9 +100,7 @@ alarm[5] = 3;
           <argument>
             <kind>1</kind>
             <string>
-    if(audio_is_playing(sound11)){
-        audio_pause_sound(sound11)
-    }
+    
     reseting = false;
     lvltran = 0;
     room_goto_next();
@@ -128,9 +128,7 @@ alarm[5] = 3;
           <argument>
             <kind>1</kind>
             <string>
-    if(audio_is_playing(sound11)){
-        audio_pause_sound(sound11)
-    }
+  
     reseting = false;
     lvltran = 0;
     room_restart();
@@ -213,13 +211,13 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var xscale = window_get_width()/sprite_get_width(level_transition);
-var yscale = window_get_height()/sprite_get_height(level_transition);
+            <string>var xscale = (window_get_width()/sprite_get_width(level_transition));
+var yscale = (window_get_height()/sprite_get_height(level_transition))+.1;
 
 if(lvltran&lt;=13&amp;&amp;!reseting){
     if(lvltran == 0){
-        audio_sound_gain(sound11, .75, 0);
-        audio_sound_gain(sound11, 1, 750);
+        audio_sound_gain(sound11, .85, 0);
+        audio_sound_gain(sound11, 1, 500);
     }
     draw_sprite_ext(level_transition, lvltran, 0, -1, xscale, yscale, 0, c_white, 1);
     //draw_sprite_stretched_ext(level_transition, lvltran, 0, 0, view_wview[0], view_hview[0], c_white, 1);
@@ -229,7 +227,7 @@ if(lvltran&lt;=13&amp;&amp;!reseting){
 if(reseting){
     if(lvltran&gt;=0){
         if(lvltran == 14){
-            audio_sound_gain(sound11, .75, 750);
+           
         }
         draw_sprite_ext(level_transition, lvltran, 0, -1, xscale, yscale, 0, c_white, 1);
      //   draw_sprite_stretched_ext(level_transition, lvltran, 0, 0, view_wview[0], view_hview[0], c_white, 1);
