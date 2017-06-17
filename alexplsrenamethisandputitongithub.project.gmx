@@ -206,7 +206,6 @@
     <sprite>sprites\level_transition</sprite>
     <sprite>sprites\big_phil</sprite>
     <sprite>sprites\big_phil_out</sprite>
-
     <sprites name="Paintings">
       <sprite>sprites\Painting_Adam</sprite>
       <sprite>sprites\Painting_Mona</sprite>
@@ -218,7 +217,6 @@
     </sprites>
     <sprite>sprites\Menu</sprite>
     <sprite>sprites\quitting_sprite</sprite>
-
   </sprites>
   <backgrounds name="background">
     <background>background\default_tileset</background>
@@ -273,6 +271,7 @@
       <object>objects\space_bar_button</object>
       <object>objects\cutscene_textbox</object>
       <object>objects\title</object>
+      <object>objects\title_noclick</object>
       <object>objects\opsound</object>
       <object>objects\titletext</object>
       <object>objects\Menu_Obj</object>
@@ -287,13 +286,14 @@
     <room>rooms\Start_Room</room>
     <room>rooms\Menu_Room</room>
     <rooms name="Cutscenes">
-      <room>rooms\cutscene_1_room</room>
+      <room>rooms\cutscene_room_1</room>
       <room>rooms\cutscene_room_2</room>
       <room>rooms\cutscene_room_3</room>
       <room>rooms\cutscene_room_4</room>
       <room>rooms\cutscene_room_5</room>
       <room>rooms\cutscene_room_6</room>
-      <room>rooms\cutscene_room_7</room>      <room>rooms\cutscene_room_8</room>
+      <room>rooms\cutscene_room_7</room>
+      <room>rooms\cutscene_room_8</room>
       <room>rooms\cutscene_room_9</room>
       <room>rooms\cutscene_room_10</room>
       <room>rooms\cutscene_room_11</room>
@@ -307,8 +307,8 @@
         <room>rooms\level_4</room>
         <room>rooms\level_5</room>
         <room>rooms\level_6</room>
-        <room>rooms\level_8</room>
         <room>rooms\level_7</room>
+        <room>rooms\level_8</room>
         <room>rooms\level_9</room>
         <room>rooms\level_10</room>
         <room>rooms\level_11</room>
@@ -324,7 +324,6 @@
       <room>rooms\fake_level</room>
       <room>rooms\level_ice</room>
     </rooms>
-<
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>
       <room>rooms\ending_cutscene_2</room>
