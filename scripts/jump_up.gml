@@ -29,7 +29,7 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
         slime.sprite_index = slime_into_pit_up;
         return false;
     }
-    if(position_meeting(slime.x, slime.y-96, pushable_box)){
+    if(position_meeting(slime.x, slime.y-96, pushable_box)&&instance_position(slime.x, slime.y-96, pushable_box).sliding == false){
         if(position_meeting(slime.x, slime.y-192, wall) || position_meeting(slime.x, slime.y-192, pushable_box) || position_meeting(slime.x, slime.y-192, pillar) || position_meeting(slime.x, slime.y-192, ice_floor)){
             if(position_meeting(slime.x, slime.y-192, ice_floor)&&!position_meeting(slime.x, slime.y-192, pushable_box)){
                 slime.sprite_index = slime_push_ice_up;
