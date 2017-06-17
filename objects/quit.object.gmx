@@ -31,25 +31,72 @@ image_speed = 0;
 self.x = view_xview[0]+10;
 self.y = view_yview[0]+5;
 
-if(room_get_name(room)=="menu_room"){
-    if(sound_isplaying(beginning)){
-    }else{
-        sound_loop(beginning);
-    }
+switch(room){
+case level_1:
+case level_2:
+case level_3:
+case level_4:
+case level_5:
+case level_6:
+case level_7:
+case level_8:
+case level_9:
+case level_10:
+case level_11:
+case level_12:
+if(!(audio_is_playing(sound11))){
+audio_stop_sound(openingsound);
+audio_stop_sound(beginning);
+ audio_stop_sound(ice_song);
+audio_play_sound(sound11,1,true);
 }
-if(room_get_name(room)=="level_1"){
-    if(sound_isplaying(sound11)){
-    }else{
-        sound_loop(sound11);
-    }
-}
-if(room_get_name(room)=="level_1"){
-    if(sound_isplaying(sound11)){
-    }else{
-        sound_loop(sound11);
-    }
-}
+break;
 
+case Menu_Room:
+case Start_Room:
+ if(audio_is_playing(beginning)){
+    }else{
+     audio_stop_sound(openingsound);
+        audio_stop_sound(sound11);
+        audio_stop_sound(ice_song);
+    audio_play_sound(beginning,1,true);
+       
+    }
+break;
+
+case cutscene_room_1:
+audio_stop_all();
+audio_play_sound(openingsound,1,false);
+break;
+
+case level_ice_1:
+case level_ice_2:
+case level_ice_3:
+case level_ice_4:
+case level_ice_5:
+/*case level_ice_6:
+case level_ice_7:
+case level_ice_8:
+case level_ice_9:
+case level_ice_10:
+case level_ice_11:
+case level_ice_12:*/
+if(!(audio_is_playing(ice_song))){
+audio_stop_sound(openingsound);
+audio_stop_sound(beginning);
+audio_stop_sound(sound11);
+audio_play_sound(ice_song,1,true);
+}
+break;
+
+case ice_cutscene_room_1:
+case ice_cutscene_room_2:
+case ice_cutscene_room_3:
+case ice_cutscene_room_4:
+audio_stop_all();
+
+break;
+}
 </string>
           </argument>
         </arguments>
@@ -72,14 +119,55 @@ if(room_get_name(room)=="level_1"){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(quitting&lt;65){
+            <string>switch(room){
+case cutscene_room_1: 
+case cutscene_room_2:
+case cutscene_room_3:
+case cutscene_room_4:
+case cutscene_room_5:
+case cutscene_room_6:
+case cutscene_room_7:
+case cutscene_room_8:
+case cutscene_room_9:
+case cutscene_room_10:
+case cutscene_room_11:
+case cutscene_room_12:
+//case cutscene_room_1:
+//case cutscene_room_1:
+//case cutscene_room_1:
+self.visible = true;
+if(quitting&lt;32){
+quitting++;
+image_index = quitting*2;
+}else if(quitting==32){
+image_index = 65;
+room_goto(Menu_Room);
+}
+break;
+case Menu_Room:
+self.visible = false;
+break;
+default:
+self.visible = true;
+if(quitting&lt;65){
 quitting++;
 image_index = quitting;
 }else if(quitting==65){
 image_index = 65;
 room_goto(Menu_Room);
+
 }
-self.visible = true;
+/*
+image_speed = 10/room_speed;
+if(image_index=65){
+room_goto(Menu_Room);
+}
+*/
+break;
+}
+
+self.x = view_xview[0]+10;
+self.y = view_yview[0]+5;
 </string>
           </argument>
         </arguments>

@@ -42,6 +42,7 @@
     <sound>sound\openingsound</sound>
     <sound>sound\sound14</sound>
     <sound>sound\codec</sound>
+    <sound>sound\ice_song</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="New-Textboxes">
@@ -196,6 +197,10 @@
       <sprite>sprites\ending_1</sprite>
       <sprite>sprites\ending_2</sprite>
       <sprite>sprites\ending_3</sprite>
+      <sprite>sprites\ice_1</sprite>
+      <sprite>sprites\ice_2</sprite>
+      <sprite>sprites\ice_3</sprite>
+      <sprite>sprites\ice_4</sprite>
       <sprite>sprites\altered_cutscene_10</sprite>
       <sprite>sprites\altered_cutscene_11</sprite>
       <sprite>sprites\altered_cutscene_12</sprite>
@@ -217,6 +222,19 @@
     </sprites>
     <sprite>sprites\Menu</sprite>
     <sprite>sprites\quitting_sprite</sprite>
+    <sprites name="Volume">
+      <sprite>sprites\volume_1</sprite>
+      <sprite>sprites\volume_2</sprite>
+      <sprite>sprites\volume_3</sprite>
+      <sprite>sprites\volume_4</sprite>
+      <sprite>sprites\volume_5</sprite>
+      <sprite>sprites\volume_6</sprite>
+      <sprite>sprites\volume_7</sprite>
+      <sprite>sprites\volume_8</sprite>
+      <sprite>sprites\volume_9</sprite>
+      <sprite>sprites\volume_10</sprite>
+    </sprites>
+    <sprite>sprites\Level_buttons</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\default_tileset</background>
@@ -281,6 +299,8 @@
       <object>objects\NPC_StepTrigger</object>
       <object>objects\NPC_Interact</object>
     </objects>
+    <object>objects\level_button_obj</object>
+    <object>objects\select_OBJ</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
@@ -314,15 +334,19 @@
         <room>rooms\level_11</room>
         <room>rooms\level_12</room>
       </rooms>
-      <rooms name="Ice Levels">
-        <room>rooms\level_ice_1</room>
-        <room>rooms\level_ice_2</room>
-        <room>rooms\level_ice_3</room>
-        <room>rooms\level_ice_4</room>
-        <room>rooms\level_ice_5</room>
-      </rooms>
-      <room>rooms\fake_level</room>
-      <room>rooms\level_ice</room>
+    </rooms>
+    <rooms name="Ice Cutscenes">
+      <room>rooms\ice_cutscene_room_1</room>
+      <room>rooms\ice_cutscene_room_2</room>
+      <room>rooms\ice_cutscene_room_3</room>
+      <room>rooms\ice_cutscene_room_4</room>
+    </rooms>
+    <rooms name="Ice Levels">
+      <room>rooms\level_ice_1</room>
+      <room>rooms\level_ice_2</room>
+      <room>rooms\level_ice_3</room>
+      <room>rooms\level_ice_4</room>
+      <room>rooms\level_ice_5</room>
     </rooms>
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>
@@ -332,6 +356,8 @@
       <room>rooms\end_room</room>
       <room>rooms\ice_test_room</room>
     </rooms>
+    <room>rooms\level_select</room>
+    <room>rooms\fake_level</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
