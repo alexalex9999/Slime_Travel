@@ -63,7 +63,7 @@ reseting = false;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.done_moving &amp;&amp; global.cheater &amp;&amp; !keyboard_check(vk_shift)){
+            <string>if(global.done_moving &amp;&amp; global.cheater &amp;&amp; !keyboard_check(vk_shift)&amp;&amp;!slime.sliding){
     solutions_script(global.solutions[count])
     if(jump_succeeded){
         count++
@@ -74,7 +74,8 @@ reseting = false;
     }
 }
 cheating = true
-alarm[5] = 3;
+alarm[5] = 5;
+
 </string>
           </argument>
         </arguments>
@@ -191,6 +192,7 @@ if(lvltran ==14){
 else{
     global.transition = true;
 }
+
 </string>
           </argument>
         </arguments>
