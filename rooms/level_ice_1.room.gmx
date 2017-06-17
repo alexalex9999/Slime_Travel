@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.solutions[] = array(0,0,0,1,0,0,1,0,3,2,3,0,0,0,0,0,0,0);
+  <code>global.solutions[] = array(0,1,2,3,2,1,2,3);
 global.solution_length = array_length_1d(global.solutions);</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
