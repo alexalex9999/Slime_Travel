@@ -534,7 +534,9 @@ if(room == asset_get_index("level_1")){
     }
 }
 if(room == asset_get_index("fake_room")){
-    if(global.pagedoneno==
+    if(global.pagedoneno==60){
+    
+    }
 }
 
 </string>
