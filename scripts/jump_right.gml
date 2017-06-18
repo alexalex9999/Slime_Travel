@@ -12,7 +12,6 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
     slime.sprite_index = slime_jump_right
     if(position_meeting(slime.x+96, slime.y, ice_floor)){
         slime.sprite_index = slime_ice_right;
-        return true;
     }
     if(position_meeting(slime.x+96, slime.y, wall)){
         slime.sprite_index = slime_bounce_right
@@ -54,3 +53,4 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
     slime.mask_index = no_mask;
     return true;
 }
+return false;

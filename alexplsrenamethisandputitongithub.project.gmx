@@ -309,12 +309,12 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-    <room>rooms\level_ice_5</room>
     <rooms name="Ice Levels">
       <room>rooms\level_ice_1</room>
       <room>rooms\level_ice_2</room>
       <room>rooms\level_ice_3</room>
       <room>rooms\level_ice_4</room>
+      <room>rooms\level_ice_5</room>
     </rooms>
     <room>rooms\Menu_Room</room>
     <rooms name="Cutscenes">
