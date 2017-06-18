@@ -353,7 +353,6 @@
       <room>rooms\ice_cutscene_room_3</room>
       <room>rooms\ice_cutscene_room_4</room>
     </rooms>
-    </rooms>
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>
       <room>rooms\ending_cutscene_2</room>
