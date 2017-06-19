@@ -12,7 +12,8 @@
   <showcolour>-1</showcolour>
   <code>global.solutions[] = array(3,3,3,2,2,1,2,3,3,1,0,0,0,3,2,2,1,2,3,3,1,1,0,0,0,0,0,1,0,3,3,0,0,0);
 global.solution_length = array_length_1d(global.solutions);
-global.philspeech = "Okay just stop. You’re gonna hurt yourself thinking so hard. It was entertaining the first few times, but I’m seriously done. If you press H, you’ll move forward in time to when you finish this puzzle. Legit.";</code>
+global.philspeech = "Okay just stop. You’re gonna hurt yourself thinking so hard. It was entertaining the first few times, but I’m seriously done. If you press H, you’ll move forward in time to when you finish this puzzle. Legit.";
+global.level_type = "normal";</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

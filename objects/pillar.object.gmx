@@ -49,64 +49,152 @@
           <argument>
             <kind>1</kind>
             <string>id.depth = -y;
-if(!place_meeting(x,y,pushable_box)){
-if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_locked || sprite_index == pillar_locking)){
-    mask_index = no_mask;
-    if(sprite_index == pillar_locking){
-    switch(image_index){
-    case 0: image_index = 6;
-    break;
-    case 1: image_index = 2;
-    break;
-    case 2: 
-    case 3: 
-    case 4: image_index = 1;
-    break;
-    case 5: 
-    case 6: image_index = 0;
-    break;
+if(global.level_type == "ice"){
+    if(!place_meeting(x,y,pushable_box)){
+    if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == ice_pillar_locked || sprite_index == ice_pillar_locking)){
+        mask_index = no_mask;
+        if(sprite_index == ice_pillar_locking){
+        switch(image_index){
+        case 0: image_index = 6;
+        break;
+        case 1: image_index = 2;
+        break;
+        case 2: 
+        case 3: 
+        case 4: image_index = 1;
+        break;
+        case 5: 
+        case 6: image_index = 0;
+        break;
+        }
+        }
+        sprite_index = ice_pillar_unlocking;
+        if(!audio_is_playing(pillar_snd))
+        audio_play_sound(pillar_snd, 1, false);
+    }
+    if(sprite_index == ice_pillar_unlocking &amp;&amp; image_index == 6){
+        sprite_index = ice_pillar_unlocked
+        id.depth = 100;
+    }
+    if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == ice_pillar_unlocked || sprite_index == ice_pillar_unlocking)){
+        mask_index = -1;
+        if(sprite_index = ice_pillar_unlocking){
+        switch(image_index){
+        case 0: image_index = 6;
+        break;
+        case 1: image_index = 3;
+        break;
+        case 2: image_index = 1;
+        break;
+        case 3: 
+        case 4: 
+        case 5: 
+        case 6: image_index = 0;
+        break;
+        }
+        }
+        sprite_index = ice_pillar_locking
+        if(!audio_is_playing(pillar_snd))
+        audio_play_sound(pillar_snd, 1, false);
+    }
+    if(sprite_index == ice_pillar_locking &amp;&amp; image_index == 6){
+        sprite_index = ice_pillar_locked
+        mask_index = -1;
     }
     }
-    sprite_index = pillar_unlocking;
-    if(!audio_is_playing(pillar_snd))
-    audio_play_sound(pillar_snd, 1, false);
+    if(sprite_index == ice_pillar_unlocked){
+        depth = 10000
+        mask_index = no_mask;
+    }
+    else{
+    }
 }
-if(sprite_index == pillar_unlocking &amp;&amp; image_index == 6){
-    sprite_index = pillar_unlocked
-    id.depth = 100;
-}
-if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_unlocked || sprite_index == pillar_unlocking)){
-    mask_index = -1;
-    if(sprite_index = pillar_unlocking){
-    switch(image_index){
-    case 0: image_index = 6;
-    break;
-    case 1: image_index = 3;
-    break;
-    case 2: image_index = 1;
-    break;
-    case 3: 
-    case 4: 
-    case 5: 
-    case 6: image_index = 0;
-    break;
+
+if(global.level_type == "normal"){
+    if(!place_meeting(x,y,pushable_box)){
+    if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_locked || sprite_index == pillar_locking)){
+        mask_index = no_mask;
+        if(sprite_index == pillar_locking){
+        switch(image_index){
+        case 0: image_index = 6;
+        break;
+        case 1: image_index = 2;
+        break;
+        case 2: 
+        case 3: 
+        case 4: image_index = 1;
+        break;
+        case 5: 
+        case 6: image_index = 0;
+        break;
+        }
+        }
+        sprite_index = pillar_unlocking;
+        if(!audio_is_playing(pillar_snd))
+        audio_play_sound(pillar_snd, 1, false);
+    }
+    if(sprite_index == pillar_unlocking &amp;&amp; image_index == 6){
+        sprite_index = pillar_unlocked
+        id.depth = 100;
+    }
+    if(!global.pillar_down[pillar_num] &amp;&amp; (sprite_index == pillar_unlocked || sprite_index == pillar_unlocking)){
+        mask_index = -1;
+        if(sprite_index = pillar_unlocking){
+        switch(image_index){
+        case 0: image_index = 6;
+        break;
+        case 1: image_index = 3;
+        break;
+        case 2: image_index = 1;
+        break;
+        case 3: 
+        case 4: 
+        case 5: 
+        case 6: image_index = 0;
+        break;
+        }
+        }
+        sprite_index = pillar_locking
+        if(!audio_is_playing(pillar_snd))
+        audio_play_sound(pillar_snd, 1, false);
+    }
+    if(sprite_index == pillar_locking &amp;&amp; image_index == 6){
+        sprite_index = pillar_locked
+        mask_index = -1;
     }
     }
-    sprite_index = pillar_locking
-    if(!audio_is_playing(pillar_snd))
-    audio_play_sound(pillar_snd, 1, false);
+    if(sprite_index == pillar_unlocked){
+        depth = 10000
+        mask_index = no_mask;
+    }
+    else{
+    }
 }
-if(sprite_index == pillar_locking &amp;&amp; image_index == 6){
-    sprite_index = pillar_locked
-    mask_index = -1;
-}
-}
-if(sprite_index == pillar_unlocked){
-    depth = 10000
-    mask_index = no_mask;
-}
-else{
-}
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>sprite_index = ice_pillar_unlocked
 </string>
           </argument>
         </arguments>
