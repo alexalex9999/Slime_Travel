@@ -68,12 +68,13 @@ case cutscene_room_1:
 audio_stop_all();
 audio_play_sound(openingsound,1,false);
 break;
-
+/*
 case level_ice_1:
 case level_ice_2:
 case level_ice_3:
 case level_ice_4:
 case level_ice_5:
+*/
 /*case level_ice_6:
 case level_ice_7:
 case level_ice_8:
