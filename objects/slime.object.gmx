@@ -499,18 +499,7 @@ if(sprite_index == slime_icewall_left &amp;&amp; image_index == 4){
     audio_play_sound(bonk_snd, 1, false);
 }
 //slid into box
-if(sprite_index == slime_icebox_up &amp;&amp; image_index == 1){
-    (instance_place(x,y-12,pushable_box)).sliding = "up";
-    (instance_place(x,y-12,pushable_box)).sprite_index = box;
-}
-if(sprite_index == slime_icebox_right &amp;&amp; image_index == 1){
-    (instance_place(x+12,y,pushable_box)).sliding = "right";
-    (instance_place(x+12,y,pushable_box)).sprite_index = box;
-}
-if(sprite_index == slime_icebox_left &amp;&amp; image_index == 1){
-    (instance_place(x-12,y,pushable_box)).sliding = "left";
-    (instance_place(x-12,y,pushable_box)).sprite_index = box;
-}
+
 
 if(sprite_index == slime_icebox_up &amp;&amp; image_index == 4){
     sprite_index = slime_idle_back;
@@ -556,6 +545,10 @@ if(sliding){
                 global.done_moving = true;
                 image_speed = 1/3;
                 sprite_index = slime_idle_front;
+                //if(!position_meeting(x,y+12,ice_floor)&amp;&amp;!position_meeting(x,y+12+95,ice_floor)){
+                    (instance_place(x,y+12,pushable_box)).sliding = "downs";
+                    (instance_place(x,y+12,pushable_box)).toslide = 8;
+                //}
             }
             else{
                 if(place_meeting(x,y+12,pit)){
@@ -597,6 +590,10 @@ if(sliding){
                 image_speed = 1/2;
                 image_index = 0;
                 sprite_index = slime_icebox_up;
+                //if(!position_meeting(x,y-12,ice_floor)&amp;&amp;!position_meeting(x,y-12-95,ice_floor)){
+                    (instance_place(x,y-12,pushable_box)).sliding = "ups";
+                    (instance_place(x,y-12,pushable_box)).toslide = 8;
+                //}
             }
             else{
                 if(place_meeting(x,y-12,pit)){
@@ -638,6 +635,10 @@ if(sliding){
                 image_speed = 1/2;
                 image_index = 0;
                 sprite_index = slime_icebox_right;
+                //if(!position_meeting(x+12,y,ice_floor)&amp;&amp;!position_meeting(x+12+95,y,ice_floor)){
+                    (instance_place(x+12,y,pushable_box)).sliding = "rights";
+                    (instance_place(x+12,y,pushable_box)).toslide = 8;
+                //}
             }
             else{
                 if(place_meeting(x+12,y,pit)){
@@ -673,12 +674,18 @@ if(sliding){
         }
         else{
             if(place_meeting(x-12,y,pushable_box)&amp;&amp;place_meeting(x-12,y,ice_floor)&amp;&amp;instance_place(x-12,y,pushable_box).sliding == false){
+            show_debug_message("icebox")
                 //(instance_place(x-12,y,pushable_box)).sprite_index = empty_sprite;
                 sliding=false;
                 //global.done_moving = true;
                 image_speed = 1/2;
                 image_index = 0;
                 sprite_index = slime_icebox_left;
+                //if(!position_meeting(x-12,y,ice_floor)&amp;&amp;!position_meeting(x-12-95,y,ice_floor)){
+                    show_debug_message("icebox slide")
+                    (instance_place(x-12,y,pushable_box)).sliding = "lefts";
+                    (instance_place(x-12,y,pushable_box)).toslide = 8;
+                //}
             }else{
                 if(place_meeting(x-12,y,pit)){
                     if((instance_place(x-12,y,pit)).pit_filled){
