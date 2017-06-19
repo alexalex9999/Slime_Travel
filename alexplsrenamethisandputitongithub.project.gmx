@@ -48,6 +48,7 @@
     <sprites name="New-Textboxes">
       <sprite>sprites\textbox_arrow</sprite>
       <sprite>sprites\blank_textbox</sprite>
+      <sprite>sprites\blank</sprite>
       <sprite>sprites\ebenezer_sad</sprite>
       <sprite>sprites\ebenezer_neutral</sprite>
       <sprite>sprites\ebenezer_angry</sprite>
@@ -179,7 +180,6 @@
     <sprite>sprites\blinking_titlescreen</sprite>
     <sprite>sprites\empty_sprite</sprite>
     <sprite>sprites\logo</sprite>
-    <sprite>sprites\blank</sprite>
     <sprites name="Placeholders">
       <sprite>sprites\next_room</sprite>
       <sprite>sprites\spr_reset</sprite>
@@ -326,6 +326,7 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
+
     <rooms name="Ice Levels">
       <room>rooms\level_ice_1</room>
       <room>rooms\level_ice_2</room>
@@ -335,6 +336,7 @@
       <room>rooms\level_ice_6</room>
       <room>rooms\level_ice_7</room>
     </rooms>
+
     <room>rooms\Menu_Room</room>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_room_1</room>

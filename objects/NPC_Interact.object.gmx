@@ -33,6 +33,9 @@ slimeNear = false;
 spriteToDraw = empty_sprite;
 global.paintingInteraction = false;
 n=0;
+global.speakingNPC[] = 0;
+global.displaytextNPC[] = 0;
+global.textboxarrayNPC[] = 0;
 </string>
           </argument>
         </arguments>
