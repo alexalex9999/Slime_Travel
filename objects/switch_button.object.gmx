@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>image_speed = 0
 depth = 10
+
 </string>
           </argument>
         </arguments>
@@ -64,6 +65,9 @@ else{
             audio_play_sound(button_push_snd, 1, false)
     }
     image_index = 0
+}
+if(global.level_type == "ice"){
+    sprite_index = ice_button;
 }
 </string>
           </argument>

@@ -104,6 +104,16 @@
             <sprite>sprites\slime_iceslide_up</sprite>
             <sprite>sprites\slime_iceslide_down</sprite>
           </sprites>
+          <sprites name="wall collision">
+            <sprite>sprites\slime_icewall_up</sprite>
+            <sprite>sprites\slime_icewall_left</sprite>
+            <sprite>sprites\slime_icewall_right</sprite>
+          </sprites>
+          <sprites name="box collision">
+            <sprite>sprites\slime_icebox_up</sprite>
+            <sprite>sprites\slime_icebox_left</sprite>
+            <sprite>sprites\slime_icebox_right</sprite>
+          </sprites>
         </sprites>
         <sprites name="slime_pit">
           <sprites name="into_pit">
@@ -140,11 +150,22 @@
         <sprite>sprites\pillar_locking</sprite>
         <sprite>sprites\pillar_unlocking</sprite>
         <sprite>sprites\pillar_unlocked</sprite>
+        <sprites name="ice">
+          <sprite>sprites\ice_pillar_locked</sprite>
+          <sprite>sprites\ice_pillar_locking</sprite>
+          <sprite>sprites\ice_pillar_unlocking</sprite>
+          <sprite>sprites\ice_pillar_unlocked</sprite>
+        </sprites>
       </sprites>
       <sprites name="pit">
         <sprite>sprites\pit_closed</sprite>
         <sprite>sprites\pit_open</sprite>
         <sprite>sprites\pit_animation</sprite>
+        <sprites name="ice">
+          <sprite>sprites\ice_pit_closed</sprite>
+          <sprite>sprites\ice_pit_open</sprite>
+          <sprite>sprites\ice_pit_animation</sprite>
+        </sprites>
       </sprites>
       <sprites name="box">
         <sprite>sprites\box</sprite>
@@ -153,6 +174,7 @@
         <sprite>sprites\box_ice_up</sprite>
         <sprite>sprites\box_ice_down</sprite>
       </sprites>
+      <sprite>sprites\ice_button</sprite>
     </sprites>
     <sprite>sprites\blinking_titlescreen</sprite>
     <sprite>sprites\empty_sprite</sprite>
@@ -169,11 +191,11 @@
     </sprites>
     <sprites name="Level_Stuff">
       <sprite>sprites\arrow_up</sprite>
-      <sprite>sprites\candles_sprite</sprite>
       <sprite>sprites\arrow_left</sprite>
-      <sprite>sprites\candle_sprite</sprite>
       <sprite>sprites\arrow_right</sprite>
       <sprite>sprites\arrow_down</sprite>
+      <sprite>sprites\candles_sprite</sprite>
+      <sprite>sprites\candle_sprite</sprite>
     </sprites>
     <sprite>sprites\purple_purge</sprite>
     <sprite>sprites\phil_animation_off</sprite>
@@ -304,6 +326,14 @@
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
+    <room>rooms\level_ice_5</room>
+    <rooms name="Ice Levels">
+      <room>rooms\level_ice_1</room>
+      <room>rooms\level_ice_2</room>
+      <room>rooms\level_ice_3</room>
+      <room>rooms\level_ice_4</room>
+      <room>rooms\level_ice_6</room>
+    </rooms>
     <room>rooms\Menu_Room</room>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_room_1</room>
@@ -340,13 +370,6 @@
       <room>rooms\ice_cutscene_room_2</room>
       <room>rooms\ice_cutscene_room_3</room>
       <room>rooms\ice_cutscene_room_4</room>
-    </rooms>
-    <rooms name="Ice Levels">
-      <room>rooms\level_ice_1</room>
-      <room>rooms\level_ice_2</room>
-      <room>rooms\level_ice_3</room>
-      <room>rooms\level_ice_4</room>
-      <room>rooms\level_ice_5</room>
     </rooms>
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>

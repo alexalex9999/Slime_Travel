@@ -14,7 +14,8 @@
 global.solution_length = array_length_1d(global.solutions)
 if(global.reset_times&gt;=1){
 global.help_needed = true;
-}</code>
+}
+global.level_type = "normal";</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>0</clearDisplayBuffer>

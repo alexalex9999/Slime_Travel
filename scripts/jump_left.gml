@@ -14,7 +14,6 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
     slime.sprite_index = slime_jump_left
     if(position_meeting(slime.x-96, slime.y, ice_floor)){
         slime.sprite_index = slime_ice_left;
-        return true;
     }
     if(position_meeting(slime.x-96, slime.y, wall)){
         slime.sprite_index = slime_bounce_left
@@ -31,7 +30,7 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
         slime.sprite_index = slime_into_pit_left;
         return false;
     }
-    if(position_meeting(slime.x-96, slime.y, pushable_box)){
+    if(position_meeting(slime.x-96, slime.y, pushable_box)&&instance_position(slime.x-96, slime.y, pushable_box).sliding == false){
         if(position_meeting(slime.x-192, slime.y, wall) || position_meeting(slime.x-192, slime.y, pushable_box) || position_meeting(slime.x-192, slime.y, pillar) || position_meeting(slime.x-192, slime.y, ice_floor)){
             if(position_meeting(slime.x-192, slime.y, ice_floor)&&!position_meeting(slime.x-192, slime.y, pushable_box)){
                 slime.sprite_index = slime_push_ice_left;
@@ -56,6 +55,7 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
     slime.mask_index = no_mask;
     return true;
 }
+return false;
 
 #define script14
 if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
