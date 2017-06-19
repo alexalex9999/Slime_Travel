@@ -98,13 +98,78 @@ if(sliding == "up"){
     }
 }
 if(sliding == "down"){
-    if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)|place_meeting(x,y+12,pushable_box)||!place_meeting(x,y,ice_floor)){
+    if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)||place_meeting(x,y+12,pushable_box)||!place_meeting(x,y,ice_floor)){
         sliding=false;
         sprite_index = box_ice_down;
     }
     if(sliding == "down"){
         y+=12;
         sprite_index = box;
+    }
+}
+//special snowflake
+if(sliding == "lefts"){
+    if(place_meeting(x-12,y,wall)||place_meeting(x-12,y,pillar)||place_meeting(x-12,y,pushable_box)){
+        sliding=false;
+        sprite_index = box_ice_left;
+    }
+    else{
+        if(sliding == "lefts"&amp;&amp;toslide&gt;0){
+            x-=12;
+            sprite_index = box;
+            toslide--;
+        }
+        else{
+            sliding = "left";
+        }
+    }
+}
+if(sliding == "rights"){
+    if(place_meeting(x+12,y,wall)||place_meeting(x+12,y,pillar)||place_meeting(x+12,y,pushable_box)){
+        sliding=false;
+        sprite_index = box_ice_right;
+    }
+    else{
+        if(sliding == "rights"&amp;&amp;toslide&gt;0){
+            x+=12;
+            sprite_index = box;
+            toslide--;
+        }
+        else{
+            sliding = "right";
+        }
+    }
+}
+if(sliding == "ups"){
+    if(place_meeting(x,y-12,wall)||place_meeting(x,y-12,pillar)||place_meeting(x,y-12,pushable_box)){
+        sliding=false;
+        sprite_index = box_ice_up;
+    }
+    else{
+        if(sliding == "ups"&amp;&amp;toslide&gt;0){
+            y-=12;
+            sprite_index = box;
+            toslide--;
+        }
+        else{
+            sliding = "up";
+        }
+    }
+}
+if(sliding == "downs"){
+    if(place_meeting(x,y+12,wall)||place_meeting(x,y+12,pillar)||place_meeting(x,y+12,pushable_box)){
+        sliding=false;
+        sprite_index = box_ice_down;
+    }
+    else{
+        if(sliding == "downs"&amp;&amp;toslide&gt;0){
+            y+=12;
+            sprite_index = box;
+            toslide--;
+        }
+        else{
+            sliding = "down";
+        }
     }
 }
 if(!place_meeting(x,y,ice_floor))
