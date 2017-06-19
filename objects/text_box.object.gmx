@@ -27,7 +27,13 @@
             <kind>1</kind>
             <string>global.displaytext[] = 0;
 global.speaking[] = 0;
-global.textboxarray = 0;
+global.textboxarray[] = 0;
+global.helptext[] = 0;
+global.helpspeaking[] = 0;
+global.helptextboxarray[] = 0;
+global.cheatertext[] = 0;
+global.cheatertextboxarray[] = 0;
+global.cheaterspeaking[] = 0;
 global.badend = false;
 global.helpActivate = false;
 self.depth = -1000;
@@ -167,7 +173,7 @@ if(global.chars_drawn&gt;=string_length(global.currentstring)){
 
     }else{
         alarm[8]=-5;
-        if(array_length_1d(global.displaytext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
+        if(array_length_1d(global.displaytext[])==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
             global.pagesdone = true;
         }else{
             global.pagesdone = false;
@@ -186,7 +192,7 @@ if(global.helpActivate){
 
         }else{
             alarm[8]=-5;
-            if(array_length_1d(global.cheatertext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.cheatertext[global.pagedoneno])){
+            if(array_length_1d(global.cheatertext[])==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.cheatertext[global.pagedoneno])){
                 global.pagesdone = true;
             }else{
                 global.pagesdone = false;
@@ -204,7 +210,7 @@ if(global.helpActivate){
 
         }else{
             alarm[8]=-5;
-            if(array_length_1d(global.helptext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.helptext[global.pagedoneno])){
+            if(array_length_1d(global.helptext[])==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.helptext[global.pagedoneno])){
                 global.pagesdone = true;
             }else{
                 global.pagesdone = false;
@@ -224,7 +230,7 @@ if(global.helpActivate){
 
     }else{
         alarm[8]=-5;
-        if(array_length_1d(global.displaytext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
+        if(array_length_1d(global.displaytext[])==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
             global.pagesdone = true;
         }else{
             global.pagesdone = false;
@@ -269,6 +275,7 @@ alarm[9]=1;
     }else{
 
     if(global.helpActivate){
+    if(global.cheater){
          if(global.cheaterspeaking[global.pagedoneno]=="phil"){
                 global.speakshift = 174;
             }else if (global.cheaterspeaking[global.pagedoneno]=="slime"){
@@ -278,7 +285,8 @@ alarm[9]=1;
             }else{
                 global.speakshift = 40;
             }
-        if(global.cheater){
+            global.currentstring = global.cheatertext[global.pagedoneno];
+        }else{
          if(global.helpspeaking[global.pagedoneno]=="phil"){
                 global.speakshift = 174;
             }else if (global.helpspeaking[global.pagedoneno]=="slime"){
@@ -288,8 +296,6 @@ alarm[9]=1;
             }else{
                 global.speakshift = 40;
             }
-            global.currentstring = global.cheatertext[global.pagedoneno];
-        }else{
             global.currentstring = global.helptext[global.pagedoneno];
         }
     }else{
@@ -415,26 +421,29 @@ global.speaking[0] ="phil";
 global.textboxarray[0] = phil_happy;
 }
 /*/
-
+if(!global.transition){
 if(global.paintingInteraction){
 draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
-        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 55,1220-global.speakshift,1,1,0);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 65,1220-global.speakshift,1,1,0);
 }else{
 if(global.helpActivate){
     
     if(global.cheater){
         draw_sprite(global.cheatertextboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
-        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 55,1220-global.speakshift,1,1,0);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 65,1220-global.speakshift,1,1,0);
     }else{
         draw_sprite(global.helptextboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
-        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 55,1220-global.speakshift,1,1,0);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 65,1220-global.speakshift,1,1,0);
     }
 }else{
     
         draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
-        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 55,1220-global.speakshift,1,1,0);
+        draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 65,1220-global.speakshift,1,1,0);
     
 }
+}
+}else{
+draw_sprite(blank,0,view_xview[0],view_yview[0]);
 }
 /*/
 draw_sprite(blank_textbox, -1, x, y);
@@ -500,8 +509,9 @@ var xscale = window_get_width()/sprite_get_width(big_phil);
 var yscale = window_get_height()/sprite_get_height(big_phil);
 
 if(room == asset_get_index("level_1")){
+if(global.reset_times&lt;1){
     if(global.pagedoneno==0){
-        if(global.chars_drawn&gt;=50){
+        if(global.chars_drawn==19){
             if(!global.pagesdone){
                 draw_sprite(space_button,0,840,700);
 
@@ -532,10 +542,13 @@ if(room == asset_get_index("level_1")){
     draw_sprite_ext(big_phil_out, 23, 0, 100, 1,1,0,c_white,1); 
     }
     }
+    }
 }
 if(room == asset_get_index("fake_room")){
     if(global.pagedoneno==60){
-    
+    instance_create(view_xview[0],view_yview[0],select_OBJ);
+    }else if(global.pagedoneno&gt;60){
+    instance_deactivate_object(select_OBJ);
     }
 }
 

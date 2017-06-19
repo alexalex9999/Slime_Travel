@@ -173,6 +173,7 @@ global.level_type = "normal";</code>
     <instance objName="wall" x="768" y="960" name="inst_09ED49DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="switch_button" x="192" y="192" name="inst_BC96C6DF" locked="0" code="switch_num = 1;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="quit" x="0" y="0" name="inst_2E6C3D76" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="text_box" x="0" y="96" name="inst_6545A9B5" locked="0" code="//Room 6&#xA; &#xA;//regular text&#xA; &#xA;global.speaking[0] = &quot;phil&quot;;&#xA;global.displaytext[0] = &quot;Remember that more than 1 button can activate a single pillar.&quot;;&#xA;global.textboxarray[0] = phil_happy;&#xA; &#xA;global.resetNeeded = 5;&#xA; &#xA;//helper text&#xA; &#xA;global.helpspeaking[0] = &quot;phil&quot;;&#xA;global.helptext[0] = &quot;Was my hint not enough? It's not that hard a concept.&quot;;&#xA;global.helptextboxarray[0] = phil_deadpan;&#xA; &#xA;//Cheater text&#xA; &#xA;global.cheaterspeaking[0] = &quot;phil&quot;;&#xA;global.cheatertext[0] = &quot;Do I need to spell it out for you. One Pillar. Multiple Buttons.&quot;;&#xA;global.cheatertextboxarray[0] = phil_angry;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="default_tileset" x="0" y="384" w="96" h="96" xo="96" yo="288" id="10005148" name="inst_017DBEBF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
