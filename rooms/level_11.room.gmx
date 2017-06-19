@@ -11,7 +11,8 @@
   <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>global.solutions[] = array(1,0,1,2,1,0,0,1,2,1,3,3,2,2,1,0,1,1,3,3,3,0,0,1,2,1,2,1,1,1,1,1);
-global.solution_length = array_length_1d(global.solutions)</code>
+global.solution_length = array_length_1d(global.solutions)
+global.level_type = "normal";</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>0</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

@@ -74,6 +74,7 @@ if(sliding == "left"){
     }
     if(sliding == "left"){
         x-=12;
+        sprite_index = box;
     }
 }
 if(sliding == "right"){
@@ -83,6 +84,7 @@ if(sliding == "right"){
     }
     if(sliding == "right"){
         x+=12
+        sprite_index = box;
     }
 }
 if(sliding == "up"){
@@ -92,6 +94,7 @@ if(sliding == "up"){
     }
     if(sliding == "up"){
         y-=12;
+        sprite_index = box;
     }
 }
 if(sliding == "down"){
@@ -101,6 +104,7 @@ if(sliding == "down"){
     }
     if(sliding == "down"){
         y+=12;
+        sprite_index = box;
     }
 }
 if(!place_meeting(x,y,ice_floor))

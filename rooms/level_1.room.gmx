@@ -16,7 +16,8 @@ global.philspeech = "Okay just stop. You’re gonna hurt yourself thinking so ha
 
 //global.help_needed =false;
 global.solutions[] = array(3,0,0,0,0,0,0,0,);
-global.solution_length = array_length_1d(global.solutions);</code>
+global.solution_length = array_length_1d(global.solutions);
+global.level_type = "normal";</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
