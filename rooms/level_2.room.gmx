@@ -423,7 +423,6 @@ global.level_type = "normal";</code>
     <tile bgName="default_tileset" x="192" y="384" w="96" h="96" xo="192" yo="192" id="10002589" name="inst_EC4D7DC0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="96" y="384" w="96" h="96" xo="96" yo="192" id="10002590" name="inst_62F513F8" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="0" y="384" w="96" h="96" xo="96" yo="192" id="10002591" name="inst_F7F8EDAF" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
-    <tile bgName="default_tileset" x="192" y="480" w="96" h="96" xo="96" yo="288" id="10002592" name="inst_EC2F1E50" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="96" y="480" w="96" h="96" xo="96" yo="288" id="10002593" name="inst_25B47C90" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="0" y="480" w="96" h="96" xo="96" yo="288" id="10002594" name="inst_A44BA6A0" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="192" y="576" w="96" h="96" xo="96" yo="384" id="10002595" name="inst_DF984B6E" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
@@ -441,12 +440,18 @@ global.level_type = "normal";</code>
     <tile bgName="default_tileset" x="1344" y="576" w="96" h="96" xo="96" yo="384" id="10004852" name="inst_0ED81323" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="1344" y="480" w="96" h="96" xo="96" yo="288" id="10004853" name="inst_AE1E1AD4" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="1344" y="384" w="96" h="96" xo="96" yo="192" id="10004854" name="inst_73EBBABA" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="default_tileset" x="192" y="480" w="96" h="96" xo="192" yo="288" id="10009093" name="inst_00768909" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="1056" y="480" w="96" h="96" xo="672" yo="480" id="10001670" name="inst_B3F27555" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="1152" y="480" w="96" h="96" xo="768" yo="480" id="10001671" name="inst_13A03F34" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="384" y="384" w="96" h="96" xo="576" yo="288" id="10001672" name="inst_FBE61CB0" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="768" y="384" w="96" h="96" xo="672" yo="288" id="10001673" name="inst_E5AD9F4D" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="864" y="384" w="96" h="96" xo="768" yo="288" id="10001674" name="inst_1EDB6760" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="672" y="192" w="96" h="96" xo="576" yo="288" id="10001675" name="inst_D0C1931B" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="normal_decor" x="576" y="576" w="96" h="96" xo="96" yo="96" id="10009094" name="inst_FD29F7F0" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="normal_decor" x="768" y="576" w="96" h="96" xo="96" yo="0" id="10009095" name="inst_C478C7A7" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="normal_decor" x="864" y="672" w="96" h="96" xo="96" yo="0" id="10009096" name="inst_EC1567ED" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="normal_decor" x="672" y="384" w="96" h="96" xo="96" yo="0" id="10009097" name="inst_AC7F6272" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+    <tile bgName="normal_decor" x="288" y="480" w="96" h="96" xo="288" yo="0" id="10009098" name="inst_4499D788" depth="999999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="288" y="576" w="96" h="96" xo="192" yo="0" id="10001458" name="inst_46E7D359" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="384" y="672" w="96" h="96" xo="96" yo="0" id="10001459" name="inst_FB1CFDBA" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
     <tile bgName="default_tileset" x="480" y="576" w="96" h="96" xo="288" yo="0" id="10001460" name="inst_38378227" depth="-10000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
