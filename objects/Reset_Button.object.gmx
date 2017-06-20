@@ -301,7 +301,7 @@ reseting = true;
             <kind>1</kind>
             <string>
 if(!reseting){
-if(global.help_needed &amp;&amp;!global.cheater){
+if(global.help_needed&amp;&amp;!global.cheater){
     
     global.cheater = true;
     reseting = true;
