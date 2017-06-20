@@ -65,7 +65,9 @@ case Start_Room:
 break;
 
 case cutscene_room_1:
-audio_stop_all();
+ audio_stop_sound(sound11);
+        audio_stop_sound(ice_song);
+    audio_stop_sound(beginning);
 audio_play_sound(openingsound,1,false);
 break;
 /*
@@ -94,8 +96,24 @@ case ice_cutscene_room_1:
 case ice_cutscene_room_2:
 case ice_cutscene_room_3:
 case ice_cutscene_room_4:
-audio_stop_all();
 
+if(!(audio_is_playing(ice_cutscene))){
+audio_stop_all();
+audio_play_sound(ice_cutscene,1,false);
+}
+break;
+
+case ending_cutscene_1:
+case ending_cutscene_2:
+case ending_cutscene_3:
+audio_stop_all();
+break;
+
+case level_ice_12:
+audio_stop_all();
+break;
+case creditsTBD:
+audio_stop_all();
 break;
 }
 </string>
@@ -133,6 +151,13 @@ case cutscene_room_9:
 case cutscene_room_10:
 case cutscene_room_11:
 case cutscene_room_12:
+case ending_cutscene_1:
+case ending_cutscene_2:
+case ending_cutscene_3:
+case ice_cutscene_room_1:
+case ice_cutscene_room_2:
+case ice_cutscene_room_3:
+case ice_cutscene_room_4:
 //case cutscene_room_1:
 //case cutscene_room_1:
 //case cutscene_room_1:

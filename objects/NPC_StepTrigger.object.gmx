@@ -58,16 +58,13 @@ if(slime.x==x&amp;&amp;slime.y==y&amp;&amp;spoke==false){
     global.displaytext[] = '';
     global.textboxarray[] = '';
     instance_create(view_current.x,view_current.y,text_box);
-    spoke = true;
+   for(i = 0; i&lt;array_length_1d(global.displaytextNPC);i++){
+   global.speaking[i] = global.speakingNPC[i];
+   global.displaytext[i] = global.displaytextNPC[i];
+   global.textboxarray[i] = global.textboxarrayNPC[i];
+   }
+     spoke = true;
    
-global.displaytext[0] = "Ha! Get rekt m8! You screwed up the first time didn’t you? You pushed the two boxes on the buttons right? ";
-global.speaking[0] ="phil";
-global.textboxarray[0] = phil_angry;
-
-global.displaytext[1] = "And then you failed! Ha! Ahaha! Haha! Haha… ha… hehe...ha. Yeah sorry I’m good. Alright, you know what to do. ";
-global.speaking[1] = "phil";
-global.textboxarray[1] = phil_happy;
-
 
 
 

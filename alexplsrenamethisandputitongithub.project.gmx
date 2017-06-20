@@ -43,10 +43,12 @@
     <sound>sound\sound14</sound>
     <sound>sound\codec</sound>
     <sound>sound\ice_song</sound>
+    <sound>sound\ice_cutscene</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="New-Textboxes">
       <sprite>sprites\textbox_arrow</sprite>
+      <sprite>sprites\chosen_arrow</sprite>
       <sprite>sprites\blank_textbox</sprite>
       <sprite>sprites\blank</sprite>
       <sprite>sprites\ebenezer_sad</sprite>
@@ -327,27 +329,12 @@
       <object>objects\NPC_Interact</object>
     </objects>
     <object>objects\level_button_obj</object>
+    <object>objects\change_text</object>
     <object>objects\select_OBJ</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>
-
     <room>rooms\Menu_Room</room>
-
-    <room>rooms\level_ice_10</room>
-
-    <rooms name="Ice Levels">
-      <room>rooms\level_ice_1</room>
-      <room>rooms\level_ice_2</room>
-      <room>rooms\level_ice_3</room>
-      <room>rooms\level_ice_4</room>
-      <room>rooms\level_ice_5</room>
-      <room>rooms\level_ice_6</room>
-      <room>rooms\level_ice_7</room>
-      <room>rooms\level_ice_8</room>
-      <room>rooms\level_ice_9</room>
-      <room>rooms\level_ice_11</room>
-    </rooms>
     <rooms name="Cutscenes">
       <room>rooms\cutscene_room_1</room>
       <room>rooms\cutscene_room_2</room>
@@ -384,6 +371,20 @@
       <room>rooms\ice_cutscene_room_3</room>
       <room>rooms\ice_cutscene_room_4</room>
     </rooms>
+    <rooms name="Ice Levels">
+      <room>rooms\level_ice_1</room>
+      <room>rooms\level_ice_2</room>
+      <room>rooms\level_ice_3</room>
+      <room>rooms\level_ice_4</room>
+      <room>rooms\level_ice_5</room>
+      <room>rooms\level_ice_6</room>
+      <room>rooms\level_ice_7</room>
+      <room>rooms\level_ice_8</room>
+      <room>rooms\level_ice_9</room>
+      <room>rooms\level_ice_10</room>
+      <room>rooms\level_ice_11</room>
+      <room>rooms\level_ice_12</room>
+    </rooms>
     <rooms name="The End">
       <room>rooms\ending_cutscene_1</room>
       <room>rooms\ending_cutscene_2</room>
@@ -393,7 +394,6 @@
       <room>rooms\ice_test_room</room>
     </rooms>
     <room>rooms\level_select</room>
-    <room>rooms\level_ice_12</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
