@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>sliding = false;
 image_speed = 1/2
+toslide = 0;
 </string>
           </argument>
         </arguments>

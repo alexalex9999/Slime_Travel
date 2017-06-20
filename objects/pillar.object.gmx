@@ -194,7 +194,8 @@ if(global.level_type == "normal"){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>sprite_index = ice_pillar_unlocked
+            <string>if(global.level_type == "ice")
+sprite_index = ice_pillar_unlocked
 </string>
           </argument>
         </arguments>

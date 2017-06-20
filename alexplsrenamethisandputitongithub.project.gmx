@@ -349,21 +349,19 @@
       <room>rooms\cutscene_room_11</room>
       <room>rooms\cutscene_room_12</room>
     </rooms>
-    <rooms name="Actual Levels">
-      <rooms name="Original Levels">
-        <room>rooms\level_1</room>
-        <room>rooms\level_2</room>
-        <room>rooms\level_3</room>
-        <room>rooms\level_4</room>
-        <room>rooms\level_5</room>
-        <room>rooms\level_6</room>
-        <room>rooms\level_7</room>
-        <room>rooms\level_8</room>
-        <room>rooms\level_9</room>
-        <room>rooms\level_10</room>
-        <room>rooms\level_11</room>
-        <room>rooms\level_12</room>
-      </rooms>
+    <rooms name="Original Levels">
+      <room>rooms\level_1</room>
+      <room>rooms\level_2</room>
+      <room>rooms\level_3</room>
+      <room>rooms\level_4</room>
+      <room>rooms\level_5</room>
+      <room>rooms\level_6</room>
+      <room>rooms\level_7</room>
+      <room>rooms\level_8</room>
+      <room>rooms\level_9</room>
+      <room>rooms\level_10</room>
+      <room>rooms\level_11</room>
+      <room>rooms\level_12</room>
     </rooms>
     <rooms name="Ice Cutscenes">
       <room>rooms\ice_cutscene_room_1</room>
