@@ -674,7 +674,7 @@ if(sliding){
         }
         else{
             if(place_meeting(x-12,y,pushable_box)&amp;&amp;place_meeting(x-12,y,ice_floor)&amp;&amp;instance_place(x-12,y,pushable_box).sliding == false){
-            show_debug_message("icebox")
+            
                 //(instance_place(x-12,y,pushable_box)).sprite_index = empty_sprite;
                 sliding=false;
                 //global.done_moving = true;
@@ -682,7 +682,7 @@ if(sliding){
                 image_index = 0;
                 sprite_index = slime_icebox_left;
                 //if(!position_meeting(x-12,y,ice_floor)&amp;&amp;!position_meeting(x-12-95,y,ice_floor)){
-                    show_debug_message("icebox slide")
+                   
                     (instance_place(x-12,y,pushable_box)).sliding = "lefts";
                     (instance_place(x-12,y,pushable_box)).toslide = 8;
                 //}
