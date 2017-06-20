@@ -8,7 +8,7 @@
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
+  <colour>0</colour>
   <showcolour>-1</showcolour>
   <code>global.solutions[] = array(0,1,1,0,3,2,1,2,3,0,0,1,0,3,3,2,1,0,0,3,0,0,0);
 global.solution_length = array_length_1d(global.solutions);
@@ -194,6 +194,10 @@ global.level_type = "ice";</code>
     <instance objName="pushable_box" x="576" y="480" name="inst_FA22F9C6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="672" y="672" name="inst_B4CC33A6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="768" y="288" name="inst_A61CF753" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="wall" x="1248" y="288" name="inst_DBE2CF08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="wall" x="1248" y="384" name="inst_B6CAE0BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="wall" x="1248" y="480" name="inst_8D95C22A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="wall" x="1248" y="576" name="inst_5D9C8012" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="icy_tileset" x="192" y="96" w="96" h="96" xo="96" yo="288" id="10008877" name="inst_8AD6C1BC" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
