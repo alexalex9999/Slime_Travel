@@ -49,13 +49,7 @@ draw_set_font(minipixel);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(!(instance_exists(text_box))){
-room_goto_next();
-}
-if(!audio_is_playing(sound14) &amp;&amp;global.pagedoneno &gt;= 6){
-    audio_play_sound(sound14, 1, true);
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
