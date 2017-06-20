@@ -25,14 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>xpos = 300+view_xview[0];
+            <string>xpos = view_xview[0]+300;
 position = "left";
+instance_deactivate_object(self);
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="8" enumb="0">
+    <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -49,9 +50,12 @@ position = "left";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(textbox_arrow,1,xpos,view_yview[0]+500,1,1,270,c_white,1);
-draw_text(view_xview+396,view_yview[0]+500,"JOIN");
-draw_text(view_xview+696,view_yview[0]+500,"TURN IN");
+            <string>if(global.pagedoneno==39){
+draw_sprite(blank,0,0,0,);
+draw_sprite_ext(chosen_arrow,0,xpos,view_yview[0]+600,1,1,90,c_white,1);
+draw_text(view_xview[0]+396,view_yview[0]+500,"JOIN");
+draw_text(view_xview[0]+696,view_yview[0]+500,"TURN IN");
+}
 </string>
           </argument>
         </arguments>
@@ -74,12 +78,12 @@ draw_text(view_xview+696,view_yview[0]+500,"TURN IN");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((xpos-300)==view_xview[0]){
-xpos = 600+view_xview[0];
-position = "right";
+            <string>if(global.pagedoneno==39){
+if(position=="left"){
+xpos = view_xview[0]+600;
+position="right";
 }else{
-xpos = 300+view_xview[0];
-position = "left";
+}
 }
 </string>
           </argument>
@@ -103,12 +107,12 @@ position = "left";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if((xpos-300)==view_xview[0]){
-xpos = 600+view_xview[0];
-position = "right";
+            <string>if(global.pagedoneno==39){
+if(position=="right"){
+xpos = view_xview[0]+300;
+position="left";
 }else{
-xpos = 300+view_xview[0];
-position = "left";
+}
 }
 </string>
           </argument>
@@ -132,10 +136,13 @@ position = "left";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(position =="left"){
+            <string>if(global.pagedoneno==40){
+if(position =="left"){
 global.badend = true;
 }else{
 global.badend = false;
+}
+instance_activate_object(change_text);
 }
 </string>
           </argument>

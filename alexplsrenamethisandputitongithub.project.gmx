@@ -43,10 +43,12 @@
     <sound>sound\sound14</sound>
     <sound>sound\codec</sound>
     <sound>sound\ice_song</sound>
+    <sound>sound\ice_cutscene</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="New-Textboxes">
       <sprite>sprites\textbox_arrow</sprite>
+      <sprite>sprites\chosen_arrow</sprite>
       <sprite>sprites\blank_textbox</sprite>
       <sprite>sprites\blank</sprite>
       <sprite>sprites\ebenezer_sad</sprite>
@@ -327,6 +329,7 @@
       <object>objects\NPC_Interact</object>
     </objects>
     <object>objects\level_button_obj</object>
+    <object>objects\change_text</object>
     <object>objects\select_OBJ</object>
   </objects>
   <rooms name="rooms">

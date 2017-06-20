@@ -345,9 +345,13 @@ global.level_type = "ice";</code>
     <instance objName="ice_floor" x="768" y="1344" name="inst_6BB927F6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="672" y="1344" name="inst_E703405E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ice_floor" x="1344" y="768" name="inst_A80418F5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+
+    <instance objName="text_box" x="0" y="96" name="inst_7284F760" locked="0" code="//Ice Level 10&#xA; &#xA;//regular text&#xA; &#xA;global.speaking[0] = &quot;phil&quot;;&#xA;global.displaytext[0] = &quot;Woah. This one's a big room. Don't let it scare you, Slime.&quot;;&#xA;global.textboxarray[0] = phil_gasp;&#xA; &#xA;global.speaking[1] = &quot;slime&quot;;&#xA;global.displaytext[1] = &quot;Pfah! Nothing scares me!&quot;;&#xA;global.textboxarray[1] = slime_giggle;&#xA; &#xA;global.speaking[2] = &quot;slime&quot;;&#xA;global.displaytext[2] = &quot;...well except spiders. And bears. And the student loan collector.&quot;;&#xA;global.textboxarray[2] = slime_cri;&#xA; &#xA;global.resetNeeded = 1;&#xA; &#xA;//helper text&#xA; &#xA;global.helpspeaking[0] = &quot;slime&quot;;&#xA;global.helptext[0] = &quot;So what scares you, Phil?&quot;;&#xA;global.helptextboxarray[0] = slime_giggle;&#xA; &#xA;global.helpspeaking[1] = &quot;phil&quot;;&#xA;global.helptext[1] = &quot;The fact that you're the only one who can save the world.&quot;;&#xA;global.helptextboxarray[1] = phil_deadpan;&#xA; &#xA;//Cheater text&#xA; &#xA;global.cheaterspeaking[0] = &quot;slime&quot;;&#xA;global.cheatertext[0] = &quot;Don't worry, I've got this. We have nothing to fear but fear itself.&quot;;&#xA;global.cheatertextboxarray[0] = slime_giggle;&#xA; &#xA;global.cheaterspeaking[1] = &quot;slime&quot;;&#xA;global.cheatertext[1] = &quot;And spider bears. Especially spider bears.&quot;;&#xA;global.cheatertextboxarray[1] = slime_cri;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+
     <instance objName="wall" x="1728" y="672" name="inst_E5E0B21B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1728" y="768" name="inst_4EB488C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1728" y="864" name="inst_4C9969ED" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+
   </instances>
   <tiles>
     <tile bgName="icy_tileset" x="192" y="288" w="96" h="96" xo="96" yo="288" id="10008412" name="inst_E0D01461" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
