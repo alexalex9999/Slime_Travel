@@ -172,7 +172,7 @@ if(sliding == "downs"){
         }
     }
 }
-if(!place_meeting(x,y,ice_floor))
+if(!place_meeting(x,y,ice_floor)&amp;&amp;!toslide&gt;0)
     sliding = false;
 
 </string>
