@@ -80,19 +80,20 @@ sliding = false;
             <string>if(sprite_index = slime_jump_left){
     if(position_meeting(x-96, y, pillar)){
         sprite_index = slime_bounce_left;
-        sound_play(bonk_snd)
+        audio_play_sound(bonk_snd,1,false);
     }
 }
 if(sprite_index = slime_jump_right){
     if(position_meeting(x+96, y, pillar)){
         sprite_index = slime_bounce_right;
-        sound_play(bonk_snd)
+        audio_play_sound(bonk_snd,1,false);
     }
 }
 if(sprite_index = slime_jump_up){
     if(position_meeting(x, y-96, pillar)){
         sprite_index = slime_bounce_up;
-        sound_play(bonk_snd)
+        
+        audio_play_sound(bonk_snd,1,false);
     }
 }
 if(sprite_index = slime_jump_down){
@@ -123,19 +124,19 @@ if(sprite_index = slime_jump_down){
           <argument>
             <kind>1</kind>
             <string>    if(sprite_index == slime_bounce_left &amp;&amp; !position_meeting(x-96, y, pillar)){
-        audio_pause_sound(bonk_snd)
-        sprite_index = slime_jump_left
+        audio_pause_sound(bonk_snd);
+        sprite_index = slime_jump_left;
     }
     if(sprite_index == slime_bounce_right &amp;&amp; !position_meeting(x+96, y, pillar)){
-        audio_pause_sound(bonk_snd)
-        sprite_index = slime_jump_right
+        audio_pause_sound(bonk_snd);
+        sprite_index = slime_jump_right;
     }
     if(sprite_index == slime_bounce_up &amp;&amp; !position_meeting(x, y-96, pillar)){
-        audio_pause_sound(bonk_snd)
-        sprite_index = slime_jump_up
+        audio_pause_sound(bonk_snd);
+        sprite_index = slime_jump_up;
     }
     if(sprite_index == slime_idle_front &amp;&amp; !position_meeting(x, y+96, pillar)){
-        sprite_index = slime_jump_down
+        sprite_index = slime_jump_down;
     }
 </string>
           </argument>
@@ -159,7 +160,8 @@ if(sprite_index = slime_jump_down){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>depth = -y-1;
+            <string>
+depth = -y-1;
 if(!instance_place(x,y,ice_floor)&amp;&amp;sliding){
     sliding = false;
     global.done_moving = true;
@@ -775,7 +777,8 @@ sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
 }
 if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
-    if(position_meeting(x, y+96, NPC_Interact)){
+    if(place_meeting(x, y+96, ebenezer)){
+        show_debug_message("ebenezer")
         sprite_index = slime_idle_front;
     }
     else{
@@ -798,7 +801,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         sprite_index = slime_idle_front
         alarm[0] = 1;
     }
-    if(position_meeting(x, y+96, pit)){
+    if(position_meeting(x, y+96, pit)&amp;&amp;!((instance_position(x, y+96, pit)).pit_filled)){
         sprite_index = slime_into_pit_down;
     }
     if(position_meeting(x, y+96, pushable_box)&amp;&amp;instance_position(x, y+96, pushable_box).sliding==false){
@@ -820,8 +823,8 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         audio_play_sound(move_box_snd, 1, false);
         }
     }
-    }
     mask_index = no_mask;
+    }
 }
 }
 </string>
@@ -855,7 +858,8 @@ sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
 }
 if((sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
-    if(position_meeting(x+96, y, NPC_Interact)){
+    if(place_meeting(x+96, y, ebenezer)){
+        show_debug_message("ebenezer")
         sprite_index = slime_idle_right;
     }
     else{
@@ -879,7 +883,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
         audio_play_sound(bonk_snd, 1, false)
         alarm[0] = 1;
     }
-    if(position_meeting(x+96, y, pit)){
+    if(position_meeting(x+96, y, pit)&amp;&amp;!((instance_position(x+96, y, pit)).pit_filled)){
         sprite_index = slime_into_pit_right;
     }
     if(position_meeting(x+96, y, pushable_box)&amp;&amp;instance_position(x+96, y, pushable_box).sliding==false){
@@ -901,8 +905,8 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
         audio_play_sound(move_box_snd, 1, false);
         }
     }
-    }
     mask_index = no_mask;
+    }
 }
 }
 </string>
@@ -936,7 +940,8 @@ sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
 }
 if((sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
-    if(position_meeting(x, y-96, NPC_Interact)){
+    if(place_meeting(x, y-96, ebenezer)){
+        show_debug_message("ebenezer")
         sprite_index = slime_idle_back;
     }
     else{
@@ -960,7 +965,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
         audio_play_sound(bonk_snd, 1, false)
         alarm[0] = 1;
     }
-    if(position_meeting(x, y-96, pit)){
+    if(position_meeting(x, y-96, pit)&amp;&amp;!((instance_position(x, y-96, pit)).pit_filled)){
         sprite_index = slime_into_pit_up;
     }
     if(position_meeting(x, y-96, pushable_box)&amp;&amp;instance_position(x, y-96, pushable_box).sliding == false){
@@ -982,8 +987,8 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
         audio_play_sound(move_box_snd, 1, false);
         }
     }
-    }
     mask_index = no_mask;
+    }
 }
 }
 </string>
@@ -1017,7 +1022,8 @@ sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
 }
 if((sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
-    if(position_meeting(x-96, y, NPC_Interact)){
+    if(place_meeting(x-96, y, ebenezer)){
+        show_debug_message("ebenezer");
         sprite_index = slime_idle_left;
     }
     else{
@@ -1041,7 +1047,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
         audio_play_sound(bonk_snd, 1, false)
         alarm[0] = 1;
     }
-    if(position_meeting(x-96, y, pit)){
+    if(position_meeting(x-96, y, pit)&amp;&amp;!((instance_position(x-96, y, pit)).pit_filled)){
         sprite_index = slime_into_pit_left;
     }
     if(position_meeting(x-96, y, pushable_box)&amp;&amp;instance_position(x-96, y, pushable_box).sliding==false){
@@ -1063,8 +1069,8 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
             audio_play_sound(move_box_snd, 1, false);
         }
     }
-    }
     mask_index = no_mask;
+    }
 }
 
 }

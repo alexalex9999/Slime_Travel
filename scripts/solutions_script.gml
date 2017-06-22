@@ -7,4 +7,8 @@ case 2: Reset_Button.jump_succeeded = jump_left();
 break;
 case 3: Reset_Button.jump_succeeded = jump_down();
 break;
+
+case 4: press_z();
+break;
+
 }

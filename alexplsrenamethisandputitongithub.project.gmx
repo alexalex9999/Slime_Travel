@@ -40,14 +40,17 @@
     <sound>sound\startup_snd</sound>
     <sound>sound\beginning</sound>
     <sound>sound\openingsound</sound>
-    <sound>sound\sound14</sound>
     <sound>sound\codec</sound>
     <sound>sound\ice_song</sound>
     <sound>sound\ice_cutscene</sound>
+    <sound>sound\ending_music</sound>
+    <sound>sound\credits_theme</sound>
+    <sound>sound\ebenezer_theme</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="New-Textboxes">
       <sprite>sprites\textbox_arrow</sprite>
+      <sprite>sprites\anti_chosen_arrow</sprite>
       <sprite>sprites\chosen_arrow</sprite>
       <sprite>sprites\blank_textbox</sprite>
       <sprite>sprites\blank</sprite>
@@ -262,6 +265,10 @@
       <sprite>sprites\volume_10</sprite>
     </sprites>
     <sprite>sprites\Level_buttons</sprite>
+    <sprite>sprites\credits_1</sprite>
+    <sprite>sprites\credits_2</sprite>
+    <sprite>sprites\credits_3</sprite>
+    <sprite>sprites\credits_4</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\default_tileset</background>
@@ -270,6 +277,7 @@
     <background>background\ice_decorations</background>
     <background>background\normal_decor</background>
     <background>background\extra_paintings</background>
+    <background>background\ice_3_0</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -282,6 +290,7 @@
     <script>scripts\jump_right.gml</script>
     <script>scripts\jump_left.gml</script>
     <script>scripts\script8.gml</script>
+    <script>scripts\press_z.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -319,7 +328,6 @@
       <object>objects\cutscene_textbox</object>
       <object>objects\title</object>
       <object>objects\title_noclick</object>
-      <object>objects\opsound</object>
       <object>objects\titletext</object>
       <object>objects\Menu_Obj</object>
     </objects>
@@ -331,6 +339,11 @@
     <object>objects\level_button_obj</object>
     <object>objects\change_text</object>
     <object>objects\select_OBJ</object>
+    <object>objects\anti_textbox_arrow_object</object>
+    <object>objects\credits_obj_1</object>
+    <object>objects\credits_obj_2</object>
+    <object>objects\credits_obj_3</object>
+    <object>objects\credits_obj_4</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Start_Room</room>

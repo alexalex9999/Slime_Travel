@@ -22,7 +22,7 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
         alarm[0] = 1;
         return false;
     }
-    if(position_meeting(slime.x, slime.y+96, pit)){
+    if(position_meeting(slime.x, slime.y+96, pit)&&!((instance_position(slime.x, slime.y+96, pit)).pit_filled)){
         slime.sprite_index = slime_into_pit_down;
         return false;
     }

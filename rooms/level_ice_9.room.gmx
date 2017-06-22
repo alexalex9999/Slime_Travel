@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.solutions[] = array(0,3,0,0,1,2,3,2,1,3,0,1,2,2,3,2,1,1,2,1,0,0,0,0,0);
+  <code>global.solutions[] = array(0,3,0,0,1,2,3,2,1,3,0,1,2,2,3,2,1,1,2,1,0,0,0,0,0,0);
 global.solution_length = array_length_1d(global.solutions);
 global.level_type = "ice";</code>
   <enableViews>-1</enableViews>
@@ -168,14 +168,11 @@ global.level_type = "ice";</code>
     <instance objName="pit" x="768" y="288" name="inst_18AD19B0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="288" y="576" name="inst_9791663C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="576" y="576" name="inst_5FACAD44" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-
     <instance objName="text_box" x="0" y="96" name="inst_A375F2CA" locked="0" code="//Ice Level 9&#xA; &#xA;//regular text&#xA; &#xA;global.speaking[0] = &quot;phil&quot;;&#xA;global.displaytext[0] = &quot;This room looks pretty small and easy,&quot;;&#xA;global.textboxarray[0] = phil_happy;&#xA; &#xA;global.speaking[1] = &quot;phil&quot;;&#xA;global.displaytext[1] = &quot;but I'd still be careful and plan this out if I were you.&quot;;&#xA;global.textboxarray[1] = phil_happy;&#xA; &#xA;global.resetNeeded = 4;&#xA; &#xA;//helper text&#xA; &#xA;global.helpspeaking[0] = &quot;phil&quot;;&#xA;global.helptext[0] = &quot;Then again if I were you, I'd be far smarter and have caught Ebenezer by now too.&quot;;&#xA;global.helptextboxarray[0] = phil_angry;&#xA; &#xA;//Cheater text&#xA; &#xA;global.cheaterspeaking[0] = &quot;slime&quot;;&#xA;global.cheatertext[0] = &quot;Well if I were me, I'd skip to the future where this puzzle is already done.&quot;;&#xA;global.cheatertextboxarray[0] = slime_indifferent;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-
     <instance objName="wall" x="1248" y="96" name="inst_40D6B588" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1248" y="192" name="inst_3DB00525" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1248" y="288" name="inst_078B26C0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1248" y="384" name="inst_947E4910" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-
   </instances>
   <tiles>
     <tile bgName="icy_tileset" x="192" y="192" w="96" h="96" xo="0" yo="384" id="10008281" name="inst_69512B0F" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

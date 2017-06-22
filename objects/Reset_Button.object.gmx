@@ -66,13 +66,15 @@ reseting = false;
           <argument>
             <kind>1</kind>
             <string>if(global.done_moving &amp;&amp; global.cheater &amp;&amp; !keyboard_check(vk_shift)&amp;&amp;!slime.sliding){
-    solutions_script(global.solutions[count])
-    if(jump_succeeded){
-        count++
-        global.done_moving = false;
-    }
-    else{
-        global.done_moving = true;
+    if(count&lt;global.solution_length){
+        solutions_script(global.solutions[count])
+        if(jump_succeeded){
+            count++
+            global.done_moving = false;
+        }
+        else{
+            global.done_moving = true;
+        }
     }
 }
 cheating = true

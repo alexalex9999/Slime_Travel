@@ -59,6 +59,9 @@ audio_sound_gain(codec,100,1);
 var soundplayed = false;
 global.currentx = view_xview[0];
 global.currenty = view_yview[0];
+
+arrow_image = 0;
+
 /*
 if(global.help_needed){
 global.displaytext[] = 0;
@@ -108,7 +111,8 @@ global.speaking[i] = "phil";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(instance_exists(text_box)){
+            <string>/*
+if(instance_exists(text_box)){
 if(!(global.currentx=view_xview[0])||!(global.currenty=view_yview[0])){
      instance_deactivate_object(textbox_arrow_object);
     alarm[9] = 1;
@@ -123,12 +127,12 @@ if(global.chars_drawn&gt;=string_length(global.currentstring)){
             instance_deactivate_object(textbox_arrow_object);
             }
             else{
-            instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object);
+            instance_create(view_xview[0]+1180,view_yview[0]+620,textbox_arrow_object);
             global.currentx = view_xview[0];
             global.currenty = view_yview[0];
            }       
         }else{
-            instance_create(view_xview[0]+1184,view_yview[0]+632,textbox_arrow_object);
+            instance_create(view_xview[0]+1180,view_yview[0]+620,textbox_arrow_object);
             global.currentx = view_xview[0];
             global.currenty = view_yview[0];
             }
@@ -139,7 +143,7 @@ if(global.chars_drawn&gt;=string_length(global.currentstring)){
     }else{
         instance_deactivate_object(textbox_arrow_object);
     }
-   
+   */
 </string>
           </argument>
         </arguments>
@@ -299,7 +303,7 @@ alarm[9]=1;
             global.currentstring = global.helptext[global.pagedoneno];
         }
     }else{
-        if(global.displaytext[0]=""){
+        if(global.displaytext[]=0){
             instance_destroy();
         }else{
             global.currentstring = global.displaytext[global.pagedoneno];
@@ -377,6 +381,34 @@ global.paintingInteraction = false;
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*if(arrow_image==0){
+arrow_image=1;
+}else{
+arrow_image=0;
+}
+*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
@@ -422,6 +454,35 @@ global.textboxarray[0] = phil_happy;
 }
 /*/
 if(!global.transition){
+    if(!global.paintingInteraction){
+        if(global.helpActivate){
+            if(global.cheater){
+                if(global.chars_drawn&lt;=string_length(global.cheatertext[global.pagedoneno])){
+                    draw_sprite(anti_chosen_arrow,0,view_xview[0]+1180,view_yview[0]+620);
+                }else{
+                    draw_sprite(textbox_arrow,arrow_image/4,view_xview[0]+1180,view_yview[0]+620);
+                }
+            }else{ 
+                if(global.chars_drawn&lt;=string_length(global.helptext[global.pagedoneno])){
+                    draw_sprite(anti_chosen_arrow,0,view_xview[0]+1180,view_yview[0]+620);
+                }else{
+                    draw_sprite(textbox_arrow,arrow_image/4,view_xview[0]+1180,view_yview[0]+620);
+                }
+            }
+        }else{
+            if(global.chars_drawn&lt;=string_length(global.displaytext[global.pagedoneno])){
+                draw_sprite(anti_chosen_arrow,0,view_xview[0]+1180,view_yview[0]+620);
+            }else{
+                draw_sprite(textbox_arrow,arrow_image/4,view_xview[0]+1180,view_yview[0]+620);
+            }
+        }
+    }else{
+        if(global.chars_drawn&lt;=string_length(global.displaytext[global.pagedoneno])){
+            draw_sprite(anti_chosen_arrow,0,view_xview[0]+1180,view_yview[0]+620);
+        }else{
+            draw_sprite(textbox_arrow,arrow_image/4,view_xview[0]+1180,view_yview[0]+620);
+        }
+    }
 if(global.paintingInteraction){
 draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
         draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 65,1220-global.speakshift,1,1,0);
@@ -436,7 +497,6 @@ if(global.helpActivate){
         draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 65,1220-global.speakshift,1,1,0);
     }
 }else{
-    
         draw_sprite(global.textboxarray[global.pagedoneno], -1, view_xview[0], view_yview[0]);
         draw_text_ext_transformed(view_xview[0]+15+global.speakshift, 500+view_yview[0],global.currenttext, 65,1220-global.speakshift,1,1,0);
     
@@ -445,6 +505,12 @@ if(global.helpActivate){
 }else{
 draw_sprite(blank,0,view_xview[0],view_yview[0]);
 }
+if(arrow_image==8){
+arrow_image=0;
+}else{
+arrow_image++;
+}
+
 /*/
 draw_sprite(blank_textbox, -1, x, y);
 var currentpage = 0;
@@ -606,10 +672,9 @@ if(global.chars_drawn&gt;=string_length(global.currentstring)){
 }
 if(global.pagesdone){
     instance_destroy();
-    
     global.displaytext[] = 0;
     global.stringdone = false;
-    if(instance_exists(NPC_Interact)){
+    if(!instance_exists(NPC_Interact)){
     global.paintingInteraction = false;
     }
 }else if(global.pagedoneno&lt;array_length_1d(global.displaytext)){
