@@ -26,7 +26,7 @@ slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)
         slime.alarm[0] = 1;
         return false;
     }
-    if(position_meeting(slime.x-96, slime.y, pit)){
+    if(position_meeting(slime.x-96, slime.y, pit)&&!((instance_position(slime.x-96, slime.y, pit)).pit_filled)){
         slime.sprite_index = slime_into_pit_left;
         return false;
     }

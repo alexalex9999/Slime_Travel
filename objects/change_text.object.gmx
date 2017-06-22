@@ -129,12 +129,13 @@ global.displaytextNPC[59] = " ";
 global.speakingNPC[59] = "else";
 global.textboxarrayNPC[59] = empty_sprite;
 
-
+if(array_length_1d(global.displaytext)!=59){
     for(var i=0; i &lt; array_length_1d(global.speakingNPC[]); i++){
     global.speaking[i] = global.speakingNPC[i];
     global.displaytext[i] = global.displaytextNPC[i];
     global.textboxarray[i] = global.textboxarrayNPC[i];
 
+}
 
 }
 }else{
@@ -157,7 +158,7 @@ global.textboxarrayNPC[44] = phil_happy;
 global.displaytextNPC[45] = " ";
 global.speakingNPC[45] = "else";
 global.textboxarrayNPC[45] = empty_sprite;
-
+if(array_length_1d(global.speaking)!=45){
     for(var i=0; i &lt; array_length_1d(global.speakingNPC[]); i++){
     global.speaking[i] = global.speakingNPC[i];
     global.displaytext[i] = global.displaytextNPC[i];
@@ -165,7 +166,7 @@ global.textboxarrayNPC[45] = empty_sprite;
 
 
 }
-
+}
 }
 </string>
           </argument>

@@ -44,77 +44,100 @@ case level_9:
 case level_10:
 case level_11:
 case level_12:
-if(!(audio_is_playing(sound11))){
-audio_stop_sound(openingsound);
-audio_stop_sound(beginning);
- audio_stop_sound(ice_song);
-audio_play_sound(sound11,1,true);
-}
-break;
+    if(!(audio_is_playing(sound11))){
+        audio_stop_sound(openingsound);
+        audio_stop_sound(beginning);
+        audio_stop_sound(ebenezer_theme);
+        audio_stop_sound(ending_music);
+        audio_stop_sound(ice_song);
+        audio_stop_sound(ice_cutscene);
+        audio_stop_sound(credits_theme);
+        audio_play_sound(sound11,0,true);
+    }
+    audio_stop_sound(ice_song);
+    break;
 
 case Menu_Room:
 case Start_Room:
  if(audio_is_playing(beginning)){
-    }else{
+ }else{
      audio_stop_sound(openingsound);
-        audio_stop_sound(sound11);
-        audio_stop_sound(ice_song);
-    audio_play_sound(beginning,1,true);
-       
+     audio_stop_sound(sound11);
+     audio_stop_sound(ebenezer_theme);
+     audio_stop_sound(ending_music);
+     audio_stop_sound(ice_cutscene);
+     audio_stop_sound(credits_theme);
+     audio_stop_sound(ice_song);
+     audio_play_sound(beginning,1,true);
     }
-break;
+    break;
 
 case cutscene_room_1:
- audio_stop_sound(sound11);
-        audio_stop_sound(ice_song);
+
+    audio_stop_sound(sound11);
+    audio_stop_sound(ice_song);
     audio_stop_sound(beginning);
-audio_play_sound(openingsound,1,false);
-break;
-/*
+    audio_stop_sound(ice_cutscene);
+    audio_stop_sound(ending_music);
+    audio_stop_sound(ebenezer_theme);
+    audio_stop_sound(credits_theme);
+    audio_play_sound(openingsound,1,false);
+    break;
+
 case level_ice_1:
 case level_ice_2:
 case level_ice_3:
 case level_ice_4:
 case level_ice_5:
-*/
-/*case level_ice_6:
+case level_ice_6:
 case level_ice_7:
 case level_ice_8:
 case level_ice_9:
 case level_ice_10:
 case level_ice_11:
-case level_ice_12:*/
-if(!(audio_is_playing(ice_song))){
-audio_stop_sound(openingsound);
-audio_stop_sound(beginning);
-audio_stop_sound(sound11);
-audio_play_sound(ice_song,1,true);
-}
-break;
+    if(!(audio_is_playing(ice_song))){
+        audio_stop_sound(openingsound);
+        audio_stop_sound(beginning);
+        audio_stop_sound(sound11);
+        audio_stop_sound(ebenezer_theme);
+        audio_stop_sound(ice_cutscene);
+        audio_stop_sound(ending_music);
+        audio_stop_sound(credits_theme);
+        audio_play_sound(ice_song,1,true);
+    }
+    break;
 
 case ice_cutscene_room_1:
-case ice_cutscene_room_2:
-case ice_cutscene_room_3:
-case ice_cutscene_room_4:
-
-if(!(audio_is_playing(ice_cutscene))){
-audio_stop_all();
-audio_play_sound(ice_cutscene,1,false);
-}
-break;
+    audio_stop_all();
+    audio_play_sound(ice_cutscene,1,false);
+    break;
 
 case ending_cutscene_1:
 case ending_cutscene_2:
 case ending_cutscene_3:
-audio_stop_all();
-break;
+        audio_stop_sound(openingsound);
+        audio_stop_sound(beginning);
+        audio_stop_sound(sound11);
+        audio_stop_sound(ebenezer_theme);
+        audio_stop_sound(ice_cutscene);
+        audio_stop_sound(credits_theme);
+        audio_stop_sound(ice_song);
+    if(!audio_is_playing(ending_music)){
+        audio_play_sound(ending_music,1,false);
+    }
+    break;
 
 case level_ice_12:
-audio_stop_all();
-break;
+    if(!audio_is_playing(ebenezer_theme)){
+    audio_stop_all();
+    audio_play_sound(ebenezer_theme,1,true);
+    }
+    break;
+
 case creditsTBD:
-audio_stop_all();
-break;
+    audio_stop_all();
+    audio_play_sound(credits_theme,1,false);
+    break;
 }
 </string>
           </argument>

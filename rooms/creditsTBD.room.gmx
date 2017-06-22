@@ -8,9 +8,9 @@
   <isometric>0</isometric>
   <speed>30</speed>
   <persistent>0</persistent>
-  <colour>12632256</colour>
+  <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>room_goto_next();</code>
+  <code></code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -52,6 +52,10 @@
   </views>
   <instances>
     <instance objName="quit" x="0" y="0" name="inst_751438BD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="credits_obj_1" x="0" y="0" name="inst_16ABCF78" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="credits_obj_2" x="0" y="4928" name="inst_00DC51E9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="credits_obj_3" x="0" y="9856" name="inst_147E0847" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="credits_obj_4" x="0" y="14820" name="inst_AFCE4CD7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
