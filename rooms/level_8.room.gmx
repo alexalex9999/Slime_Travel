@@ -120,11 +120,11 @@ global.level_type = "normal";</code>
     <instance objName="wall" x="1056" y="672" name="inst_5136BBCE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="960" y="768" name="inst_84E2ECE9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="slime" x="0" y="672" name="inst_74FD9C4F" locked="0" code="sprite_index = slime_jump_right;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="switch_button" x="576" y="288" name="inst_F9C014CD" locked="0" code="switch_num = 0;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="switch_button" x="576" y="288" name="inst_F9C014CD" locked="0" code="switch_num = 0;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="480" y="288" name="inst_FF1199C2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="288" y="480" name="inst_1136EDC4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="192" y="672" name="inst_AA117A66" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="pillar" x="960" y="288" name="inst_699A907F" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num] = false;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="pillar" x="960" y="288" name="inst_699A907F" locked="0" code="pillar_num = 0;&#xA;global.pillar_down[pillar_num] = false;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="288" y="96" name="inst_EFC07B36" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="576" y="672" name="inst_C87A34F1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="480" y="672" name="inst_A83A1D38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

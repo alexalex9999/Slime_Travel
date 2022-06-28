@@ -26,6 +26,216 @@
           <argument>
             <kind>1</kind>
             <string>image_speed = 1/3;
+alarm[11] = 1500;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="11">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>isSolid = true;
+painting = false;
+spriteToDraw = empty_sprite;
+ebenezer_NPC = true;
+global.optionPageNo = 43;
+instance_create(x-96,y,pushable_box);
+
+global.displaytextNPC[0] = "There! There he is! ";
+global.speakingNPC[0] = "phil";
+global.textboxarrayNPC[0] = phil_gasp;
+
+global.displaytextNPC[1] = "Aha! Ive found you!";
+global.speakingNPC[1] = "slime";
+global.textboxarrayNPC[1] = slime_angry;
+
+global.displaytextNPC[2] = "So this is the end, then. Ive nowhere left to run,";
+global.speakingNPC[2] = "ebenezer";
+global.textboxarrayNPC[2] = ebenezer_neutral;
+
+global.displaytextNPC[3] = "and the time machine must still recharge.";
+global.speakingNPC[3] = "ebenezer";
+global.textboxarrayNPC[3] = ebenezer_neutral;
+
+global.displaytextNPC[4] = "You must think me insane, or perhaps driven solely by hate.";
+global.speakingNPC[4] = "ebenezer";
+global.textboxarrayNPC[4] = ebenezer_angry;
+
+global.displaytextNPC[5] = "You are fools, then.";
+global.speakingNPC[5] = "ebenezer";
+global.textboxarrayNPC[5] = ebenezer_neutral;
+
+global.displaytextNPC[6] = "You must know that I have suffered. What I, no, my people have endured.";
+global.speakingNPC[6] = "ebenezer";
+global.textboxarrayNPC[6] = ebenezer_sad;
+
+global.displaytextNPC[7] = "...";
+global.speakingNPC[7] = "slime";
+global.textboxarrayNPC[7] = slime_angry;
+
+global.displaytextNPC[8] = "You really do not know? Let me give you a lesson on history.";
+global.speakingNPC[8] = "ebenezer";
+global.textboxarrayNPC[8] = ebenezer_sad;
+
+global.displaytextNPC[9] = "Dont listen to him, just-";
+global.speakingNPC[9] = "phil";
+global.textboxarrayNPC[9] =phil_angry;
+
+global.displaytextNPC[10] = "...";
+global.speakingNPC[10] = "else";
+global.textboxarrayNPC[10] = phil_empty;
+
+global.displaytextNPC[11] = "Phil? Phil, are you there?";
+global.speakingNPC[11] = "slime";
+global.textboxarrayNPC[11] = slime_angry;
+ 
+global.displaytextNPC[12] = "...";
+global.speakingNPC[12] = "else";
+global.textboxarrayNPC[12] = phil_empty;
+
+global.displaytextNPC[13] = "No, no he isnt. I used my time machine to block his signal.";
+global.speakingNPC[13] = "ebenezer";
+global.textboxarrayNPC[13] = ebenezer_neutral;
+ 
+global.displaytextNPC[14] = "It isnt YOUR time machine, Phil made it!";
+global.speakingNPC[14] = "slime";
+global.textboxarrayNPC[14] = slime_angry;
+
+global.displaytextNPC[15] = "So he says. Did you know that Phil used to have a partner in science?";
+global.speakingNPC[15] = "ebenezer";
+global.textboxarrayNPC[15] = ebenezer_neutral;
+
+global.displaytextNPC[16] = "No, what-";
+global.speakingNPC[16] = "slime";
+global.textboxarrayNPC[16] = slime_angry;
+
+global.displaytextNPC[17] = "Nevermind. That isnt what is important.";
+global.speakingNPC[17] = "ebenezer";
+global.textboxarrayNPC[17] = ebenezer_neutral;
+
+global.displaytextNPC[18] = "Do you recognize the architecture of this castle, slime?";
+global.speakingNPC[18] = "ebenezer";
+global.textboxarrayNPC[18] = ebenezer_neutral;
+
+global.displaytextNPC[19] = "It was constructed around the time of the... Great Slime Wars";
+global.speakingNPC[19] = "ebenezer";
+global.textboxarrayNPC[19] = ebenezer_sad;
+
+global.displaytextNPC[20] = "You wouldnt know about them - they were much before your time.";
+global.speakingNPC[20] = "ebenezer";
+global.textboxarrayNPC[20] = ebenezer_sad;
+
+global.displaytextNPC[21] = "But, the effects linger. Slimeciety has always been divided by color,";
+global.speakingNPC[21] = "ebenezer";
+global.textboxarrayNPC[21] = ebenezer_neutral;
+
+global.displaytextNPC[22] = "(though we pretend this is not that case today.)";
+global.speakingNPC[22] = "ebenezer";
+global.textboxarrayNPC[22] = ebenezer_neutral;
+
+global.displaytextNPC[23] = "The highest on the spectrum, warm color slimes lived lavishly.";
+global.speakingNPC[23] = "ebenezer";
+global.textboxarrayNPC[23] = ebenezer_neutral;
+
+global.displaytextNPC[24] = "Now look at me. See the color of my slime? Lavender. LAVENDER.";
+global.speakingNPC[24] = "ebenezer";
+global.textboxarrayNPC[24] = ebenezer_angry;
+
+global.displaytextNPC[25] = "Since the dawn of slime, purple has always been the most oppressed hue.";
+global.speakingNPC[25] = "ebenezer";
+global.textboxarrayNPC[25] = ebenezer_angry;
+
+global.displaytextNPC[26] = "Condemned to peasantry, we have lived in the shadows of the warm.";
+global.speakingNPC[26] = "ebenezer";
+global.textboxarrayNPC[26] = ebenezer_neutral;
+
+global.displaytextNPC[27] = "During the Great Slime Wars, we cool colors revolted.";
+global.speakingNPC[27] = "ebenezer";
+global.textboxarrayNPC[27] = ebenezer_neutral;
+
+global.displaytextNPC[28] = "Taking up arms, we marched against the deposit slime king.";
+global.speakingNPC[28] = "ebenezer";
+global.textboxarrayNPC[28] = ebenezer_neutral;
+
+global.displaytextNPC[29] = "We were crushed. Though at first he gave no heed, they destroyed us.";
+global.speakingNPC[29] = "ebenezer";
+global.textboxarrayNPC[29] = ebenezer_angry;
+
+global.displaytextNPC[30] = "We never stood a chance. It was then, that the Purple Purge began.";
+global.speakingNPC[30] = "ebenezer";
+global.textboxarrayNPC[30] = ebenezer_angry;
+
+global.displaytextNPC[31] = "Suspicious of any peasants that might again rebel,";
+global.speakingNPC[31] = "ebenezer";
+global.textboxarrayNPC[31] = ebenezer_angry;
+
+global.displaytextNPC[32] = "the warm aristocracy harshly persecuted the lower, cool slimes.";
+global.speakingNPC[32] = "ebenezer";
+global.textboxarrayNPC[32] = ebenezer_angry;
+
+global.displaytextNPC[33] = "We tried and executed en masse. They suppressed information around it.";
+global.speakingNPC[33] = "ebenezer";
+global.textboxarrayNPC[33] = ebenezer_angry;
+
+global.displaytextNPC[34] = "Even today, we will never have equality. Slime can never be equal.";
+global.speakingNPC[34] = "ebenezer";
+global.textboxarrayNPC[34] = ebenezer_sad;
+
+global.displaytextNPC[35] = "I came to the past to right these wrongs, to correct these flaws.";
+global.speakingNPC[35] = "ebenezer";
+global.textboxarrayNPC[35] = ebenezer_neutral;
+
+global.displaytextNPC[36] = "Youre stupid! Phil says you couldve screwed up everything!";
+global.speakingNPC[36] = "slime";
+global.textboxarrayNPC[36] = slime_angry;
+
+global.displaytextNPC[37] = "Im not saying youre wrong, but I think you might be going about it the wrong way.";
+global.speakingNPC[37] = "slime";
+global.textboxarrayNPC[37] = slime_indifferent;
+
+global.displaytextNPC[38] = "You still dont understand. Fine then. Let us go to the past.";
+global.speakingNPC[38] = "ebenezer";
+global.textboxarrayNPC[38] = ebenezer_neutral;
+
+global.displaytextNPC[39] = "I will take you there. To the day of rebellion. The dawn of the war.";
+global.speakingNPC[39] = "ebenezer";
+global.textboxarrayNPC[39] = ebenezer_neutral;
+
+global.displaytextNPC[40] = "You can see for yourself the atrocities that my people faced.";
+global.speakingNPC[40] = "ebenezer";
+global.textboxarrayNPC[40] = ebenezer_neutral;
+
+global.displaytextNPC[41] = "You can know truth. Join me and your whole world will change.";
+global.speakingNPC[41] = "ebenezer";
+global.textboxarrayNPC[41] = ebenezer_neutral;
+
+global.displaytextNPC[42] = "What do you say, Slime Guy?";
+global.speakingNPC[42] = "ebenezer";
+global.textboxarrayNPC[42] = ebenezer_neutral;
+
+global.displaytextNPC[43] = " ";
+global.speakingNPC[43] = "else";
+global.textboxarrayNPC[43] = empty_sprite;
+
+global.displaytextNPC[44] = "Im...";
+global.speakingNPC[44] = "slime";
+global.textboxarrayNPC[4] = slime_angry;
+
 </string>
           </argument>
         </arguments>

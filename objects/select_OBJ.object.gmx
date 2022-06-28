@@ -50,7 +50,7 @@ instance_deactivate_object(self);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pagedoneno==39){
+            <string>if(global.pagedoneno==global.optionPageNo){
 draw_sprite(blank,0,0,0,);
 draw_sprite_ext(chosen_arrow,0,xpos,view_yview[0]+600,1,1,90,c_white,1);
 draw_text(view_xview[0]+396,view_yview[0]+500,"JOIN");
@@ -78,7 +78,7 @@ draw_text(view_xview[0]+696,view_yview[0]+500,"TURN IN");
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pagedoneno==39){
+            <string>if(global.pagedoneno==global.optionPageNo){
 if(position=="left"){
 xpos = view_xview[0]+600;
 position="right";
@@ -107,7 +107,7 @@ position="right";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pagedoneno==39){
+            <string>if(global.pagedoneno == global.optionPageNo){
 if(position=="right"){
 xpos = view_xview[0]+300;
 position="left";
@@ -136,7 +136,7 @@ position="left";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.pagedoneno==40){
+            <string>if(global.pagedoneno==(global.optionPageNo + 1)){
 if(position =="left"){
 global.badend = true;
 }else{

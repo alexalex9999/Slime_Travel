@@ -48,7 +48,131 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(global.badend){
+            <string>if(global.optionPageNo == 43)
+{
+
+    if(global.badend){
+      global.displaytextNPC[45] = "going to join you.";
+      global.speakingNPC[45] = "slime";
+      global.textboxarrayNPC[45] = slime_angry;
+
+      global.displaytextNPC[46] = "Good choice. Now, lend me your time machine. I must recharge mine.";
+      global.speakingNPC[46] = "ebenezer";
+      global.textboxarrayNPC[46] = ebenezer_angry;
+
+        global.displaytextNPC[47] = "Alright.";
+        global.speakingNPC[47] = "slime";
+        global.textboxarrayNPC[47] = slime_angry;
+
+        global.displaytextNPC[48] = "Slime, what have you done?!";
+        global.speakingNPC[48] = "phil";
+        global.textboxarrayNPC[48] = phil_angry;
+
+        global.displaytextNPC[49] = "What are you talking about?";
+        global.speakingNPC[49] = "slime";
+        global.textboxarrayNPC[49] = slime_angry;
+
+        global.displaytextNPC[50] = "Did you give him the time machine?!?";
+        global.speakingNPC[50] = "phil";
+        global.textboxarrayNPC[50] = phil_angry;
+
+        global.displaytextNPC[51] = "...Yes.";
+        global.speakingNPC[51] = "slime";
+        global.textboxarrayNPC[51] = slime_indifferent;
+
+        global.displaytextNPC[52] = "You fool! Youve doomed this timeline!";
+        global.speakingNPC[52] = "phil";
+        global.textboxarrayNPC[52] = phil_angry;
+
+        global.displaytextNPC[53] = "Huh?";
+        global.speakingNPC[53] = "slime";
+        global.textboxarrayNPC[53] = slime_indifferent;
+
+        global.displaytextNPC[54] = "Ebenezer has taken control of the future! You gave him that power!";
+        global.speakingNPC[54] = "phil";
+        global.textboxarrayNPC[54] = phil_angry;
+
+        global.displaytextNPC[55] = "But... I should be in control too!";
+        global.speakingNPC[55] = "slime";
+        global.textboxarrayNPC[55] = slime_angry;
+
+        global.displaytextNPC[56] = "Did you trust him, you idiot?! He is going to leave you there in the past!";
+        global.speakingNPC[56] = "phil";
+        global.textboxarrayNPC[56] = phil_angry;
+
+        global.displaytextNPC[57] = "What?! Ebenezer, are you going to just leave me here?!";
+        global.speakingNPC[57] = "slime";
+        global.textboxarrayNPC[57] = slime_angry;
+
+        global.displaytextNPC[58] = "I was planning on it.";
+        global.speakingNPC[58] = "ebenezer";
+        global.textboxarrayNPC[58] = ebenezer_angry;
+
+        global.displaytextNPC[59] = "Why you little-";
+        global.speakingNPC[59] = "slime";
+        global.textboxarrayNPC[59] = slime_angry;
+
+        global.displaytextNPC[60] = "Slime, I have one last option. I have a vial of spacetime energy here.";
+        global.speakingNPC[60] = "phil";
+        global.textboxarrayNPC[60] = phil_angry;
+
+        global.displaytextNPC[61] = "I'm going to use it to turn back time to before you sided with ebenezer.";
+        global.speakingNPC[61] = "phil";
+        global.textboxarrayNPC[61] = phil_angry;
+
+        global.displaytextNPC[62] = "Save the future, slime! Don't make the same mistake!";
+        global.speakingNPC[62] = "phil";
+        global.textboxarrayNPC[62] = phil_angry;
+
+        global.displaytextNPC[63] = " ";
+        global.speakingNPC[63] = "else";
+        global.textboxarrayNPC[63] = empty_sprite;
+
+if(array_length_1d(global.displaytext)!=63){
+    for(var i=0; i &lt; array_length_1d(global.speakingNPC); i++){
+    global.speaking[i] = global.speakingNPC[i];
+    global.displaytext[i] = global.displaytextNPC[i];
+    global.textboxarray[i] = global.textboxarrayNPC[i];
+
+}
+
+}
+}else{
+global.displaytextNPC[45] = "going to turn you in, Ebenezer.";
+global.speakingNPC[45] = "slime";
+global.textboxarrayNPC[45] = slime_angry;
+
+global.displaytextNPC[46] = "So be it.";
+global.speakingNPC[46] = "ebenezer";
+global.textboxarrayNPC[46] = ebenezer_angry;
+
+global.displaytextNPC[47] = "...";
+global.speakingNPC[47] = "else";
+global.textboxarrayNPC[47] = phil_empty;
+
+global.displaytextNPC[48] = "Good job Slime, you've saved us all! Take the thief to the present so we can arrest him.";
+global.speakingNPC[48] = "phil";
+global.textboxarrayNPC[48] = phil_happy;
+
+global.displaytextNPC[49] = " ";
+global.speakingNPC[49] = "else";
+global.textboxarrayNPC[49] = empty_sprite;
+if(array_length_1d(global.speaking)!=49){
+    for(var i=0; i &lt; array_length_1d(global.speakingNPC); i++){
+    global.speaking[i] = global.speakingNPC[i];
+    global.displaytext[i] = global.displaytextNPC[i];
+    global.textboxarray[i] = global.textboxarrayNPC[i];
+
+
+}
+}
+}
+
+}
+else
+{
+
+if(global.badend){
 global.displaytextNPC[41] = "going to join you.";
 global.speakingNPC[41] = "slime";
 global.textboxarrayNPC[41] = slime_angry;
@@ -81,7 +205,7 @@ global.displaytextNPC[48] = "...Yes.";
 global.speakingNPC[48] = "slime";
 global.textboxarrayNPC[48] = slime_indifferent;
 
-global.displaytextNPC[49] = "You fool! You've doomed this timeline!";
+global.displaytextNPC[49] = "You fool! Youve doomed this timeline!";
 global.speakingNPC[49] = "phil";
 global.textboxarrayNPC[49] = phil_angry;
 
@@ -168,6 +292,8 @@ if(array_length_1d(global.speaking)!=45){
 }
 }
 }
+}
+
 </string>
           </argument>
         </arguments>

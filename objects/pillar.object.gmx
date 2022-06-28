@@ -52,6 +52,7 @@
 if(global.level_type == "ice"){
     if(!place_meeting(x,y,pushable_box)){
     if(global.pillar_down[pillar_num] &amp;&amp; (sprite_index == ice_pillar_locked || sprite_index == ice_pillar_locking)){
+        
         mask_index = no_mask;
         if(sprite_index == ice_pillar_locking){
         switch(image_index){
@@ -99,16 +100,19 @@ if(global.level_type == "ice"){
     }
     if(sprite_index == ice_pillar_locking &amp;&amp; image_index == 6){
         sprite_index = ice_pillar_locked
+        depth = -500;
         mask_index = -1;
     }
     }
     if(sprite_index == ice_pillar_unlocked){
-        depth = 10000
+        id.depth = 10000
         mask_index = -1;
+        depth = 10000;
     }
     else{
     }
 }
+
 
 if(global.level_type == "normal"){
     if(!place_meeting(x,y,pushable_box)){
