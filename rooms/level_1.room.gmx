@@ -15,7 +15,7 @@ sound_fade(beginning, 100, 10);
 global.philspeech = "Okay just stop. You’re gonna hurt yourself thinking so hard. It was entertaining the first few times, but I’m seriously done. If you press H, you’ll move forward in time to when you finish this puzzle. Legit.";
 
 //global.help_needed =false;
-global.solutions[] = array(3,0,0,0,0,0,0,0);
+global.solutions = array(3,0,0,0,0,0,0,0);
 global.solution_length = array_length_1d(global.solutions);
 global.level_type = "normal";</code>
   <enableViews>-1</enableViews>

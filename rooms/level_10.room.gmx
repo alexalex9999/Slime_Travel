@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.solutions[] = array(1,2,1,3,0,0,1,2,1,1,1,2,2,1,2,1,0,0,0,0,0,0,3,3,2,2,2,1,1,1,1,1);
+  <code>global.solutions = array(1,2,1,3,0,0,1,2,1,1,1,2,2,1,2,1,0,0,0,0,0,0,3,3,2,2,2,1,1,1,1,1);
 global.solution_length = array_length_1d(global.solutions)
 global.level_type = "normal";</code>
   <enableViews>-1</enableViews>
@@ -184,11 +184,11 @@ global.level_type = "normal";</code>
     <instance objName="pit" x="576" y="192" name="inst_198989D6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="480" y="288" name="inst_81CB53D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="672" y="288" name="inst_B59C9B2C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="slime" x="576" y="1152" name="inst_7A70BCB8" locked="0" code="sprite_index = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="slime" x="576" y="1056" name="inst_7A70BCB8" locked="0" code="sprite_index = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="door_nextroom" x="576" y="0" name="inst_FE5FAA46" locked="0" code="sprite_index = arrow_up;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="576" y="1056" name="inst_EB77C1B0" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="576" y="1056" name="inst_63611CAE" locked="0" code="slime_direction = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="auto_jump" x="576" y="1056" name="inst_0534BFED" locked="0" code="slime_direction = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="auto_jump" x="672" y="1152" name="inst_0534BFED" locked="0" code="slime_direction = slime_jump_up;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="Reset_Button" x="0" y="0" name="inst_AEE2B25B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="text_box" x="0" y="96" name="inst_58AE7F5F" locked="0" code="//Room 10&#xA; &#xA;//regular text&#xA; &#xA;global.speaking[0] = &quot;phil&quot;;&#xA;global.displaytext[0] = &quot;Careful.&quot;;&#xA;global.textboxarray[0] = phil_happy;&#xA; &#xA;global.speaking[1] = &quot;slime&quot;;&#xA;global.displaytext[1] = &quot;Don't worry, I can solve this with my eyes closed!&quot;;&#xA;global.textboxarray[1] = slime_giggle;&#xA; &#xA;global.resetNeeded = 1;&#xA; &#xA;//help text&#xA; &#xA;global.helpspeaking[0] = &quot;slime&quot;;&#xA;global.helptext[0] = &quot;Ahahahaha man the floor's slippery, huh haha...&quot;;&#xA;global.helptextboxarray[0] = slime_giggle;&#xA; &#xA;global.helpspeaking[1] = &quot;phil&quot;;&#xA;global.helptext[1] = &quot;...&quot;;&#xA;global.helptextboxarray[1] = phil_deadpan;&#xA; &#xA;//Cheater text&#xA; &#xA;global.cheaterspeaking[0] = &quot;slime&quot;;&#xA;global.cheatertext[0] = &quot;...&quot;;&#xA;global.cheatertextboxarray[0] = slime_indifferent;&#xA; &#xA;global.cheaterspeaking[1] = &quot;phil&quot;;&#xA;global.cheatertext[1] = &quot;...&quot;;&#xA;global.cheatertextboxarray[1] = phil_deadpan;&#xA;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="576" y="-96" name="inst_5441B728" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

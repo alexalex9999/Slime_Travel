@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.solutions[] = array(3,3,3,2,2,1,2,3,3,1,0,0,0,3,2,2,1,2,3,3,1,1,0,0,0,0,0,1,0,3,3,0,0,0);
+  <code>global.solutions = array(3,3,3,2,2,1,2,3,3,1,0,0,0,3,2,2,1,2,3,3,1,1,0,0,0,0,0,1,0,3,3,0,0,0);
 global.solution_length = array_length_1d(global.solutions);
 global.philspeech = "Okay just stop. You’re gonna hurt yourself thinking so hard. It was entertaining the first few times, but I’m seriously done. If you press H, you’ll move forward in time to when you finish this puzzle. Legit.";
 global.level_type = "normal";</code>
@@ -90,7 +90,7 @@ global.level_type = "normal";</code>
     <instance objName="wall" x="768" y="864" name="inst_5414207E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="864" y="864" name="inst_A5FAE7EF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="864" y="768" name="inst_9ADD2423" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="slime" x="576" y="-96" name="inst_6118AF01" locked="0" code="sprite_index = slime_jump_down&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="slime" x="576" y="96" name="inst_6118AF01" locked="0" code="sprite_index = slime_jump_down" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="384" y="480" name="inst_7D5FDC89" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pushable_box" x="672" y="480" name="inst_FA901A17" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pit" x="288" y="672" name="inst_923C3B3A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -127,7 +127,7 @@ global.level_type = "normal";</code>
     <instance objName="wall" x="864" y="0" name="inst_CCB99D65" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="960" y="0" name="inst_21707196" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="1056" y="0" name="inst_9FD93444" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="auto_jump" x="576" y="0" name="inst_3D07AE5A" locked="0" code="slime_direction = slime_jump_down&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="auto_jump" x="672" y="-96" name="inst_3D07AE5A" locked="0" code="slime_direction = slime_jump_down&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="pillar" x="576" y="96" name="inst_4B0289E7" locked="0" code="pillar_num = 10000;&#xA;global.pillar_down[pillar_num] = true;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="invisible_button" x="576" y="96" name="inst_611D4C1F" locked="0" code="slime_direction = slime_jump_down&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="wall" x="96" y="0" name="inst_2E09405C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

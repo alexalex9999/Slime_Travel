@@ -2,14 +2,14 @@
 
 if((slime.sprite_index == slime_idle_front || slime.sprite_index == slime_idle_back || 
 slime.sprite_index == slime_idle_left || slime.sprite_index == slime_idle_right)){
-    slime.image_index = 0
-    slime.image_speed = 1/2
+    slime.image_index = 0;
+    slime.image_speed = 1/2;
    // if(position_meeting(slime.x, slime.y, switch_button)&&!argument0){
    //     slime.alarm[1] = 1;
    //     jump_up(true);
    //     return false;
    // }
-    slime.sprite_index = slime_jump_up
+    slime.sprite_index = slime_jump_up;
     if(position_meeting(slime.x, slime.y-96, ice_floor)){
         slime.sprite_index = slime_ice_up;
     }

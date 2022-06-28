@@ -25,15 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.displaytext[] = 0;
-global.speaking[] = 0;
-global.textboxarray[] = 0;
-global.helptext[] = 0;
-global.helpspeaking[] = 0;
-global.helptextboxarray[] = 0;
-global.cheatertext[] = 0;
-global.cheatertextboxarray[] = 0;
-global.cheaterspeaking[] = 0;
+            <string>global.displaytext = 0;
+global.speaking = 0;
+global.textboxarray = 0;
+global.helptext = 0;
+global.helpspeaking = 0;
+global.helptextboxarray = 0;
+global.cheatertext = 0;
+global.cheatertextboxarray = 0;
+global.cheaterspeaking = 0;
 global.badend = false;
 global.helpActivate = false;
 self.depth = -1000;
@@ -177,7 +177,7 @@ if(global.chars_drawn&gt;=string_length(global.currentstring)){
 
     }else{
         alarm[8]=-5;
-        if(array_length_1d(global.displaytext[])==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
+        if(array_length_1d(global.displaytext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
             global.pagesdone = true;
         }else{
             global.pagesdone = false;
@@ -196,7 +196,7 @@ if(global.helpActivate){
 
         }else{
             alarm[8]=-5;
-            if(array_length_1d(global.cheatertext[])==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.cheatertext[global.pagedoneno])){
+            if(array_length_1d(global.cheatertext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.cheatertext[global.pagedoneno])){
                 global.pagesdone = true;
             }else{
                 global.pagesdone = false;
@@ -214,7 +214,7 @@ if(global.helpActivate){
 
         }else{
             alarm[8]=-5;
-            if(array_length_1d(global.helptext[])==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.helptext[global.pagedoneno])){
+            if(array_length_1d(global.helptext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.helptext[global.pagedoneno])){
                 global.pagesdone = true;
             }else{
                 global.pagesdone = false;
@@ -234,7 +234,7 @@ if(global.helpActivate){
 
     }else{
         alarm[8]=-5;
-        if(array_length_1d(global.displaytext[])==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
+        if(array_length_1d(global.displaytext)==global.pagedoneno&amp;&amp;global.chars_drawn==string_length(global.displaytext[global.pagedoneno])){
             global.pagesdone = true;
         }else{
             global.pagesdone = false;
@@ -303,7 +303,7 @@ alarm[9]=1;
             global.currentstring = global.helptext[global.pagedoneno];
         }
     }else{
-        if(global.displaytext[]=0){
+        if(global.displaytext=0){
             instance_destroy();
         }else{
             global.currentstring = global.displaytext[global.pagedoneno];
@@ -346,7 +346,7 @@ global.helpActivate = true;
 }
 
 if(!global.help_needed){
-if(global.displaytext[]==0){
+if(global.displaytext==0){
 instance_destroy();
 }
 }
@@ -672,7 +672,7 @@ if(global.chars_drawn&gt;=string_length(global.currentstring)){
 }
 if(global.pagesdone){
     instance_destroy();
-    global.displaytext[] = 0;
+    global.displaytext = 0;
     global.stringdone = false;
     if(!instance_exists(NPC_Interact)){
     global.paintingInteraction = false;
@@ -682,7 +682,7 @@ if(global.pagesdone){
     if((array_length_1d(global.displaytext)-global.pagedoneno)==1){
         if(global.stringdone){
         instance_destroy();
-        global.displaytext[] = 0;
+        global.displaytext = 0;
         }else{
         global.stringdone = true;
         global.pagesdone = true;
@@ -801,7 +801,7 @@ if(global.chars_drawn&gt;=string_length(global.currentstring)){
 if(global.pagesdone){
     instance_destroy();
     
-    global.displaytext[] = 0;
+    global.displaytext = 0;
     global.stringdone = false;
     if(instance_exists(NPC_Interact)){
     global.paintingInteraction = false;
@@ -811,7 +811,7 @@ if(global.pagesdone){
     if((array_length_1d(global.displaytext)-global.pagedoneno)==1){
         if(global.stringdone){
         instance_destroy();
-        global.displaytext[] = 0;
+        global.displaytext = 0;
         }else{
         global.stringdone = true;
         global.pagesdone = true;

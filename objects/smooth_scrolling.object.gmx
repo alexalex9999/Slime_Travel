@@ -25,31 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(slime.sprite_index == slime_jump_left &amp;&amp; slime.image_index == 0){
-    x-=96
-}
-if(slime.sprite_index == slime_jump_right &amp;&amp; slime.image_index == 0){
-    x+=96
-}
-if(slime.sprite_index == slime_jump_up &amp;&amp; slime.image_index == 0){
-    y-=96
-}
-if(slime.sprite_index == slime_jump_down &amp;&amp; slime.image_index == 0){
-    y+=96
-}
-if(slime.sprite_index == slime_push_left &amp;&amp; slime.image_index == 0){
-    x-=96
-}
-if(slime.sprite_index == slime_push_right &amp;&amp; slime.image_index == 0){
-    x+=96
-}
-if(slime.sprite_index == slime_push_up &amp;&amp; slime.image_index == 0){
-    y-=96
-}
-if(slime.sprite_index == slime_push_down &amp;&amp; slime.image_index == 0){
-    y+=96
-}
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

@@ -136,6 +136,7 @@ if(sprite_index = slime_jump_down){
         sprite_index = slime_jump_up;
     }
     if(sprite_index == slime_idle_front &amp;&amp; !position_meeting(x, y+96, pillar)){
+         audio_pause_sound(bonk_snd);
         sprite_index = slime_jump_down;
     }
 </string>
@@ -778,12 +779,12 @@ sprite_index == slime_idle_pit_left || sprite_index == slime_idle_pit_right){
 if(sprite_index == slime_idle_front || sprite_index == slime_idle_back || 
 sprite_index == slime_idle_left || sprite_index == slime_idle_right){
     if(place_meeting(x, y+96, ebenezer)){
-        show_debug_message("ebenezer")
+        show_debug_message("ebenezer");
         sprite_index = slime_idle_front;
     }
     else{
-    image_index = 0
-    image_speed = 1/2
+    image_index = 0;
+    image_speed = 1/2;
     //if(!position_meeting(x, y+96, all) || position_meeting(x, y+96, ice_floor) || position_meeting(x, y+96, door_nextroom) || position_meeting(x, y+96, invisible_button) || position_meeting(x, y+96, switch_button)){
         sprite_index = slime_jump_down
         if(position_meeting(x, y, switch_button)){
@@ -794,11 +795,11 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right){
         sprite_index = slime_ice_down;
     }
     if(position_meeting(x, y+96, wall)){
-        sprite_index = slime_idle_front
+        sprite_index = slime_idle_front;
         //sprite_index = slime_bounce_down
     }
     if(position_meeting(x, y+96, pillar)){
-        sprite_index = slime_idle_front
+        sprite_index = slime_idle_front;
         alarm[0] = 1;
     }
     if(position_meeting(x, y+96, pit)&amp;&amp;!((instance_position(x, y+96, pit)).pit_filled)){
@@ -875,12 +876,12 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
         sprite_index = slime_ice_right;
     }
     if(position_meeting(x+96, y, wall)){
-        sprite_index = slime_bounce_right
-        audio_play_sound(bonk_snd, 1, false)
+        sprite_index = slime_bounce_right;
+        audio_play_sound(bonk_snd, 1, false);
     }
     if(position_meeting(x+96, y, pillar)){
-        sprite_index = slime_bounce_right
-        audio_play_sound(bonk_snd, 1, false)
+        sprite_index = slime_bounce_right;
+        audio_play_sound(bonk_snd, 1, false);
         alarm[0] = 1;
     }
     if(position_meeting(x+96, y, pit)&amp;&amp;!((instance_position(x+96, y, pit)).pit_filled)){
@@ -895,7 +896,7 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
             }
             else{
                 sprite_index=slime_box_right
-                audio_play_sound(bonk_snd, 1, false)
+                audio_play_sound(bonk_snd, 1, false);
                 (instance_position(x+96, y, pushable_box)).sprite_index = empty_sprite;
             }
         }
@@ -1039,12 +1040,12 @@ sprite_index == slime_idle_left || sprite_index == slime_idle_right)){
         sprite_index = slime_ice_left;
     }
     if(position_meeting(x-96, y, wall)){
-        sprite_index = slime_bounce_left
-        audio_play_sound(bonk_snd, 1, false)
+        sprite_index = slime_bounce_left;
+        audio_play_sound(bonk_snd, 1, false);
     }
     if(position_meeting(x-96, y, pillar)){
-        sprite_index = slime_bounce_left
-        audio_play_sound(bonk_snd, 1, false)
+        sprite_index = slime_bounce_left;
+        audio_play_sound(bonk_snd, 1, false);
         alarm[0] = 1;
     }
     if(position_meeting(x-96, y, pit)&amp;&amp;!((instance_position(x-96, y, pit)).pit_filled)){

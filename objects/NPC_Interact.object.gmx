@@ -34,9 +34,9 @@ spriteToDraw = empty_sprite;
 global.paintingInteraction = false;
 n=0;
 j=0;
-global.speakingNPC[] = 0;
-global.displaytextNPC[] = 0;
-global.textboxarrayNPC[] = 0;
+global.speakingNPC = 0;
+global.displaytextNPC = 0;
+global.textboxarrayNPC = 0;
 ebenezer_NPC = false;
 sprite_index = empty_sprite;
 global.badend = false;
@@ -184,13 +184,13 @@ if(slime.x==x&amp;&amp;slime.y==y+96&amp;&amp;spoke==false&amp;&amp;slime.sprite
 
 
 
-    global.speaking[] = '';
-    global.displaytext[] = '';
-    global.textboxarray[] = '';
+    global.speaking = '';
+    global.displaytext = '';
+    global.textboxarray = '';
     global.paintingInteraction = true;
     instance_create(view_current.x,view_current.y,text_box);
     
-    for(var i=0; i &lt; array_length_1d(global.speakingNPC[]); i++){
+    for(var i=0; i &lt; array_length_1d(global.speakingNPC); i++){
     global.speaking[i] = global.speakingNPC[i];
     global.displaytext[i] = global.displaytextNPC[i];
     global.textboxarray[i] = global.textboxarrayNPC[i];

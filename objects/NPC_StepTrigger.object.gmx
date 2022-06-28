@@ -33,9 +33,9 @@ slimeNear = false;
 spriteToDraw = empty_sprite;
 global.paintingInteraction = false;
 n=0;
-global.speakingNPC[] = 0;
-global.displaytextNPC[] = 0;
-global.textboxarrayNPC[] = 0;
+global.speakingNPC = 0;
+global.displaytextNPC = 0;
+global.textboxarrayNPC = 0;
 ebenezer_NPC = false;
 global.badend = false;
 
@@ -66,9 +66,9 @@ if(global.pillar_down[0] = false){
 if(!instance_exists(text_box)){
 if(slime.x==x&amp;&amp;slime.y==y&amp;&amp;spoke==false){
 
-    global.speaking[] = '';
-    global.displaytext[] = '';
-    global.textboxarray[] = '';
+    global.speaking = '';
+    global.displaytext = '';
+    global.textboxarray = '';
     instance_create(view_current.x,view_current.y,text_box);
    for(i = 0; i&lt;array_length_1d(global.displaytextNPC);i++){
    global.speaking[i] = global.speakingNPC[i];
@@ -90,12 +90,12 @@ if(!instance_exists(text_box)){
 if(slime.x==x&amp;&amp;slime.y==y){
 
     
-    global.speaking[] = '';
-    global.displaytext[] = '';
-    global.textboxarray[] = '';
+    global.speaking = '';
+    global.displaytext = '';
+    global.textboxarray = '';
     instance_create(view_current.x,view_current.y,text_box);
     
-    for(var i=0; i &lt; array_length_1d(global.speakingNPC[]); i++){
+    for(var i=0; i &lt; array_length_1d(global.speakingNPC); i++){
     global.speaking[i] = global.speakingNPC[i];
     global.displaytext[i] = global.displaytextNPC[i];
     global.textboxarray[i] = global.textboxarrayNPC[i];
@@ -130,12 +130,12 @@ if(slime.x==x&amp;&amp;slime.y==y){
 
 if(!instance_exists(text_box)){
 if(slime.x==x&amp;&amp;slime.y==y&amp;&amp;spoke==false&amp;&amp;global.pillar_down[0]==false){
-    global.speaking[] = '';
-    global.displaytext[] = '';
-    global.textboxarray[] = '';
+    global.speaking = '';
+    global.displaytext = '';
+    global.textboxarray = '';
     global.paintingInteraction = true;
     instance_create(view_current.x,view_current.y,text_box);
-    for(var i=0; i &lt; array_length_1d(global.speakingNPC[]); i++){
+    for(var i=0; i &lt; array_length_1d(global.speakingNPC); i++){
     global.speaking[i] = global.speakingNPC[i];
     global.displaytext[i] = global.displaytextNPC[i];
     global.textboxarray[i] = global.textboxarrayNPC[i];

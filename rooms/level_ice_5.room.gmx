@@ -10,7 +10,7 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.solutions[] = array(0,1,2,3,2,1,0,1,1,2,1,0,0,3,0,1,2,3,2,1,1,2,1,0,0,0,0,1,1);
+  <code>global.solutions = array(0,1,2,3,2,1,0,1,1,2,1,0,0,3,0,1,2,3,2,1,1,2,1,0,0,0,0,1,1);
 global.solution_length = array_length_1d(global.solutions);
 global.level_type = "ice";</code>
   <enableViews>-1</enableViews>
